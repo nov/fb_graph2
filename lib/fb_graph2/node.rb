@@ -4,8 +4,8 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       self.id = id
-      self.raw_attributes = attributes
       self.access_token = attributes[:access_token]
+      self.raw_attributes = attributes
     end
 
     def fetch(params = {}, options = {})
