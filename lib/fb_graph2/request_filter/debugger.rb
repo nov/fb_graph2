@@ -1,5 +1,5 @@
 module FbGraph2
-  module RequestFilters
+  module RequestFilter
     class Debugger
       def filter_request(request)
         started = "======= [FbGraph2] API REQUEST STARTED ======="

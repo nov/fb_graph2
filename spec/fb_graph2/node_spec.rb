@@ -5,7 +5,7 @@ describe FbGraph2::Node do
     it 'should support access_token option' do
       FbGraph2::Node.new(
         'matake', :access_token => 'access_token'
-      ).access_token.should be_a Rack::OAuth2::AccessToken
+      ).access_token.should == 'access_token'
     end
 
     it 'should store raw attributes' do

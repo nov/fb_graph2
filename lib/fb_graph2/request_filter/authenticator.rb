@@ -1,5 +1,5 @@
 module FbGraph2
-  module RequestFilters
+  module RequestFilter
     class Authenticator < Rack::OAuth2::AccessToken::Authenticator
       def initialize(access_token)
         _access_token_ = case access_token

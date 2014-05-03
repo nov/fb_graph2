@@ -2,14 +2,18 @@ require 'active_support/all'
 require 'rack/oauth2'
 
 module FbGraph2
-  VERSION = File.read(File.join(__dir__, '../VERSION')).delete("\n\r")
-  ROOT_URL = 'https://graph.facebook.com/v2.0'
+  cattr_accessor :api_version, :gem_version, :logger, :debugging, :_http_config_
 
-  cattr_accessor :logger, :debugging, :_http_config_
+  self.api_version = 'v2.0'
+  self.gem_version = File.read(File.join(__dir__, '../VERSION')).delete("\n\r")
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
 
   class << self
+    def root_url
+      File.join('https://graph.facebook.com', api_version)
+    end
+
     def debugging?
       !!self.debugging
     end
@@ -20,10 +24,13 @@ module FbGraph2
 
     def http_client(access_token = nil)
       _http_client_ = HTTPClient.new(
-        agent_name: "FbGraph2 (#{VERSION})"
+        agent_name: "FbGraph2 (#{gem_version})"
       )
-      _http_client_.request_filter << RequestFilters::Authenticator.new(access_token) if access_token.present?
-      _http_client_.request_filter << RequestFilters::Debugger.new if self.debugging?
+      _http_client_.request_filter.delete_if do |filter|
+        filter.is_a? HTTPClient::WWWAuth
+      end
+      _http_client_.request_filter << RequestFilter::Authenticator.new(access_token) if access_token.present?
+      _http_client_.request_filter << RequestFilter::Debugger.new if self.debugging?
       _http_config_.try(:call, _http_client_)
       _http_client_
     end
@@ -35,6 +42,11 @@ module FbGraph2
 end
 
 require 'fb_graph2/node'
-Dir[File.dirname(__FILE__) + '/fb_graph2/*.rb'].each do |file|
-  require file
+[
+  '.',
+  'request_filter'
+].each do |dir|
+  Dir[File.join(__dir__, 'fb_graph2', dir, '*.rb')].each do |file|
+    require file
+  end
 end

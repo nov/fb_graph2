@@ -22,7 +22,7 @@ module FbGraph2
     protected
 
     def http_client
-      FbGraph2.http_client access_token
+      FbGraph2.http_client(access_token)
     end
 
     def get(params = {}, options = {})
@@ -34,11 +34,11 @@ module FbGraph2
     private
 
     def build_endpoint(options = {})
-      File.join([
-        File.join(ROOT_URL, id.to_s),
+      File.join [
+        File.join(FbGraph2.root_url, id.to_s),
         options[:connection],
         options[:connection_scope]
-      ].compact.collect(&:to_s))
+      ].compact.collect(&:to_s)
     end
 
     def build_params(params = {})
@@ -48,10 +48,11 @@ module FbGraph2
     def handle_response
       response = yield
       _response_ = MultiJson.load(response.body).with_indifferent_access
-      if (200...300).include?(response.status)
+      case response.status
+      when 200...300
         _response_
       else
-        Exception.handle_structured_response(response.status, _response_, response.headers)
+        raise response.body
       end
     rescue MultiJson::DecodeError
       raise Exception.new(response.status, "Unparsable Response: #{response.body}")
