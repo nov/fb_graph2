@@ -51,7 +51,7 @@ module FbGraph2
     private
 
     def edge_for(edge, params = {}, options = {})
-      collection = get params, options.merge(:edge => edge)
+      collection = get params, options.merge(edge: edge)
       Collection.new collection
     end
 
