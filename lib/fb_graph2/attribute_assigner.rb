@@ -35,13 +35,13 @@ module FbGraph2
             when :page
               Page.new raw[:id], raw
             when :pages
-              Collection.new(raw).each do |_raw_|
+              Collection.new(raw).collect do |_raw_|
                 Page.new _raw_[:id], _raw_
               end
             when :profile
               as_profile raw
             when :profiles
-              Collection.new(raw).each do |_raw_|
+              Collection.new(raw).collect do |_raw_|
                 as_profile _raw_
               end
             when :user
@@ -54,6 +54,8 @@ module FbGraph2
         end
       end
     end
+
+    private
 
     def as_profile(raw)
       klass = if raw.include?(:namespace)

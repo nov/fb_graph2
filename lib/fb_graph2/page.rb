@@ -1,7 +1,5 @@
 module FbGraph2
   class Page < Node
-    include AttributeAssigner
-
     register_attributes(
       raw: [
         :about, :attire, :band_members, :booking_agent, :can_post, :category, :checkins, :company_overview,
@@ -21,7 +19,6 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       super
-      assign attributes
       # TODO: handle custom attributes.
     end
   end

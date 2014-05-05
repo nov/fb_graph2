@@ -1,7 +1,5 @@
 module FbGraph2
   class User < Node
-    include AttributeAssigner
-
     include Edge::Accounts
     include Edge::Friends
     include Edge::Feed
@@ -22,7 +20,6 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       super
-      assign attributes
       # TODO: handle custom attributes.
     end
 

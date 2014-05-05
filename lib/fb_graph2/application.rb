@@ -1,7 +1,5 @@
 module FbGraph2
   class Application < Node
-    include AttributeAssigner
-
     register_attributes(
       raw: [
         :id, :android_key_hash, :app_domains, :auth_dialog_data_help_url, :auth_dialog_headline,
@@ -23,7 +21,6 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       super
-      assign attributes
       # TODO: handle custom attributes.
     end
   end

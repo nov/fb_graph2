@@ -1,7 +1,5 @@
 module FbGraph2
   class Post < Node
-    include AttributeAssigner
-
     register_attributes(
       raw: [
         :caption, :description, :icon, :is_hidden, :link, :message, :name, :object_id, :picture,
@@ -19,7 +17,6 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       super
-      assign attributes
       # TODO: handle custom attributes.
     end
   end
