@@ -24,9 +24,5 @@ module FbGraph2
       assign attributes
       # TODO: handle custom attributes.
     end
-
-    def self.me(access_token)
-      new(:me).authenticate access_token
-    end
   end
 end

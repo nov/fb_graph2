@@ -4,6 +4,7 @@ module FbGraph2
 
     include Edge::Accounts
     include Edge::Friends
+    include Edge::Feed
 
     register_attributes(
       raw: [
