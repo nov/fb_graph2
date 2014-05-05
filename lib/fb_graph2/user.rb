@@ -2,7 +2,7 @@ module FbGraph2
   class User < Node
     include Edge::Friends
 
-    self.registered_attributes = {
+    register_attributes(
       raw: [
         :about, :bio, :email, :first_name, :gender, :installed, :is_verified, :link, :locale,
         :middle_name, :name, :name_format, :political, :quotes, :relationship_status, :religion,
@@ -10,16 +10,15 @@ module FbGraph2
       ],
       time: [:updated_time], # NOTE: undocumented attribute
       date: [:birthday],
-      custom: [
-        :age_range, :context, :cover, :currency, :education, :favorite_athletes, :favorite_teams,
-        :hometown, :inspirational_people, :languages, :location, :significant_other, :work
-      ]
-    }
-    attr_accessor *registered_attributes.values.flatten
+      page: [:hometown, :location],
+      pages: [:favorite_athletes, :favorite_teams, :inspirational_people, :languages],
+      user: [:significant_other],
+      custom: [:age_range, :context, :cover, :currency, :education, :work]
+    )
 
     def initialize(id, attributes = {})
       super
-      assign attributes
+      # TODO: handle custom attributes.
     end
 
     def self.me(access_token)
