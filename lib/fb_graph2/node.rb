@@ -1,22 +1,36 @@
 module FbGraph2
   class Node
+    include AttributeAssigner
     attr_accessor :id, :access_token, :raw_attributes
 
     def initialize(id, attributes = {})
       self.id = id
-      self.access_token = attributes[:access_token]
       self.raw_attributes = attributes
     end
 
-    def fetch(params = {}, options = {})
-      self.access_token ||= options[:access_token]
-      _fetched_ = get params, options
-      _fetched_[:access_token] ||= self.access_token
-      self.class.new(_fetched_[:id], _fetched_)
+    def authenticate(access_token)
+      self.access_token = access_token
+      self
     end
 
-    def self.fetch(identifier, options = {})
-      new(identifier).fetch(options)
+    def fetch(params = {})
+      attributes = get params
+      self.class.new(attributes[:id], attributes).authenticate access_token
+    end
+
+    def self.fetch(identifier, params = {})
+      new(identifier).fetch params
+    end
+
+    def edge(edge, params = {}, options = {})
+      Edge.new(
+        self,
+        edge,
+        params,
+        options.merge(
+          collection: edge_for(edge, params, options)
+        )
+      )
     end
 
     protected
@@ -33,11 +47,16 @@ module FbGraph2
 
     private
 
+    def edge_for(edge, params = {}, options = {})
+      collection = get params, options.merge(:edge => edge)
+      Collection.new collection
+    end
+
     def build_endpoint(options = {})
       File.join [
         File.join(FbGraph2.root_url, id.to_s),
-        options[:connection],
-        options[:connection_scope]
+        options[:edge],
+        options[:edge_scope]
       ].compact.collect(&:to_s)
     end
 

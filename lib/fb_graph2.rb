@@ -41,7 +41,10 @@ module FbGraph2
   end
 end
 
+require 'fb_graph2/attribute_assigner'
 require 'fb_graph2/node'
+require 'fb_graph2/collection'
+require 'fb_graph2/edge'
 [
   '.',
   'request_filter'
