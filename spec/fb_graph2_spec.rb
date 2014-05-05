@@ -4,12 +4,21 @@ describe FbGraph2 do
   subject { FbGraph2 }
   after { FbGraph2.debugging = false }
 
-  its(:logger) { should be_a Logger }
-  its(:debugging?) { should be_false }
+  context 'as default' do
+    its(:logger) { should be_a Logger }
+    its(:api_version) { should == 'v2.0' }
+    its(:root_url) { should == 'https://graph.facebook.com/v2.0' }
+    it { should_not be_debugging }
+  end
 
   describe '.debug!' do
     before { FbGraph2.debug! }
-    its(:debugging?) { should be_true }
+    it { should be_debugging }
+  end
+
+  describe '.api_version' do
+    before { FbGraph2.api_version = 'v2.x' }
+    its(:root_url) { should == 'https://graph.facebook.com/v2.x' }
   end
 
   describe '.http_client' do
@@ -22,6 +31,7 @@ describe FbGraph2 do
           config.receive_timeout = 60
         end
       end
+
       it 'should configure Rack::OAuth2 and FbGraph2 http_client' do
         [Rack::OAuth2, FbGraph2].each do |klass|
           klass.http_client.ssl_config.verify_mode.should == OpenSSL::SSL::VERIFY_NONE
