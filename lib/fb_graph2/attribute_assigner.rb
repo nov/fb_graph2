@@ -17,7 +17,7 @@ module FbGraph2
 
     def assign(attributes)
       self.raw_attributes = attributes
-      self.class.registered_attributes.each do |type, keys|
+      Array(self.class.registered_attributes).each do |type, keys|
         keys.each do |key|
           raw = attributes[key]
           if raw.present?
