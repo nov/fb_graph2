@@ -1,11 +1,9 @@
 module FbGraph2
   class Node
-    include AttributeAssigner
     attr_accessor :id, :access_token, :raw_attributes
 
     def initialize(id, attributes = {})
       self.id = id
-      assign attributes
     end
 
     def authenticate(access_token)

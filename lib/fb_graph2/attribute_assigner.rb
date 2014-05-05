@@ -8,6 +8,13 @@ module FbGraph2
       cattr_accessor :registered_attributes
     end
 
+    module ClassMethods
+      def register_attributes(attributes)
+        self.registered_attributes = attributes
+        send :attr_accessor, *attributes.values.flatten
+      end
+    end
+
     def assign(attributes)
       self.raw_attributes = attributes
       self.class.registered_attributes.each do |type, keys|
@@ -35,13 +42,6 @@ module FbGraph2
             self.send :"#{key}=", attributes[key]
           end
         end
-      end
-    end
-
-    module ClassMethods
-      def register_attributes(attributes)
-        self.registered_attributes = attributes
-        send :attr_accessor, *attributes.values.flatten
       end
     end
   end
