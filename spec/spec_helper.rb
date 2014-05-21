@@ -6,3 +6,7 @@ end
 
 require 'rspec'
 require 'fb_graph2'
+
+Dir[File.join(__dir__, 'spec_helper/*.rb')].each do |file|
+  require file
+end
