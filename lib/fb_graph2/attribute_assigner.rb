@@ -46,8 +46,9 @@ module FbGraph2
               end
             when :user
               User.new raw[:id], raw
-            when :custom
-              # NOTE: handle custom attributes in each class
+            else
+              # NOTE: handle these attributes in each class
+              next
             end
             self.send :"#{key}=", value
           end

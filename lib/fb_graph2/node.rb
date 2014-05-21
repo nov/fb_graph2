@@ -48,6 +48,12 @@ module FbGraph2
       end
     end
 
+    def post(params = {}, options = {})
+      handle_response do
+        http_client.post build_endpoint(options), build_params(params)
+      end
+    end
+
     private
 
     def edge_for(edge, params = {}, options = {})
