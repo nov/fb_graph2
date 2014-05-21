@@ -5,7 +5,7 @@ describe FbGraph2::Edge::Accounts do
     describe '#accounts' do
       let(:me) { FbGraph2::User.me('token') }
       it 'should return pages with page token' do
-        accounts = mock_graph :get, 'me/accounts', 'user/accounts' do
+        accounts = mock_graph :get, 'me/accounts', 'user/accounts', access_token: 'token' do
           me.accounts
         end
         account = accounts.first

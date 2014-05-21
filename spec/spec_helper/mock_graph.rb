@@ -39,8 +39,10 @@ module MockGraph
   def request_for(method, options = {})
     request = {}
     if options[:access_token]
-      options[:params] ||= {}
-      options[:params][:access_token] = options[:access_token].to_s
+      request[:headers] ||= {}
+      request[:headers] = {
+        authorization: "Bearer #{options[:access_token]}"
+      }
     end
     if options[:params]
       case method
