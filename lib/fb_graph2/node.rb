@@ -80,6 +80,7 @@ module FbGraph2
       when 200...300
         _response_
       else
+        # TODO: better exception structure
         raise response.body
       end
     rescue MultiJson::DecodeError

@@ -9,6 +9,7 @@ module FbGraph2
         # only within /:user_id/accounts context
         :perms
       ],
+      time: [:created_time],
       date: [:birthday],
       page: [:best_page],
       custom: [
