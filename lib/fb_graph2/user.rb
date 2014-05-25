@@ -6,7 +6,9 @@ module FbGraph2
     include Edge::Albums
     include Edge::Books
     include Edge::Events
+    include Edge::Family
     include Edge::Feed
+    include Edge::FriendLists
     include Edge::Friends
     include Edge::Games
     include Edge::Home
@@ -24,7 +26,9 @@ module FbGraph2
       raw: [
         :about, :bio, :email, :first_name, :gender, :installed, :is_verified, :link, :locale,
         :middle_name, :name, :name_format, :political, :quotes, :relationship_status, :religion,
-        :timezone, :third_party_id, :verified, :website
+        :timezone, :third_party_id, :verified, :website,
+        # NOTE: in family edge context
+        :relationship
       ],
       time: [:updated_time], # NOTE: undocumented attribute
       date: [:birthday],
