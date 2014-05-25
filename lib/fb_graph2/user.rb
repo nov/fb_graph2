@@ -5,6 +5,7 @@ module FbGraph2
     include Edge::Activities
     include Edge::Albums
     include Edge::Books
+    include Edge::Events
     include Edge::Feed
     include Edge::Friends
     include Edge::Games
