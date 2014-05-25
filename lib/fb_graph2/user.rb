@@ -1,8 +1,13 @@
 module FbGraph2
   class User < Node
     include Edge::Accounts
-    include Edge::Friends
     include Edge::Feed
+    include Edge::Friends
+    include Edge::Home
+    include Edge::Links
+    include Edge::Posts
+    include Edge::Statuses
+    include Edge::Tagged
 
     register_attributes(
       raw: [
