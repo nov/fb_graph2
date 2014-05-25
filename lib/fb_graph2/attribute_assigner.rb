@@ -44,6 +44,8 @@ module FbGraph2
               Collection.new(raw).collect do |_raw_|
                 as_profile _raw_
               end
+            when :application
+              Application.new raw[:id], raw
             when :user
               User.new raw[:id], raw
             else

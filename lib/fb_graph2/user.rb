@@ -1,6 +1,9 @@
 module FbGraph2
   class User < Node
     include Edge::Accounts
+    include Edge::Achievements
+    include Edge::Activities
+    include Edge::Albums
     include Edge::Books
     include Edge::Feed
     include Edge::Friends
