@@ -22,10 +22,13 @@ module FbGraph2
     include Edge::Permissions
     include Edge::Picture
     include Edge::Photos
+    include Edge::Pokes
     include Edge::Posts
+    include Edge::Scores
     include Edge::Statuses
     include Edge::Tagged
     include Edge::Television
+    include Edge::Videos
 
     register_attributes(
       raw: [
