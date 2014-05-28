@@ -19,8 +19,8 @@ module FbGraph2
       self.raw_attributes = attributes
       Array(self.class.registered_attributes).each do |type, keys|
         keys.each do |key|
-          raw = attributes[key]
-          if raw.present?
+          if attributes.include? key
+            raw = attributes[key]
             value = case type
             when :raw
               raw
@@ -48,6 +48,10 @@ module FbGraph2
               Application.new raw[:id], raw
             when :user
               User.new raw[:id], raw
+            when :picture
+              Struct::Picture.new raw[:data]
+            when :album
+              Album.new raw[:id], raw
             else
               # NOTE: handle these attributes in each class
               next

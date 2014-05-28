@@ -13,10 +13,15 @@ module FbGraph2
     include Edge::Games
     include Edge::Home
     include Edge::Interests
+    include Edge::InvitableFriends
     include Edge::Likes
     include Edge::Links
     include Edge::Movies
     include Edge::Music
+    include Edge::Notifications
+    include Edge::Permissions
+    include Edge::Picture
+    include Edge::Photos
     include Edge::Posts
     include Edge::Statuses
     include Edge::Tagged

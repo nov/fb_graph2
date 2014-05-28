@@ -8,7 +8,7 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       self.id = id
-      assign attributes if respond_to?(:assign)
+      assign attributes if respond_to? :assign
     end
 
     def authenticate(access_token)
@@ -36,6 +36,10 @@ module FbGraph2
       )
     end
 
+    def destroy(params = {}, options = {})
+      delete params, options
+    end
+
     protected
 
     def http_client
@@ -51,6 +55,12 @@ module FbGraph2
     def post(params = {}, options = {})
       handle_response do
         http_client.post build_endpoint(options), build_params(params)
+      end
+    end
+
+    def delete(params = {}, options = {})
+      handle_response do
+        http_client.delete build_endpoint(params), build_params(params)
       end
     end
 
