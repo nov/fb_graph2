@@ -4,12 +4,9 @@ module FbGraph2
       raw: [:description, :is_date_only, :location, :name, :privacy, :ticket_uri, :timezone],
       time: [:end_time, :start_time, :updated_time],
       page: [:venue],
-      custom: [:cover, :owner, :parent_group]
+      profile: [:owner],
+      group: [:parent_group],
+      photo: [:cover]
     )
-
-    def initialize(id, attributes = {})
-      super
-      # TODO: handle custom attributes.
-    end
   end
 end

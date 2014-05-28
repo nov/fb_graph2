@@ -1,6 +1,6 @@
 module FbGraph2
   class Struct
-    class Poke < Struct
+    class Score < Struct
       register_attributes(
         raw: [:score],
         user: [:user],

@@ -7,12 +7,8 @@ module FbGraph2
         :administrator, :bookmark_order, :unread
       ],
       time: [:updated_time],
-      custom: [:cover, :owner, :parent]
+      profile: [:owner, :parent],
+      photo: [:cover]
     )
-
-    def initialize(id, attributes = {})
-      super
-      # TODO: handle custom attributes.
-    end
   end
 end

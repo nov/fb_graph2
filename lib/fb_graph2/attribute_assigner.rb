@@ -30,28 +30,40 @@ module FbGraph2
               Time.parse raw
             when :timestamp
               Time.at raw
+            when :actions
+              Collection.new(raw).collect do |_raw_|
+                Struct::Action.new _raw_
+              end
+            when :album
+              Album.new raw[:id], raw
             when :application
               Application.new raw[:id], raw
+            when :comment
+              Comment.new raw[:id], raw
+            when :group
+              Group.new raw[:id], raw
+            when :image_sources
+              Collection.new(raw).collect do |_raw_|
+                Struct::ImageSource.new _raw_
+              end
             when :page
               Page.new raw[:id], raw
             when :pages
               Collection.new(raw).collect do |_raw_|
                 Page.new _raw_[:id], _raw_
               end
+            when :photo
+              Photo.new raw[:id], raw
+            when :picture
+              Struct::Picture.new raw[:data]
             when :profile
               as_profile raw
             when :profiles
               Collection.new(raw).collect do |_raw_|
                 as_profile _raw_
               end
-            when :application
-              Application.new raw[:id], raw
             when :user
               User.new raw[:id], raw
-            when :picture
-              Struct::Picture.new raw[:data]
-            when :album
-              Album.new raw[:id], raw
             else
               # NOTE: handle these attributes in each class
               next

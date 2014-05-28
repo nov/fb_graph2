@@ -12,8 +12,9 @@ module FbGraph2
       time: [:created_time],
       date: [:birthday],
       page: [:best_page],
+      photo: [:cover],
       custom: [
-        :category_list, :cover, :context, :hours, :location, :parking, :price_range, :restaurant_services,
+        :category_list, :context, :hours, :location, :parking, :price_range, :restaurant_services,
         :restaurant_specialties
       ]
     )

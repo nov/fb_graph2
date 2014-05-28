@@ -4,7 +4,9 @@ module FbGraph2
       raw: [:can_comment, :can_remove, :comment_count, :like_count, :message, :user_likes],
       time: [:created_time],
       user: [:from],
-      custom: [:attachment, :message_tags, :parent]
+      comment: [:parent],
+      profiles: [:message_tags],
+      custom: [:attachment]
     )
 
     def initialize(id, attributes = {})

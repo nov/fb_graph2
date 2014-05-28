@@ -43,7 +43,8 @@ module FbGraph2
       page: [:hometown, :location],
       pages: [:favorite_athletes, :favorite_teams, :inspirational_people, :languages],
       user: [:significant_other],
-      custom: [:age_range, :context, :cover, :currency, :education, :work]
+      photo: [:cover],
+      custom: [:age_range, :context, :currency, :education, :work]
     )
 
     def initialize(id, attributes = {})

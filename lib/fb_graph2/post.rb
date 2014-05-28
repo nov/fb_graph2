@@ -12,8 +12,9 @@ module FbGraph2
       page: [:place],
       profile: [:from],
       profiles: [:to, :with_tags],
+      actions: [:actions],
       custom: [
-        :actions, :message_tags, :privacy, :properties, :shares, :status_type, :type
+        :message_tags, :privacy, :properties, :shares, :status_type, :type
       ]
     )
 

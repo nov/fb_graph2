@@ -1,12 +1,17 @@
 module FbGraph2
   class Photo < Node
     register_attributes(
-      raw: [:backdated_time_granularity, :height, :icon, :link, :name, :page_story_id, :picture, :position, :source, :width],
+      raw: [
+        :backdated_time_granularity, :height, :icon, :link, :name, :page_story_id, :picture, :position, :source, :width,
+        # NOTE: as cover photo
+        :offset_y, :offset_x
+      ],
       time: [:backdated_time, :created_time, :updated_time],
       page: [:place],
       profile: [:from],
       album: [:album],
-      custom: [:images, :name_tags]
+      image_sources: [:images],
+      custom: [:name_tags]
     )
   end
 end
