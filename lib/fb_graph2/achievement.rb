@@ -1,5 +1,8 @@
 module FbGraph2
   class Achievement < Node
+    include Edge::Comments
+    include Edge::Likes::LikeeContext
+
     register_attributes(
       raw: [:type, :no_feed_story],
       time: [:publish_time],

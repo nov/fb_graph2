@@ -14,7 +14,7 @@ module FbGraph2
     include Edge::Home
     include Edge::Interests
     include Edge::InvitableFriends
-    include Edge::Likes
+    include Edge::Likes::LikerContext
     include Edge::Links
     include Edge::Movies
     include Edge::Music

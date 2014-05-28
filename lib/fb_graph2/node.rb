@@ -60,7 +60,7 @@ module FbGraph2
 
     def delete(params = {}, options = {})
       handle_response do
-        http_client.delete build_endpoint(params), build_params(params)
+        http_client.delete build_endpoint(options), build_params(params)
       end
     end
 
@@ -85,7 +85,8 @@ module FbGraph2
 
     def handle_response
       response = yield
-      _response_ = MultiJson.load(response.body).with_indifferent_access
+      _response_ = MultiJson.load response.body
+      _response_ = _response_.with_indifferent_access if _response_.respond_to? :with_indifferent_access
       case response.status
       when 200...300
         _response_

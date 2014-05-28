@@ -1,5 +1,7 @@
 module FbGraph2
   class Post < Node
+    include Edge::Likes::LikeeContext
+
     register_attributes(
       raw: [
         :caption, :description, :icon, :is_hidden, :link, :message, :name, :object_id, :picture,
