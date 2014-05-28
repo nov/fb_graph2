@@ -84,7 +84,8 @@ module FbGraph2
         raise response.body
       end
     rescue MultiJson::DecodeError
-      raise Exception.new(response.status, "Unparsable Response: #{response.body}")
+      # TODO: better exception structure
+      raise response.body
     end
   end
 end

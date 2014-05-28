@@ -22,6 +22,10 @@ module MockGraph
     end
   end
 
+  def mock_json(response_path)
+    response_for(response_path)[:body].read
+  end
+
   def request_to(path, method = :get)
     raise_error { |e|
       e.should be_instance_of WebMock::NetConnectNotAllowedError
