@@ -16,7 +16,7 @@ describe FbGraph2::Edge::Feed do
       end
     end
 
-    describe 'feed!' do
+    describe '#feed!' do
       it 'should return FbGraph2::Post with posted params' do
         post = mock_graph :post, 'me/feed', 'success_with_id', access_token: 'token' do
           me.feed! message: 'hello'

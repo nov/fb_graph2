@@ -16,7 +16,7 @@ module FbGraph2
       end
 
       module LikeeContext
-        def initialize(id, attributes)
+        def assign(attributes)
           super
           if attributes.include?(:likes)
             @_cached_likes = Collection.new attributes[:likes]

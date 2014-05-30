@@ -1,7 +1,7 @@
 module FbGraph2
   class Edge
     module Comments
-      def initialize(id, attributes)
+      def assign(attributes)
         super
         if attributes.include?(:comments)
           @_cached_comments = Collection.new attributes[:comments]
