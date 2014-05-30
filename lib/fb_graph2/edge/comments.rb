@@ -1,8 +1,19 @@
 module FbGraph2
   class Edge
     module Comments
+      def initialize(id, attributes)
+        super
+        if attributes.include?(:comments)
+          @_cached_comments = Collection.new attributes[:comments]
+        end
+      end
+
       def comments(params = {})
-        comments = self.edge :comments, params
+        comments = if @_cached_comments.present? && params.blank?
+          @_cached_comments
+        else
+          self.edge :comments, params
+        end
         comments.collect do |comment|
           Comment.new(comment[:id], comment).authenticate self.access_token
         end

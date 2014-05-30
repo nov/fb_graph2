@@ -16,8 +16,19 @@ module FbGraph2
       end
 
       module LikeeContext
+        def initialize(id, attributes)
+          super
+          if attributes.include?(:likes)
+            @_cached_likes = Collection.new attributes[:likes]
+          end
+        end
+
         def likes(params = {})
-          users = self.edge :likes, params
+          users = if @_cached_likes.present? && params.blank?
+            @_cached_likes
+          else
+            self.edge :likes, params
+          end
           users.collect do |user|
             User.new(user[:id], user).authenticate self.access_token
           end

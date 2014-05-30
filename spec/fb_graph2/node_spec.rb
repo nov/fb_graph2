@@ -34,6 +34,14 @@ describe FbGraph2::Node do
       its(:access_token) { should == 'access_token' }
     end
 
+    describe '#destroy' do
+      it 'should call API with DELETE method' do
+        expect do
+          instance.destroy
+        end.to request_to 'identifier', :delete
+      end
+    end
+
     describe '#handle_response' do
       context 'when error' do
         context 'when valid json' do

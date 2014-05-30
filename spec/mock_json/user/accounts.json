@@ -14,7 +14,7 @@
   }, {
     "category": "Non-profit organization",
     "name": "OpenID Foundation Japan",
-    "access_token": "access_token",
+    "access_token": "page_token",
     "perms": ["ADMINISTER", "EDIT_PROFILE", "CREATE_CONTENT", "MODERATE_CONTENT", "CREATE_ADS", "BASIC_ADMIN"],
     "id": "157574337644417"
   }],

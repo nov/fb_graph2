@@ -1,5 +1,8 @@
 module FbGraph2
   class Photo < Node
+    include Edge::Comments
+    include Edge::Likes::LikeeContext
+
     register_attributes(
       raw: [
         :backdated_time_granularity, :height, :icon, :link, :name, :page_story_id, :picture, :position, :source, :width,

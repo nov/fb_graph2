@@ -5,7 +5,15 @@ describe FbGraph2::Edge::Feed do
     let(:me) { FbGraph2::User.me('token') }
 
     describe '#feed' do
-      it :TODO
+      it 'should return an Array of FbGraph2::Post' do
+        posts = mock_graph :get, 'me/feed', 'user/feed', access_token: 'token' do
+          me.feed
+        end
+        posts.should_not be_blank
+        posts.each do |post|
+          post.should be_instance_of FbGraph2::Post
+        end
+      end
     end
 
     describe 'feed!' do
