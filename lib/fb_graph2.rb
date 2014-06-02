@@ -2,12 +2,13 @@ require 'active_support/all'
 require 'rack/oauth2'
 
 module FbGraph2
-  cattr_accessor :api_version, :gem_version, :logger, :debugging, :_http_config_
+  cattr_accessor :api_version, :gem_version, :logger, :debugging, :_http_config_, :object_classes
 
   self.api_version = 'v2.0'
   self.gem_version = File.read(File.join(__dir__, '../VERSION')).delete("\n\r")
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
+  self.object_classes = Array.new
 
   class << self
     def root_url

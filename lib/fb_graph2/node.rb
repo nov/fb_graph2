@@ -4,6 +4,7 @@ module FbGraph2
 
     def self.inherited(klass)
       klass.include AttributeAssigner
+      FbGraph2.object_classes << klass
     end
 
     def initialize(id, attributes = {})
@@ -34,6 +35,12 @@ module FbGraph2
           collection: edge_for(edge, params, options)
         )
       )
+    end
+
+    def edges
+      @edges ||= self.class.included_modules.select do |_module_|
+        _module_.name =~ /FbGraph2::Edge/
+      end.collect(&:instance_methods).sort
     end
 
     def destroy(params = {}, options = {})
