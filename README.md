@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-See [fb_graph2 Wiki](https://github.com/nov/fb_graph/wiki).
+See [fb_graph2 Wiki](https://github.com/nov/fb_graph2/wiki).
 
 ## Contributing
 
