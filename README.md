@@ -1,6 +1,6 @@
 # FbGraph2
 
-TODO: Write a gem description
+Similar to [fb_graph gem](https://github.com/nov/fb_graph), but supports Graph API v2.0+.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+See [fb_graph2 Wiki](https://github.com/nov/fb_graph/wiki).
 
 ## Contributing
 
