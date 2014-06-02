@@ -1,6 +1,22 @@
 module FbGraph2
   class Page < Node
     include Edge::Admins
+    include Edge::Albums
+    include Edge::Blocked
+    include Edge::Events
+    include Edge::Feed
+    include Edge::GlobalBrandChildren
+    include Edge::Links
+    include Edge::Locations
+    include Edge::Milestones
+    include Edge::Offers
+    include Edge::Picture
+    include Edge::Photos
+    include Edge::Posts
+    include Edge::PromotablePosts
+    include Edge::Statuses
+    include Edge::Tagged
+    include Edge::Videos
 
     register_attributes(
       raw: [

@@ -9,8 +9,8 @@ module FbGraph2
           end
         end
 
-        def liked?(page_id, params = {})
-          pages = self.edge :likes, params, edge_scope: page_id
+        def liked?(page, params = {})
+          pages = self.edge :likes, params, edge_scope: page
           pages.present?
         end
       end

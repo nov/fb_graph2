@@ -8,8 +8,8 @@ module FbGraph2
         end
       end
 
-      def admin?(user_id, params = {})
-        users = self.edge :admins, params, edge_scope: user_id
+      def admin?(user, params = {})
+        users = self.edge :admins, params, edge_scope: user
         users.present?
       end
     end

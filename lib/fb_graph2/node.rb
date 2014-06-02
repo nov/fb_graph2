@@ -75,7 +75,7 @@ module FbGraph2
       File.join [
         File.join(FbGraph2.root_url, id.to_s),
         options[:edge],
-        options[:edge_scope].respond_to?(:id) ? options[:edge_scope].id : options[:edge_scope]
+        Util.as_identifier(options[:edge_scope])
       ].compact.collect(&:to_s)
     end
 
