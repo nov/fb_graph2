@@ -36,7 +36,9 @@ module FbGraph2
         :middle_name, :name, :name_format, :political, :quotes, :relationship_status, :religion,
         :timezone, :third_party_id, :verified, :website,
         # NOTE: in family edge context
-        :relationship
+        :relationship,
+        # NOTE: in page admin context
+        :perms, :role
       ],
       time: [:updated_time], # NOTE: undocumented attribute
       date: [:birthday],

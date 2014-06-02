@@ -1,5 +1,7 @@
 module FbGraph2
   class Page < Node
+    include Edge::Admins
+
     register_attributes(
       raw: [
         :about, :attire, :band_members, :booking_agent, :can_post, :category, :checkins, :company_overview,
