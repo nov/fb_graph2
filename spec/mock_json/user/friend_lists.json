@@ -1,0 +1,98 @@
+{
+  "data": [{
+    "id": "10152338362087277",
+    "name": "CyberAgent America",
+    "list_type": "work"
+  }, {
+    "id": "10152338362072277",
+    "name": "Cerego Japan",
+    "list_type": "work"
+  }, {
+    "id": "10152142419302277",
+    "name": "Capy Inc.",
+    "list_type": "work"
+  }, {
+    "id": "10151887848997277",
+    "name": "Cerego Japan",
+    "list_type": "work"
+  }, {
+    "id": "10151870113532277",
+    "name": "Kyoto CtoG.org",
+    "list_type": "work"
+  }, {
+    "id": "10150348660692277",
+    "name": "同志社大学",
+    "list_type": "education"
+  }, {
+    "id": "10150346113542277",
+    "name": "Kawasaki-shi, Kanagawa, Japan Area",
+    "list_type": "current_city"
+  }, {
+    "id": "10150346085662277",
+    "name": "OpenID Foundation",
+    "list_type": "work"
+  }, {
+    "id": "10150346074892277",
+    "name": "OpenID Foundation Japan",
+    "list_type": "work"
+  }, {
+    "id": "10150341935447277",
+    "name": "株式会社ドリコム",
+    "list_type": "work"
+  }, {
+    "id": "10150336745462277",
+    "name": "Kyoto CtoG.org",
+    "list_type": "work"
+  }, {
+    "id": "10150336745457277",
+    "name": "Acquaintances",
+    "list_type": "acquaintances"
+  }, {
+    "id": "10150336744357277",
+    "name": "ドリコム",
+    "list_type": "work"
+  }, {
+    "id": "10150336526382277",
+    "name": "Doshisha University",
+    "list_type": "education"
+  }, {
+    "id": "10150336526227277",
+    "name": "Doshisha High School",
+    "list_type": "education"
+  }, {
+    "id": "10150336526222277",
+    "name": "Cerego Japan",
+    "list_type": "work"
+  }, {
+    "id": "10150336526217277",
+    "name": "Family",
+    "list_type": "family"
+  }, {
+    "id": "10150336526212277",
+    "name": "Close Friends",
+    "list_type": "close_friends"
+  }, {
+    "id": "10150287189437277",
+    "name": "Family",
+    "list_type": "user_created"
+  }, {
+    "id": "494503307276",
+    "name": "OpenStack",
+    "list_type": "user_created"
+  }, {
+    "id": "41968037276",
+    "name": "Doshisha",
+    "list_type": "user_created"
+  }, {
+    "id": "41967672276",
+    "name": "iKnow!",
+    "list_type": "user_created"
+  }, {
+    "id": "41967622276",
+    "name": "Drecom",
+    "list_type": "user_created"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.0/579612276/friendlists?limit=5000&offset=5000&__after_id=enc_AeyvnVCKex4_AhqGX7_QdptE11EjyFPx0CGxMGyRHvxS2SbnqjP7fJD8tL2VFjeodZA"
+  }
+}

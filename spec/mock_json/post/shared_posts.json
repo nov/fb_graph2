@@ -1,0 +1,50 @@
+{
+  "data": [{
+    "id": "689134294485152_695439827187932",
+    "from": {
+      "id": "689134294485152",
+      "name": "Shunya Iriki"
+    },
+    "story": "Shunya Iriki shared a link.",
+    "story_tags": {
+      "0": [{
+        "id": "689134294485152",
+        "name": "Shunya Iriki",
+        "offset": 0,
+        "length": 12,
+        "type": "user"
+      }]
+    },
+    "picture": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCtEdPdezKIoUxo&w=154&h=154&url=http%3A%2F%2Fi.yimg.jp%2Fi%2Fdocs%2Frelease%2Ffbicon.jpg",
+    "link": "http://docs.yahoo.co.jp/docs/info/terms/chapter1.html#cf2nd",
+    "name": "ヤフー株式会社 - サービス利用規約 第1編 基本ガイドライン",
+    "caption": "docs.yahoo.co.jp",
+    "description": "Yahoo! JAPANのサービス利用規約、第1編 基本ガイドラインは当社のサービスをご利用になるすべての方に共通して適用されます。",
+    "icon": "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif",
+    "actions": [{
+      "name": "Comment",
+      "link": "https://www.facebook.com/100001657627507/posts/695439827187932"
+    }, {
+      "name": "Like",
+      "link": "https://www.facebook.com/100001657627507/posts/695439827187932"
+    }],
+    "privacy": {
+      "value": ""
+    },
+    "type": "link",
+    "status_type": "shared_story",
+    "application": {
+      "name": "Facebook for iPhone",
+      "namespace": "fbiphone",
+      "id": "6628568379"
+    },
+    "created_time": "2014-06-02T12:46:26+0000",
+    "updated_time": "2014-06-02T12:46:26+0000"
+  }],
+  "paging": {
+    "cursors": {
+      "after": "Njk1NDM5ODI3MTg3OTMy",
+      "before": "Njk1NDM5ODI3MTg3OTMy"
+    }
+  }
+}

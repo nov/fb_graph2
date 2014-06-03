@@ -23,5 +23,9 @@ module FbGraph2
       super
       # TODO: handle custom attributes.
     end
+
+    def self.app(access_token)
+      new(:app).authenticate access_token
+    end
   end
 end

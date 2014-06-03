@@ -7,6 +7,12 @@ module FbGraph2
           Notification.new notification[:id], notification
         end
       end
+
+      def notification!(params = {})
+        notification = self.post params, edge: :notifications
+        notification.include? :success
+      end
+      alias_method :notify!, :notification!
     end
   end
 end
