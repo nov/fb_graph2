@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe FbGraph2::RequestFilter::Debugger do
-  let(:resource_endpoint) { 'https://graph.facebook.com/matake' }
-  let(:request) { HTTP::Message.new_request(:get, URI.parse(resource_endpoint)) }
+  let(:endpoint) { 'https://graph.facebook.com/matake' }
+  let(:request)  { HTTP::Message.new_request(:get, URI.parse(endpoint)) }
   let(:response) { HTTP::Message.new_response({:hello => 'world'}.to_json) }
   let(:request_filter) { FbGraph2::RequestFilter::Debugger.new }
 
