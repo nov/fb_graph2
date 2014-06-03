@@ -13,7 +13,9 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       super
-      # TODO: handle custom attributes.
+      if attributes.include? :data
+        self.data = attributes[:data]
+      end
     end
   end
 end

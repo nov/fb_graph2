@@ -40,7 +40,7 @@ module FbGraph2
     def initialize(id, attributes = {})
       super
       if attributes.include? :category_list
-        attributes[:category_list].collect do |page_category|
+        self.category_list = attributes[:category_list].collect do |page_category|
           PageCategory.new page_category[:id], page_category
         end
       end

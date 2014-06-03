@@ -14,7 +14,7 @@ describe FbGraph2::User do
     context 'when fetched' do
       it 'should call API' do
         me = mock_graph :get, 'me', 'user/me' do
-          FbGraph2::User.me('token').fetch
+          klass.me('token').fetch
         end
         me.should be_instance_of klass
       end
