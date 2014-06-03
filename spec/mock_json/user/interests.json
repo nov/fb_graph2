@@ -1,0 +1,41 @@
+{
+  "data": [{
+    "category": "Interest",
+    "name": "#idcon 14th ~ BYOResume or DEAD! ~",
+    "created_time": "2012-09-03T17:18:16+0000",
+    "id": "309562105809363"
+  }, {
+    "category": "Interest",
+    "name": "Heroku Meetup #6 Japan Heroku Lab",
+    "created_time": "2012-09-03T03:07:14+0000",
+    "id": "102424793243222"
+  }, {
+    "category": "Interest",
+    "name": "Activity Streams",
+    "created_time": "2011-06-30T22:57:47+0000",
+    "id": "114998808528822"
+  }, {
+    "category": "Company",
+    "name": "Social Web",
+    "created_time": "2011-06-18T02:52:35+0000",
+    "id": "105645299472577"
+  }, {
+    "category": "Interest",
+    "name": "Open ID",
+    "created_time": "2011-01-05T00:21:56+0000",
+    "id": "106260522746492"
+  }, {
+    "category": "Interest",
+    "name": "Open Social",
+    "created_time": "2011-01-05T00:21:52+0000",
+    "id": "107119605991729"
+  }, {
+    "category": "Interest",
+    "name": "OAuth",
+    "created_time": "2010-07-04T06:17:52+0000",
+    "id": "104064209632570"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.0/579612276/interests?limit=25&offset=25&__after_id=enc_AezLYldJHiKEyShbuOdR82cv0TtL4DwoXvFHvxocLB9dyJjlw96DIz3jwBNiERXgDjzAH_sT_ZhHU9QGJNxiOe3P"
+  }
+}
