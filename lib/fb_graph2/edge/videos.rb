@@ -10,7 +10,7 @@ module FbGraph2
       end
 
       def video!(params = {})
-        video = post params, edge: :videos
+        video = self.post params, edge: :videos
         Video.new(video[:id], params.merge(video)).authenticate self.access_token
       end
     end

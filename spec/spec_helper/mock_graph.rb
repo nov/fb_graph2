@@ -50,7 +50,7 @@ module MockGraph
     end
     if options[:params]
       case method
-      when :post, :put
+      when :post, :put, :delete
         request[:body] = options[:params]
       else
         request[:query] = options[:params]

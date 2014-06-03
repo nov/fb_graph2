@@ -1,0 +1,14 @@
+{
+  "data": [{
+    "user": {
+      "id": "10152411392127277",
+      "name": "Nov Matake"
+    },
+    "score": 10,
+    "application": {
+      "name": "gem sample",
+      "namespace": "fbgraphsample",
+      "id": "134145643294322"
+    }
+  }]
+}

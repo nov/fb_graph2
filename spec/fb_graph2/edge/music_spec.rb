@@ -4,7 +4,7 @@ describe FbGraph2::Edge::Music do
   context 'included in User' do
     describe '#music' do
       let(:me) { FbGraph2::User.me('token') }
-      it 'should return an Array of FbGraph2::Page with page token' do
+      it 'should return an Array of FbGraph2::Page' do
         pages = mock_graph :get, 'me/music', 'user/music', access_token: 'token' do
           me.music
         end

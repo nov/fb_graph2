@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe FbGraph2::Edge::FriendLists do
-  context 'included in Post' do
+  context 'included in User' do
     describe '#friend_lists' do
       let(:me) { FbGraph2::User.me('token') }
       it 'should return an Array of FbGraph2::FriendList' do

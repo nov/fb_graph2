@@ -1,0 +1,16 @@
+{
+  "data": [{
+    "name": "OpenID Connect Hackathon",
+    "administrator": true,
+    "bookmark_order": 14,
+    "id": "562322927125681"
+  }, {
+    "name": "OAuth.jp",
+    "administrator": true,
+    "bookmark_order": 12,
+    "id": "343659285716553"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.0/579612276/groups?icon_size=16&limit=5000&offset=5000&__after_id=enc_AeynOYwetNSbegZQTbjirpNPayS9oqujy9wnu0CnNjC7YMl4zxLq-JP--CRz3FX3KWg"
+  }
+}

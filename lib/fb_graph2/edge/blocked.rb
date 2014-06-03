@@ -8,15 +8,20 @@ module FbGraph2
         end
       end
 
+      def blocked?(user, params = {})
+        users = self.edge :blocked, params, edge_scope: user
+        users.present?
+      end
+
       def block!(user, params = {})
         self.post params.merge(
-          user_id: Util.as_identifier(user)
+          user: Util.as_identifier(user)
         ), edge: :blocked
       end
 
       def unblock!(user, params = {})
         self.delete params.merge(
-          user_id: Util.as_identifier(user)
+          user: Util.as_identifier(user)
         ), edge: :blocked
       end
     end

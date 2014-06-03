@@ -22,7 +22,7 @@ describe FbGraph2::Edge::Notifications do
           href: 'href', template: 'template'
         } do
           user.authenticate('app_token').notification! href: 'href', template: 'template'
-        end.should be_true
+        end.should be true
       end
     end
   end

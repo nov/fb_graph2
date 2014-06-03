@@ -1,0 +1,36 @@
+{
+  "data": [{
+    "category": "Interest",
+    "name": "Mobile Hack Tokyo",
+    "created_time": "2012-03-01T00:30:09+0000",
+    "id": "253431701402959"
+  }, {
+    "category": "Software",
+    "name": "Rack::OAuth2",
+    "created_time": "2011-06-23T10:32:47+0000",
+    "id": "141477809244105"
+  }, {
+    "category": "Non-profit organization",
+    "name": "OpenID Foundation Japan",
+    "created_time": "2011-06-23T04:53:40+0000",
+    "id": "157574337644417"
+  }, {
+    "category": "Internet/software",
+    "name": "SocialWeb Japan",
+    "created_time": "2011-04-26T04:54:13+0000",
+    "id": "150730961633"
+  }, {
+    "category": "Community organization",
+    "name": "OAuth.jp",
+    "created_time": "2011-01-05T00:27:02+0000",
+    "id": "140478125968442"
+  }, {
+    "category": "Software",
+    "name": "FbGraph",
+    "created_time": "2010-04-30T06:48:21+0000",
+    "id": "117513961602338"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.0/579612276/activities?limit=25&offset=25&__after_id=enc_AewISXs8Uhe2pwegtVsWC8GFmzAWEKKFzGcJoZ-UJa4MA_wFfCIRKFaQMJkS6U5WTdiSKw3G3EvlyDir1upNCBop"
+  }
+}

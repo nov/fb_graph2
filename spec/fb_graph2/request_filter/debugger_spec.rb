@@ -12,7 +12,7 @@ describe FbGraph2::RequestFilter::Debugger do
         "======= [FbGraph2] API REQUEST STARTED =======",
         request.dump
       ].each do |output|
-        FbGraph2.logger.should_receive(:info).with output
+        expect(FbGraph2.logger).to receive(:info).with output
       end
       request_filter.filter_request(request)
     end
@@ -25,7 +25,7 @@ describe FbGraph2::RequestFilter::Debugger do
         response.dump,
         "======= [FbGraph2] API REQUEST FINISHED ======="
       ].each do |output|
-        FbGraph2.logger.should_receive(:info).with output
+        expect(FbGraph2.logger).to receive(:info).with output
       end
       request_filter.filter_response(request, response)
     end

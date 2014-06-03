@@ -21,7 +21,7 @@ module FbGraph2
 
       def comment!(params = {})
         comment = self.post params, edge: :comments
-        Comment.new(comment[:id], comment.merge(params)).authenticate self.access_token
+        Comment.new(comment[:id], params.merge(comment)).authenticate self.access_token
       end
     end
   end

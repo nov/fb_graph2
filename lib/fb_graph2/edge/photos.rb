@@ -10,7 +10,7 @@ module FbGraph2
       end
 
       def photo!(params = {})
-        photo = post params, edge: :photos
+        photo = self.post params, edge: :photos
         Photo.new(photo[:id], params.merge(photo)).authenticate self.access_token
       end
     end

@@ -1,0 +1,11 @@
+{
+  "data": [{
+    "name": "Nov Matake",
+    "role": "MANAGER",
+    "perms": ["ADMINISTER", "EDIT_PROFILE", "CREATE_CONTENT", "MODERATE_CONTENT", "CREATE_ADS", "BASIC_ADMIN"],
+    "id": "10152411392127277"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.0/140478125968442/admins?limit=5000&offset=5000&__after_id=enc_AewHp5mZW0v4ZorlBTo4lsBccesXKfIJsKvOM-Qb268XDhHwKtZnhOhNwXWSun5KdHE"
+  }
+}

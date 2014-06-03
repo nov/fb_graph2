@@ -21,7 +21,7 @@ describe FbGraph2::Edge::Likes do
         it do
           mock_graph :get, 'me/likes/page_id', 'user/likes', access_token: 'token' do
             me.liked? 'page_id'
-          end.should be_true
+          end.should be true
         end
       end
 
@@ -29,7 +29,7 @@ describe FbGraph2::Edge::Likes do
         it do
           mock_graph :get, 'me/likes/page_id', 'blank_collection', access_token: 'token' do
             me.liked? 'page_id'
-          end.should be_false
+          end.should be false
         end
       end
     end
@@ -80,7 +80,7 @@ describe FbGraph2::Edge::Likes do
       it 'should return true' do
         mock_graph :post, 'post_id/likes', 'true', access_token: 'token' do
           post.like!
-        end.should be_true
+        end.should be true
       end
     end
 
@@ -88,7 +88,7 @@ describe FbGraph2::Edge::Likes do
       it 'should return true' do
         mock_graph :delete, 'post_id/likes', 'true', access_token: 'token' do
           post.unlike!
-        end.should be_true
+        end.should be true
       end
     end
   end

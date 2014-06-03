@@ -7,6 +7,11 @@ module FbGraph2
           Album.new(album[:id], album).authenticate self.access_token
         end
       end
+
+      def album!(params = {})
+        album = self.post params, edge: :albums
+        Album.new(album[:id], params.merge(album)).authenticate self.access_token
+      end
     end
   end
 end

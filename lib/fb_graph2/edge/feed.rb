@@ -9,7 +9,7 @@ module FbGraph2
       end
 
       def feed!(params = {})
-        post = post params, edge: :feed
+        post = self.post params, edge: :feed
         Post.new(post[:id], params.merge(post)).authenticate self.access_token
       end
     end
