@@ -1,5 +1,5 @@
 module FbGraph2
-  class Application < Node
+  class App < Node
     register_attributes(
       raw: [
         :id, :android_key_hash, :app_domains, :auth_dialog_data_help_url, :auth_dialog_headline,

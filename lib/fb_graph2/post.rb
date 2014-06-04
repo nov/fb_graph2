@@ -10,7 +10,7 @@ module FbGraph2
         :source, :story
       ],
       time: [:created_time, :updated_time],
-      application: [:application],
+      app: [:application],
       page: [:place],
       profile: [:from],
       profiles: [:to, :with_tags],

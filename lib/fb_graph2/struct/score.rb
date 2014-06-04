@@ -4,7 +4,7 @@ module FbGraph2
       register_attributes(
         raw: [:score],
         user: [:user],
-        application: [:application]
+        app: [:application]
       )
     end
   end

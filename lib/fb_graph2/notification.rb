@@ -5,7 +5,7 @@ module FbGraph2
       time: [:created_time, :updated_time],
       profile: [:from],
       user: [:to],
-      application: [:application],
+      app: [:application],
       custom: [:object]
     )
 

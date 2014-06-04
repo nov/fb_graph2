@@ -36,8 +36,8 @@ module FbGraph2
               end
             when :album
               Album.new raw[:id], raw
-            when :application
-              Application.new raw[:id], raw
+            when :app
+              App.new raw[:id], raw
             when :comment
               Comment.new raw[:id], raw
             when :group
@@ -78,7 +78,7 @@ module FbGraph2
 
     def as_profile(raw)
       klass = if raw.include?(:namespace)
-        Application
+        App
       elsif raw.include?(:category)
         Page
       else

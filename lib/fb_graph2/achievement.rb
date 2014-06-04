@@ -6,7 +6,7 @@ module FbGraph2
     register_attributes(
       raw: [:type, :no_feed_story],
       time: [:publish_time],
-      application: [:application],
+      app: [:application],
       user: [:from],
       custom: [:data]
     )

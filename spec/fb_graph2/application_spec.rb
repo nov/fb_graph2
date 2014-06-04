@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe FbGraph2::User do
   describe '.app' do
-    let(:klass) { FbGraph2::Application }
+    let(:klass) { FbGraph2::App }
 
     it 'should not call API' do
       expect do
@@ -13,7 +13,7 @@ describe FbGraph2::User do
 
     context 'when fetched' do
       it 'should call API' do
-        app = mock_graph :get, 'app', 'application/app' do
+        app = mock_graph :get, 'app', 'app/app' do
           klass.app('token').fetch
         end
         app.should be_instance_of klass
