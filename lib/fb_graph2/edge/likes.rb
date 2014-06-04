@@ -18,7 +18,7 @@ module FbGraph2
       module LikeeContext
         def assign(attributes)
           super
-          if attributes.include?(:likes)
+          if attributes.include? :likes
             @_cached_likes = Collection.new attributes[:likes]
           end
         end

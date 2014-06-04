@@ -46,6 +46,10 @@ module FbGraph2
               Collection.new(raw).collect do |_raw_|
                 Struct::ImageSource.new _raw_
               end
+            when :messages
+              Collection.new(raw).collect do |_raw_|
+                Message.new _raw_[:id], _raw_
+              end
             when :page
               Page.new raw[:id], raw
             when :pages
@@ -77,12 +81,15 @@ module FbGraph2
     private
 
     def as_profile(raw)
-      klass = if raw.include?(:namespace)
+      klass = if raw.include? :namespace
         App
-      elsif raw.include?(:category)
+      elsif raw.include? :category
         Page
+      elsif raw.include? :start_time
+        Event
+      elsif raw.include? :owner
+        Group
       else
-        # TODO: needs to handle Event and Group here.
         User
       end
       klass.new raw[:id], raw

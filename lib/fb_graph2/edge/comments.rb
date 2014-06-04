@@ -3,7 +3,7 @@ module FbGraph2
     module Comments
       def assign(attributes)
         super
-        if attributes.include?(:comments)
+        if attributes.include? :comments
           @_cached_comments = Collection.new attributes[:comments]
         end
       end

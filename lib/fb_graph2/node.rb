@@ -43,6 +43,10 @@ module FbGraph2
       end.collect(&:instance_methods).sort
     end
 
+    def update(params = {}, options = {})
+      post params, options
+    end
+
     def destroy(params = {}, options = {})
       delete params, options
     end
