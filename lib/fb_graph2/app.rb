@@ -1,5 +1,18 @@
 module FbGraph2
   class App < Node
+    include Edge::Achievements
+    include Edge::AppLinkHosts
+    include Edge::AppEventTypes
+    include Edge::Banned
+    include Edge::Groups
+    include Edge::Picture
+    include Edge::Roles
+    include Edge::Scores
+    include Edge::StaticResources
+    include Edge::Subscriptions
+    include Edge::TestUsers
+    include Edge::Translations
+
     register_attributes(
       raw: [
         :id, :android_key_hash, :app_domains, :auth_dialog_data_help_url, :auth_dialog_headline,

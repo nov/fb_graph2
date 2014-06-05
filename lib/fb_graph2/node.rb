@@ -10,6 +10,7 @@ module FbGraph2
     def initialize(id, attributes = {})
       self.id = id
       assign attributes if respond_to? :assign
+      authenticate attributes[:access_token] if attributes.include? :access_token
     end
 
     def authenticate(access_token)
