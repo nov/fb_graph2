@@ -24,6 +24,7 @@ module FbGraph2
     include Edge::Music
     include Edge::Notifications
     include Edge::Outbox
+    include Edge::PaymentTransactions
     include Edge::Permissions
     include Edge::Picture
     include Edge::Photos
@@ -32,6 +33,7 @@ module FbGraph2
     include Edge::Scores
     include Edge::Statuses
     include Edge::Tagged
+    include Edge::TaggedPlaces
     include Edge::Television
     include Edge::Videos
 
