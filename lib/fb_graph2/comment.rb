@@ -1,5 +1,8 @@
 module FbGraph2
   class Comment < Node
+    include Edge::Comments
+    include Edge::Likes::LikeeContext
+
     register_attributes(
       raw: [:can_comment, :can_remove, :comment_count, :like_count, :message, :user_likes],
       time: [:created_time],

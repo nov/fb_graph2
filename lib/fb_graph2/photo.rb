@@ -2,6 +2,7 @@ module FbGraph2
   class Photo < Node
     include Edge::Comments
     include Edge::Likes::LikeeContext
+    include Edge::Tags
 
     register_attributes(
       raw: [

@@ -4,6 +4,8 @@ module FbGraph2
     include Edge::Achievements
     include Edge::Activities
     include Edge::Albums
+    include Edge::Applications
+    include Edge::AppRequests
     include Edge::Books
     include Edge::Events
     include Edge::Family
@@ -13,6 +15,7 @@ module FbGraph2
     include Edge::Games
     include Edge::Groups
     include Edge::Home
+    include Edge::Inbox
     include Edge::Interests
     include Edge::InvitableFriends
     include Edge::Likes::LikerContext
@@ -20,6 +23,7 @@ module FbGraph2
     include Edge::Movies
     include Edge::Music
     include Edge::Notifications
+    include Edge::Outbox
     include Edge::Permissions
     include Edge::Picture
     include Edge::Photos
@@ -39,13 +43,24 @@ module FbGraph2
         # NOTE: in family edge context
         :relationship,
         # NOTE: in page admin context
-        :perms, :role
+        :perms, :role,
+        # NOTE: in photo tags context
+        :x, :y
       ],
-      time: [:updated_time], # NOTE: undocumented attribute
+      time: [
+        # NOTE: undocumented attribute
+        :updated_time,
+        # NOTE: in photo tags context
+        :created_time
+      ],
       date: [:birthday],
       page: [:hometown, :location],
       pages: [:favorite_athletes, :favorite_teams, :inspirational_people, :languages],
-      user: [:significant_other],
+      user: [
+        :significant_other,
+        # NOTE: in photo tags context
+        :tagging_user
+      ],
       photo: [:cover],
       custom: [:age_range, :context, :currency, :education, :work]
     )

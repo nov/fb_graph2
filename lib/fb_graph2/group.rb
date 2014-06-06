@@ -1,5 +1,11 @@
 module FbGraph2
   class Group < Node
+    include Edge::Docs
+    include Edge::Events
+    include Edge::Feed
+    include Edge::Files
+    include Edge::Members
+
     register_attributes(
       raw: [
         :description, :email, :icon, :link, :name, :privacy,
