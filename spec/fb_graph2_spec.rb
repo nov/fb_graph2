@@ -7,7 +7,7 @@ describe FbGraph2 do
   context 'as default' do
     its(:logger) { should be_a Logger }
     its(:api_version) { should == 'v2.0' }
-    its(:root_url) { should == 'https://graph.facebook.com/v2.0' }
+    its(:root_url) { should == 'https://graph.facebook.com' }
     its(:object_classes) { should contain_exactly *FbGraph2::Node.subclasses }
     it { should_not be_debugging }
   end
@@ -19,7 +19,7 @@ describe FbGraph2 do
 
   describe '.api_version' do
     before { FbGraph2.api_version = 'v2.x' }
-    its(:root_url) { should == 'https://graph.facebook.com/v2.x' }
+    its(:api_version) { should == 'v2.x' }
   end
 
   describe '.http_client' do

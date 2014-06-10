@@ -4,7 +4,7 @@ module MockGraph
   def mock_graph(method, path, response_path, options = {})
     stub_request(
       method,
-      endpoint_for(path)
+      endpoint_for(path, options)
     ).with(
       request_for(method, options)
     ).to_return(
@@ -26,18 +26,21 @@ module MockGraph
     response_for(response_path)[:body].read
   end
 
-  def request_to(path, method = :get)
+  def request_to(path, method = :get, options = {})
     raise_error { |e|
       e.should be_instance_of WebMock::NetConnectNotAllowedError
       e.message.should include("Unregistered request: #{method.to_s.upcase}")
-      e.message.should include(endpoint_for path)
+      e.message.should include(endpoint_for path, options)
     }
   end
 
   private
 
-  def endpoint_for(path)
-    File.join(FbGraph2.root_url, path)
+  def endpoint_for(path, options = {})
+    api_version = unless options[:api_version_in_path]
+      options[:api_version] || FbGraph2.api_version
+    end
+    File.join FbGraph2.root_url, api_version.to_s, path
   end
 
   def request_for(method, options = {})

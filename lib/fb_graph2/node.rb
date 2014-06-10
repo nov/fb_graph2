@@ -18,13 +18,13 @@ module FbGraph2
       self
     end
 
-    def fetch(params = {})
-      attributes = get params
+    def fetch(params = {}, options = {})
+      attributes = get params, options
       self.class.new(attributes[:id], attributes).authenticate access_token
     end
 
-    def self.fetch(identifier, params = {})
-      new(identifier).fetch params
+    def self.fetch(identifier, params = {}, options = {})
+      new(identifier).fetch params, options
     end
 
     def edge(edge, params = {}, options = {})
@@ -85,7 +85,11 @@ module FbGraph2
 
     def build_endpoint(options = {})
       File.join [
-        File.join(FbGraph2.root_url, id.to_s),
+        File.join(
+          FbGraph2.root_url,
+          options[:api_version] || FbGraph2.api_version,
+          id.to_s
+        ),
         options[:edge],
         Util.as_identifier(options[:edge_scope])
       ].compact.collect(&:to_s)

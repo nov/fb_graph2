@@ -4,6 +4,58 @@ describe FbGraph2::Node do
   let(:klass) { FbGraph2::Node }
   let(:instance) { klass.new 'identifier' }
 
+  describe 'API Versioning' do
+    before do
+      @original = FbGraph2.api_version
+    end
+
+    after do
+      FbGraph2.api_version = @original
+    end
+
+    describe 'via global setting' do
+      before do
+        FbGraph2.api_version = 'v2.x'
+      end
+
+      describe '#fetch' do
+        it 'should use api_version globally' do
+          expect do
+            instance.fetch
+          end.to request_to 'v2.x/identifier', :get, api_version_in_path: true
+        end
+      end
+
+      describe '#edge' do
+        it 'should use api_version globally' do
+          expect do
+            instance.edge :foo
+          end.to request_to 'v2.x/identifier/foo', :get, api_version_in_path: true
+        end
+      end
+    end
+
+    describe 'via per-call option' do
+      describe '#fetch' do
+        it 'should use api_version locally' do
+          expect do
+            instance.fetch nil, api_version: 'v2.y'
+          end.to request_to 'v2.y/identifier', :get, api_version_in_path: true
+          FbGraph2.api_version.should == @original
+        end
+      end
+
+      describe '#edge' do
+        it 'should use api_version locally' do
+          expect do
+            instance.edge :foo, {}, api_version: 'v2.y'
+          end.to request_to 'v2.y/identifier/foo', :get, api_version_in_path: true
+          FbGraph2.api_version.should == @original
+        end
+      end
+    end
+  end
+
   context 'class' do
     subject { klass }
     it { should_not respond_to :register_attributes }
@@ -14,7 +66,7 @@ describe FbGraph2::Node do
       it 'should call API' do
         expect do
           klass.fetch 'foo'
-        end.to request_to '/foo'
+        end.to request_to 'foo'
       end
     end
   end
