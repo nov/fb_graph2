@@ -17,11 +17,6 @@ describe FbGraph2 do
     it { should be_debugging }
   end
 
-  describe '.api_version' do
-    before { FbGraph2.api_version = 'v2.x' }
-    its(:api_version) { should == 'v2.x' }
-  end
-
   describe '.http_client' do
     context 'with http_config' do
       before do
