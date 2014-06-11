@@ -24,6 +24,8 @@ module FbGraph2
             value = case type
             when :raw
               raw
+            when :int_flag
+              raw == 1
             when :date
               Date.strptime raw, '%m/%d/%Y' rescue raw
             when :time

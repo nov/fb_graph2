@@ -1,21 +1,17 @@
 module FbGraph2
   class Struct
-    class Context < Struct
-      register_attributes(
-        custom: [:mutual_friends, :mutual_likes]
-      )
+    module Context
+      class UserContext < Struct
+        register_attributes(
+          users: [:mutual_friends],
+          pages: [:mutual_likes]
+        )
+      end
 
-      def initialize(attributes = {})
-        if attributes.include? :mutual_friends
-          self.mutual_friends = Collection.new(attributes[:mutual_friends]).collect do |user|
-            User.new user[:id], user
-          end
-        end
-        if attributes.include? :mutual_likes
-          self.mutual_likes = Collection.new(attributes[:mutual_likes]).collect do |page|
-            Page.new page[:id], page
-          end
-        end
+      class PageContext < Struct
+        register_attributes(
+          users: [:friends_who_like, :friends_tagged_at, :music_listen_friends, :video_watch_friends]
+        )
       end
     end
   end

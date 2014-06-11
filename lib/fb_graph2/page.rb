@@ -21,9 +21,9 @@ module FbGraph2
     register_attributes(
       raw: [
         :about, :attire, :band_members, :booking_agent, :can_post, :category, :checkins, :company_overview,
-        :current_location, :description, :directed_by, :founded, :general_info, :general_manager, :hometown,
+        :current_location, :description, :directed_by, :founded, :general_info, :general_manager, :hometown, :hours,
         :is_permanently_closed, :is_published, :is_unclaimed, :likes, :link, :mission, :name, :phone, :press_contact,
-        :products, :talking_about_count, :username, :website, :were_here_count,
+        :price_range, :products, :talking_about_count, :username, :website, :were_here_count,
         # NOTE: only within /:user_id/accounts context
         :perms
       ],
@@ -40,8 +40,9 @@ module FbGraph2
         :with
       ],
       custom: [
-        :category_list, :context, :hours, :location, :parking, :price_range, :restaurant_services,
-        :restaurant_specialties
+        :category_list, :context, :location, :parking, :restaurant_services, :restaurant_specialties,
+        # NOTE: undocumented
+        :payment_options
       ]
     )
 
@@ -52,7 +53,24 @@ module FbGraph2
           PageCategory.new page_category[:id], page_category
         end
       end
-      # TODO: handle other custom attributes.
+      if attributes.include? :context
+        self.context = Struct::Context::PageContext.new attributes[:context]
+      end
+      if attributes.include? :location
+        self.location = Struct::Location.new attributes[:location]
+      end
+      if attributes.include? :parking
+        self.parking = Struct::Parking.new attributes[:parking]
+      end
+      if attributes.include? :restaurant_services
+        self.restaurant_services = Struct::RestaurantServices.new attributes[:restaurant_services]
+      end
+      if attributes.include? :restaurant_specialties
+        self.restaurant_specialties = Struct::RestaurantSpecialties.new attributes[:restaurant_specialties]
+      end
+      if attributes.include? :payment_options
+        self.payment_options = Struct::PaymentOptions.new attributes[:payment_options]
+      end
     end
   end
 end
