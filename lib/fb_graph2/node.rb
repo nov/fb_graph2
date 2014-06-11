@@ -107,12 +107,10 @@ module FbGraph2
       when 200...300
         _response_
       else
-        # TODO: better exception structure
-        raise response.body
+        raise Exception.detect(response.status, _response_, response.headers)
       end
     rescue MultiJson::DecodeError
-      # TODO: better exception structure
-      raise response.body
+      raise Exception.new(response.status, "Unparsable Response: #{response.body}")
     end
   end
 end

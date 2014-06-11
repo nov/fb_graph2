@@ -23,7 +23,10 @@ module MockGraph
   end
 
   def mock_json(response_path)
-    response_for(response_path)[:body].read
+    content = response_for(response_path)[:body].read
+    MultiJson.load(content).with_indifferent_access
+  rescue MultiJson::DecodeError
+    content
   end
 
   def request_to(path, method = :get, options = {})

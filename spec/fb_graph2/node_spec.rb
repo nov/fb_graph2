@@ -103,8 +103,8 @@ describe FbGraph2::Node do
                 instance.fetch
               end
             end.to raise_error { |e|
-              e.should be_instance_of RuntimeError
-              e.message.should == mock_json('error/400/2500')
+              e.should be_instance_of FbGraph2::Exception::BadRequest
+              e.message.should == mock_json('error/400/2500')[:error][:message]
             }
           end
         end
@@ -116,8 +116,8 @@ describe FbGraph2::Node do
                 instance.fetch
               end
             end.to raise_error { |e|
-              e.should be_instance_of RuntimeError
-              e.message.should == mock_json('error/invalid_format')
+              e.should be_instance_of FbGraph2::Exception
+              e.message.should == "Unparsable Response: #{mock_json('error/invalid_format')}"
             }
           end
         end

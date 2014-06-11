@@ -25,8 +25,6 @@ module FbGraph2
           Struct::AppLink::Native::Android
         when :windows_phone
           Struct::AppLink::Native::WindowsPhone
-        else
-          raise 'Unknown AppLink Type'
         end
         klass.new link
       end
