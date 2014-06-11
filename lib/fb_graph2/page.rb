@@ -27,10 +27,18 @@ module FbGraph2
         # NOTE: only within /:user_id/accounts context
         :perms
       ],
-      time: [:created_time],
+      time: [
+        :created_time,
+        # NOTE: only as Struct::Work#start_date
+        :start_date, :end_date
+      ],
       date: [:birthday],
       page: [:best_page],
       photo: [:cover],
+      users: [
+        # NOTE: only as Struct::Work#projects
+        :with
+      ],
       custom: [
         :category_list, :context, :hours, :location, :parking, :price_range, :restaurant_services,
         :restaurant_specialties

@@ -70,6 +70,21 @@ module FbGraph2
     def initialize(id, attributes = {})
       super
       # TODO: handle custom attributes.
+      if attributes.include? :age_range
+        self.age_range = Struct::AgeRange.new attributes[:age_range]
+      end
+      if attributes.include? :context
+        self.context = Struct::Context.new attributes[:context]
+      end
+      if attributes.include? :currency
+        self.currency = Struct::Currency.new attributes[:currency]
+      end
+      if attributes.include? :education
+        self.education = Struct::Education.new attributes[:education]
+      end
+      if attributes.include? :work
+        self.work = Struct::Work.new attributes[:work]
+      end
     end
 
     def self.me(access_token)
