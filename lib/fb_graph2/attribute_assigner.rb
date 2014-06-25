@@ -70,6 +70,8 @@ module FbGraph2
               end
             when :user
               User.new raw[:id], raw
+            when :custom
+              raw
             else
               # NOTE: handle these attributes in each class
               next
