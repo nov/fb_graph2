@@ -7,7 +7,8 @@ module FbGraph2
     register_attributes(
       raw: [
         :caption, :description, :icon, :is_hidden, :link, :message, :name, :object_id, :picture,
-        :source, :story
+        :source, :story, 
+        :privacy, :shares, :status_type, :type
       ],
       time: [:created_time, :updated_time],
       app: [:application],
@@ -16,7 +17,7 @@ module FbGraph2
       profiles: [:to, :with_tags],
       actions: [:actions],
       custom: [
-        :message_tags, :privacy, :properties, :shares, :status_type, :type
+        :message_tags, :properties      
       ]
     )
 
@@ -27,24 +28,11 @@ module FbGraph2
           Struct::MessageTag.new message_tag
         end
       end
-      if attributes.include? :privacy
-        self.privacy = Struct::Privacy.new attributes[:privacy]
-      end
       if attributes.include? :properties
         self.properties = attributes[:properties].collect do |property|
           Struct::Property.new property
         end
       end
-      if attributes.include? :shares
-        self.shares = Struct::Share.new attributes[:shares]
-      end
-      if attributes.include? :status_type
-        self.status_type = Struct::StatusType.new attributes[:status_type]
-      end
-      if attributes.include? :type
-        self.type = Struct::Type.new attributes[:type]
-      end
-
     end
   end
 end
