@@ -2,7 +2,7 @@ require 'active_support/all'
 require 'rack/oauth2'
 
 module FbGraph2
-  cattr_accessor :root_url, :api_version, :gem_version, :logger, :debugging, :_http_config_, :object_classes
+  mattr_accessor :root_url, :api_version, :gem_version, :logger, :debugging, :_http_config_, :object_classes
 
   self.root_url = 'https://graph.facebook.com'
   self.api_version = 'v2.0'
