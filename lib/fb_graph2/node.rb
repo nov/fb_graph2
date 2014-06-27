@@ -3,7 +3,7 @@ module FbGraph2
     attr_accessor :id, :access_token, :raw_attributes
 
     def self.inherited(klass)
-      klass.include AttributeAssigner
+      klass.send :include, AttributeAssigner
       FbGraph2.object_classes << klass
     end
 
