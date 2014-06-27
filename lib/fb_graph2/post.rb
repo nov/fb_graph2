@@ -22,7 +22,29 @@ module FbGraph2
 
     def initialize(id, attributes = {})
       super
-      # TODO: handle custom attributes.
+      if attributes.include? :message_tags
+        self.message_tags =  attributes[:message_tags].collect do |message_tag|
+          Struct::MessageTag.new message_tag
+        end
+      end
+      if attributes.include? :privacy
+        self.privacy = Struct::Privacy.new attributes[:privacy]
+      end
+      if attributes.include? :properties
+        self.properties = attributes[:properties].collect do |property|
+          Struct::Property.new property
+        end
+      end
+      if attributes.include? :shares
+        self.shares = Struct::Share.new attributes[:shares]
+      end
+      if attributes.include? :status_type
+        self.status_type = Struct::StatusType.new attributes[:status_type]
+      end
+      if attributes.include? :type
+        self.type = Struct::Type.new attributes[:type]
+      end
+
     end
   end
 end
