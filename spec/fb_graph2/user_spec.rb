@@ -18,6 +18,19 @@ describe FbGraph2::User do
         end
         me.should be_instance_of klass
       end
+
+      context 'when ext attrs included' do
+        it 'should success to parse' do
+          me = mock_graph :get, 'me', 'user/me_with_ext_attrs' do
+            klass.me('token').fetch
+          end
+          [
+            :age_range, :context, :currency, :devices
+          ].each do |key|
+            me.send(key).should be_present
+          end
+        end
+      end
     end
   end
 end
