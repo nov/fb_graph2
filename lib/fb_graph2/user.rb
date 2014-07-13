@@ -39,7 +39,7 @@ module FbGraph2
 
     register_attributes(
       raw: [
-        :about, :bio, :email, :first_name, :gender, :installed, :is_verified, :link, :locale,
+        :about, :bio, :email, :first_name, :last_name, :gender, :installed, :is_verified, :link, :locale,
         :middle_name, :name, :name_format, :political, :quotes, :relationship_status, :religion,
         :timezone, :third_party_id, :verified, :website,
         # NOTE: in family edge context
