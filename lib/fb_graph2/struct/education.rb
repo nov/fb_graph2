@@ -4,7 +4,7 @@ module FbGraph2
       register_attributes(
         raw: [:type],
         page: [:school, :year],
-        pages: [:concentration]
+        pages: [:classes, :concentration]
       )
     end
   end

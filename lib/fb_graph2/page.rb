@@ -36,7 +36,7 @@ module FbGraph2
       page: [:best_page],
       photo: [:cover],
       users: [
-        # NOTE: only as Struct::Work#projects
+        # NOTE: only as Struct::Education#classes and Struct::Work#projects
         :with
       ],
       custom: [
