@@ -96,7 +96,14 @@ module FbGraph2
     end
 
     def build_params(params = {})
-      params.present? ? params : nil
+      if params.present?
+        if params.include? :fields
+          params[:fields] = Array(params[:fields]).join(',')
+        end
+        params
+      else
+        nil
+      end
     end
 
     def handle_response
