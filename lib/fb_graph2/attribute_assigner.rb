@@ -29,7 +29,7 @@ module FbGraph2
             when :date
               Date.strptime raw, '%m/%d/%Y' rescue raw
             when :time
-              Time.parse raw
+              Time.parse raw rescue raw
             when :timestamp
               Time.at raw
             when :actions

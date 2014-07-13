@@ -39,7 +39,7 @@ module FbGraph2
 
     register_attributes(
       raw: [
-        :about, :bio, :email, :first_name, :last_name, :gender, :installed, :is_verified, :link, :locale,
+        :about, :bio, :email, :first_name, :gender, :installed, :is_verified, :last_name, :link, :locale,
         :middle_name, :name, :name_format, :political, :quotes, :relationship_status, :religion,
         :timezone, :third_party_id, :verified, :website,
         # NOTE: in family edge context
@@ -64,7 +64,7 @@ module FbGraph2
         :tagging_user
       ],
       photo: [:cover],
-      custom: [:age_range, :context, :currency, :education, :work]
+      custom: [:age_range, :context, :currency, :devices, :education, :work]
     )
 
     def initialize(id, attributes = {})
@@ -78,11 +78,20 @@ module FbGraph2
       if attributes.include? :currency
         self.currency = Struct::Currency.new attributes[:currency]
       end
+      if attributes.include? :devices
+        self.devices = attributes[:devices].collect do |device|
+          Struct::Device.new device
+        end
+      end
       if attributes.include? :education
-        self.education = Struct::Education.new attributes[:education]
+        self.education = attributes[:education].collect do |education|
+          Struct::Education.new education
+        end
       end
       if attributes.include? :work
-        self.work = Struct::Work.new attributes[:work]
+        self.work = attributes[:work].collect do |work|
+          Struct::Work.new work
+        end
       end
     end
 
