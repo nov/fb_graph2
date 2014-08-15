@@ -112,7 +112,11 @@ module FbGraph2
       _response_ = _response_.with_indifferent_access if _response_.respond_to? :with_indifferent_access
       case response.status
       when 200...300
-        _response_
+        if _response_.respond_to?(:include?) && _response_.include?(:success)
+          _response_[:success]
+        else
+          _response_
+        end
       else
         raise Exception.detect(response.status, _response_, response.headers)
       end
