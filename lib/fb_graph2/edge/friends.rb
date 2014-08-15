@@ -7,6 +7,11 @@ module FbGraph2
           User.new(user[:id], user).authenticate self.access_token
         end
       end
+
+      def friend?(user, params = {})
+        users = self.edge :friends, params, edge_scope: user
+        users.present?
+      end
     end
   end
 end

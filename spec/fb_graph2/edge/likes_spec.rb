@@ -18,7 +18,7 @@ describe FbGraph2::Edge::Likes do
     end
 
     describe '#liked?' do
-      context 'liked' do
+      context 'when liked' do
         it do
           mock_graph :get, 'me/likes/page_id', 'user/likes', access_token: 'token' do
             me.liked? 'page_id'
