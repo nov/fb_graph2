@@ -1,0 +1,27 @@
+{
+  "data": [{
+    "id": "AVm6afobc20T0wATmCYRk_CNymo_44MQW8yMBwpgDFAQ18iF9feZpDEDmwfmcjSBSSuYkFfD5fx77g_uJRF0fmQ7AR2kObX8biP4wzN7UMpbYQ",
+    "name": "Shingo Yamanaka",
+    "picture": {
+      "data": {
+        "is_silhouette": false,
+        "url": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/t1.0-1/c0.15.85.85/s50x50/1468668_10152037195781416_2050550170_s.jpg"
+      }
+    }
+  }, {
+    "id": "AVnJiIlmAtrWJ106ErRPlLZNy8_Hd4mfmuQBrbGm4tuFS_ENvyYdVxTwgesXE5Wp2ICtxcPHzkA4Y4BJAWwJqyUie2ZDKQeKn9mnjPCVAUr8Lg",
+    "name": "Hayashi Tatsuya",
+    "picture": {
+      "data": {
+        "is_silhouette": false,
+        "url": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/t1.0-1/c79.38.479.479/s50x50/388771_10150501378984825_523522119_n.jpg"
+      }
+    }
+  }],
+  "paging": {
+    "cursors": {
+      "before": "QVZra09GaExkNndsM1J5eVpuQ2dWS1hLV3FBb0dqRTh3dC1PVXJIZE8ya0JzbV9kUDZXcWZEdUtUZFNHejcxeGlWZ3JjZjZjdkIwMWdtSWtHZGpGVE8wTWZ5cUdNUm5NWWw3c2hSTEtPZ19ySmc=",
+      "after": "QVZrdlNsUHItNExPY1JIUVdlZ3BDZlFCTHFFMUl6YVhnVG5fRVlBLVV0QThUMFBmRnZNQkVQWVg2VkRBQWhRa3RyemVQUFhscWxBVERYZU15SExZbG50Z0RTQUtfVno5VjRjT3VUb2J5NGg1VFE="
+    }
+  }
+}
