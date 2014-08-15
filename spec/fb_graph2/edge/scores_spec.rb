@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Scores do
         scores = mock_graph :get, 'me/scores', 'user/scores', access_token: 'token' do
           me.scores
         end
+        scores.should be_instance_of FbGraph2::Edge
         scores.should_not be_blank
         scores.each do |score|
           score.should be_instance_of FbGraph2::Struct::Score

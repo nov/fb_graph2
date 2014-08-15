@@ -11,6 +11,7 @@ describe FbGraph2::Edge::Blocked do
         users = mock_graph :get, 'page_id/blocked', 'page/blocked', access_token: 'page_token' do
           page.blocked
         end
+        users.should be_instance_of FbGraph2::Edge
         users.should_not be_blank
         users.each do |user|
           user.should be_instance_of FbGraph2::User

@@ -3,7 +3,7 @@ module FbGraph2
     module Groups
       def groups(params = {})
         groups = self.edge :groups, params
-        groups.collect do |group|
+        groups.collect! do |group|
           Group.new(group[:id], group).authenticate self.access_token
         end
       end

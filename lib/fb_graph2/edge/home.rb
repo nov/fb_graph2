@@ -3,7 +3,7 @@ module FbGraph2
     module Home
       def home(params = {})
         posts = self.edge :home, params
-        posts.collect do |post|
+        posts.collect! do |post|
           Post.new(post[:id], post).authenticate self.access_token
         end
       end

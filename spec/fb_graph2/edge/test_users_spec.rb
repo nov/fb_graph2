@@ -8,6 +8,7 @@ describe FbGraph2::Edge::TestUsers do
         users = mock_graph :get, 'app/accounts/test-users', 'app/test_users', access_token: 'app_token' do
           app.test_users
         end
+        users.should be_instance_of FbGraph2::Edge
         users.should_not be_blank
         users.each do |user|
           user.should be_instance_of FbGraph2::User

@@ -17,7 +17,7 @@ module FbGraph2
     private
 
     def collect_links(attributes, link_attr)
-      Collection.new(attributes[link_attr]).collect do |link|
+      Collection.new(attributes[link_attr]).collect! do |link|
         klass = case link_attr
         when :ios, :iphone, :ipad
           Struct::AppLink::Native::IOS

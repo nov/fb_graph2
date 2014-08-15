@@ -14,7 +14,7 @@ module FbGraph2
         else
           self.edge :comments, params
         end
-        comments.collect do |comment|
+        comments.collect! do |comment|
           Comment.new(comment[:id], comment).authenticate self.access_token
         end
       end

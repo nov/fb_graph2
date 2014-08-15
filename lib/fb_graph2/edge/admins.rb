@@ -3,7 +3,7 @@ module FbGraph2
     module Admins
       def admins(params = {})
         users = self.edge :admins, params
-        users.collect do |user|
+        users.collect! do |user|
           User.new(user[:id], user).authenticate self.access_token
         end
       end

@@ -3,7 +3,7 @@ module FbGraph2
     module Albums
       def albums(params = {})
         albums = self.edge :albums, params
-        albums.collect do |album|
+        albums.collect! do |album|
           Album.new(album[:id], album).authenticate self.access_token
         end
       end

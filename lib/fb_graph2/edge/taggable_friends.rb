@@ -3,7 +3,7 @@ module FbGraph2
     module TaggableFriends
       def taggable_friends(params = {})
         taggable_friends = self.edge :taggable_friends, params
-        taggable_friends.collect do |friend|
+        taggable_friends.collect! do |friend|
           Struct::Friend.new friend
         end
       end

@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Music do
         pages = mock_graph :get, 'me/music', 'user/music', access_token: 'token' do
           me.music
         end
+        pages.should be_instance_of FbGraph2::Edge
         pages.should_not be_blank
         pages.each do |page|
           page.should be_instance_of FbGraph2::Page

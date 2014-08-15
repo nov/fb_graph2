@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Notifications do
         notifications = mock_graph :get, 'me/notifications', 'user/notifications', access_token: 'token' do
           me.notifications
         end
+        notifications.should be_instance_of FbGraph2::Edge
         notifications.should_not be_blank
         notifications.each do |notification|
           notification.should be_instance_of FbGraph2::Notification

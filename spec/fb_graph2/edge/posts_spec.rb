@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Posts do
         posts = mock_graph :get, 'me/posts', 'user/posts', access_token: 'token' do
           me.posts
         end
+        posts.should be_instance_of FbGraph2::Edge
         posts.should_not be_blank
         posts.each do |post|
           post.should be_instance_of FbGraph2::Post

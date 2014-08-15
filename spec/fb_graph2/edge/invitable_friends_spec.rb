@@ -8,6 +8,7 @@ describe FbGraph2::Edge::InvitableFriends do
         users = mock_graph :get, 'me/invitable_friends', 'user/invitable_friends', access_token: 'token' do
           me.invitable_friends
         end
+        users.should be_instance_of FbGraph2::Edge
         users.should_not be_blank
         users.each do |user|
           user.should be_instance_of FbGraph2::Struct::Friend

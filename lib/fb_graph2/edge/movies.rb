@@ -3,7 +3,7 @@ module FbGraph2
     module Movies
       def movies(params = {})
         pages = self.edge :movies, params
-        pages.collect do |page|
+        pages.collect! do |page|
           Page.new(page[:id], page).authenticate self.access_token
         end
       end

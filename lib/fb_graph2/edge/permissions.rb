@@ -3,7 +3,7 @@ module FbGraph2
     module Permissions
       def permissions(params = {})
         permissions = self.edge :permissions, params
-        permissions.collect do |permission|
+        permissions.collect! do |permission|
           Struct::Permission.new permission
         end
       end

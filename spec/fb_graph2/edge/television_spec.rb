@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Television do
         pages = mock_graph :get, 'me/television', 'user/television', access_token: 'token' do
           me.television
         end
+        pages.should be_instance_of FbGraph2::Edge
         pages.should_not be_blank
         pages.each do |page|
           page.should be_instance_of FbGraph2::Page

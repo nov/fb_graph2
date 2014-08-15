@@ -3,7 +3,7 @@ module FbGraph2
     module Friends
       def friends(params = {})
         users = self.edge :friends, params
-        users.collect do |user|
+        users.collect! do |user|
           User.new(user[:id], user).authenticate self.access_token
         end
       end

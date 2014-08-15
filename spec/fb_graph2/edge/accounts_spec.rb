@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Accounts do
         accounts = mock_graph :get, 'me/accounts', 'user/accounts', access_token: 'token' do
           me.accounts
         end
+        accounts.should be_instance_of FbGraph2::Edge
         accounts.should_not be_blank
         accounts.each do |account|
           account.should be_instance_of FbGraph2::Page

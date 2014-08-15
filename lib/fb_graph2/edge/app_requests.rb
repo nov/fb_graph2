@@ -3,7 +3,7 @@ module FbGraph2
     module AppRequests
       def app_requests(params = {})
         requests = self.edge :apprequests, params
-        requests.collect do |request|
+        requests.collect! do |request|
           Request.new(request[:id], request).authenticate self.access_token
         end
       end

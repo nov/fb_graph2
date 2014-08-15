@@ -3,7 +3,7 @@ module FbGraph2
     module Scores
       def scores(params = {})
         scores = self.edge :scores, params
-        scores.collect do |score|
+        scores.collect! do |score|
           Struct::Score.new score
         end
       end

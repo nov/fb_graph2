@@ -8,6 +8,7 @@ describe FbGraph2::Edge::PromotablePosts do
         posts = mock_graph :get, 'page_id/promotable_posts', 'page/promotable_posts', access_token: 'page_token' do
           page.promotable_posts
         end
+        posts.should be_instance_of FbGraph2::Edge
         posts.should_not be_blank
         posts.each do |post|
           post.should be_instance_of FbGraph2::Post

@@ -4,7 +4,7 @@ module FbGraph2
       module LikerContext
         def likes(params = {})
           pages = self.edge :likes, params
-          pages.collect do |page|
+          pages.collect! do |page|
             Page.new(page[:id], page).authenticate self.access_token
           end
         end
@@ -29,7 +29,7 @@ module FbGraph2
           else
             self.edge :likes, params
           end
-          users.collect do |user|
+          users.collect! do |user|
             User.new(user[:id], user).authenticate self.access_token
           end
         end

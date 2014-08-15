@@ -3,7 +3,7 @@ module FbGraph2
     module Docs
       def docs(params = {})
         docs = self.edge :docs, params
-        docs.collect do |doc|
+        docs.collect! do |doc|
           GroupDoc.new(doc[:id], doc).authenticate self.access_token
         end
       end

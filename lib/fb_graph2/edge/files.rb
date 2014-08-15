@@ -3,7 +3,7 @@ module FbGraph2
     module Files
       def files(params = {})
         files = self.edge :files, params
-        files.collect do |file|
+        files.collect! do |file|
           Struct::GroupFile.new file
         end
       end

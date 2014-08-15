@@ -3,7 +3,7 @@ module FbGraph2
     module FriendLists
       def friend_lists(params = {})
         friend_lists = self.edge :friendlists, params
-        friend_lists.collect do |friend_list|
+        friend_lists.collect! do |friend_list|
           FriendList.new(friend_list[:id], friend_list).authenticate self.access_token
         end
       end

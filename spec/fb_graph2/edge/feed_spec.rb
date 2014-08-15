@@ -9,6 +9,7 @@ describe FbGraph2::Edge::Feed do
         posts = mock_graph :get, 'me/feed', 'user/feed', access_token: 'token' do
           me.feed
         end
+        posts.should be_instance_of FbGraph2::Edge
         posts.should_not be_blank
         posts.each do |post|
           post.should be_instance_of FbGraph2::Post

@@ -3,7 +3,7 @@ module FbGraph2
     module Tagged
       def tagged(params = {})
         posts = self.edge :tagged, params
-        posts.collect do |post|
+        posts.collect! do |post|
           Post.new(post[:id], post).authenticate self.access_token
         end
       end

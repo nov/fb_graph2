@@ -3,7 +3,7 @@ module FbGraph2
     module Accounts
       def accounts(params = {})
         pages = self.edge :accounts, params
-        pages.collect do |page|
+        pages.collect! do |page|
           Page.new(page[:id], page).authenticate page[:access_token]
         end
       end

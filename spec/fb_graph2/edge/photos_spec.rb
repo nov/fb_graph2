@@ -9,6 +9,7 @@ describe FbGraph2::Edge::Photos do
         photos = mock_graph :get, 'me/photos', 'user/photos', access_token: 'token' do
           me.photos
         end
+        photos.should be_instance_of FbGraph2::Edge
         photos.should_not be_blank
         photos.each do |photo|
           photo.should be_instance_of FbGraph2::Photo

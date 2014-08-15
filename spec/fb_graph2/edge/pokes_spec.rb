@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Pokes do
         pokes = mock_graph :get, 'me/pokes', 'user/pokes', access_token: 'token' do
           me.pokes
         end
+        pokes.should be_instance_of FbGraph2::Edge
         pokes.should_not be_blank
         pokes.each do |poke|
           poke.should be_instance_of FbGraph2::Struct::Poke

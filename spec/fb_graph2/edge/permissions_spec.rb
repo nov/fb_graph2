@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Permissions do
         permissions = mock_graph :get, 'me/permissions', 'user/permissions', access_token: 'token' do
           me.permissions
         end
+        permissions.should be_instance_of FbGraph2::Edge
         permissions.should_not be_blank
         permissions.each do |permission|
           permission.should be_instance_of FbGraph2::Struct::Permission

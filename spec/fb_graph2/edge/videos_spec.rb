@@ -9,6 +9,7 @@ describe FbGraph2::Edge::Videos do
         videos = mock_graph :get, 'me/videos', 'user/videos', access_token: 'token' do
           me.videos
         end
+        videos.should be_instance_of FbGraph2::Edge
         videos.should_not be_blank
         videos.each do |video|
           video.should be_instance_of FbGraph2::Video

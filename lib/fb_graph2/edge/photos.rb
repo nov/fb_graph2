@@ -4,7 +4,7 @@ module FbGraph2
       def photos(*args)
         params = args.extract_options!
         photos = self.edge :photos, params, edge_scope: args.first
-        photos.collect do |photo|
+        photos.collect! do |photo|
           Photo.new(photo[:id], photo).authenticate self.access_token
         end
       end

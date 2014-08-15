@@ -34,6 +34,7 @@ describe FbGraph2::Edge::Comments do
           comments = mock_graph :get, 'post_id/comments', 'post/comments', access_token: 'token' do
             post.comments
           end
+          comments.should be_instance_of FbGraph2::Edge
           comments.should_not be_blank
           comments.each do |comment|
             comment.should be_instance_of FbGraph2::Comment

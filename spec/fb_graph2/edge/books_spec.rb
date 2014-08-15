@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Books do
         pages = mock_graph :get, 'me/books', 'user/books', access_token: 'token' do
           me.books
         end
+        pages.should be_instance_of FbGraph2::Edge
         pages.should_not be_blank
         pages.each do |page|
           page.should be_instance_of FbGraph2::Page

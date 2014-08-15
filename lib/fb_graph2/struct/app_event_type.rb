@@ -15,7 +15,7 @@ module FbGraph2
       def initialize(attributes = {})
         super
         if attributes.include? :parameters
-          self.parameters = Collection.new(attributes[:parameters]).collect do |param|
+          self.parameters = Collection.new(attributes[:parameters]).collect! do |param|
             Parameter.new param
           end
         end

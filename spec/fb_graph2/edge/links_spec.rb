@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Links do
         posts = mock_graph :get, 'me/links', 'user/links', access_token: 'token' do
           me.links
         end
+        posts.should be_instance_of FbGraph2::Edge
         posts.should_not be_blank
         posts.each do |post|
           post.should be_instance_of FbGraph2::Post

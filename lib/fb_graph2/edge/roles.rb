@@ -3,7 +3,7 @@ module FbGraph2
     module Roles
       def roles(params = {})
         roles = self.edge :roles, params
-        roles.collect do |role|
+        roles.collect! do |role|
           Struct::Role.new role
         end
       end

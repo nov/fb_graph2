@@ -8,6 +8,7 @@ describe FbGraph2::Edge::Events do
         events = mock_graph :get, 'me/events', 'user/events', access_token: 'token' do
           me.events
         end
+        events.should be_instance_of FbGraph2::Edge
         events.should_not be_blank
         events.each do |event|
           event.should be_instance_of FbGraph2::Event

@@ -3,7 +3,7 @@ module FbGraph2
     module TestUsers
       def test_users(params = {})
         users = self.edge :accounts, params, edge_scope: :'test-users'
-        users.collect do |user|
+        users.collect! do |user|
           User.new(user[:id], user)
         end
       end

@@ -8,6 +8,7 @@ describe FbGraph2::Edge::TaggableFriends do
         users = mock_graph :get, 'me/taggable_friends', 'user/taggable_friends', access_token: 'token' do
           me.taggable_friends
         end
+        users.should be_instance_of FbGraph2::Edge
         users.should_not be_blank
         users.each do |user|
           user.should be_instance_of FbGraph2::Struct::Friend

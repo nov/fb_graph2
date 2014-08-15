@@ -3,7 +3,7 @@ module FbGraph2
     module Books
       def books(params = {})
         pages = self.edge :books, params
-        pages.collect do |page|
+        pages.collect! do |page|
           Page.new(page[:id], page).authenticate self.access_token
         end
       end

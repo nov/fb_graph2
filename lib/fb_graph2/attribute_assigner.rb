@@ -33,7 +33,7 @@ module FbGraph2
             when :timestamp
               Time.at raw
             when :actions
-              Collection.new(raw).collect do |_raw_|
+              Collection.new(raw).collect! do |_raw_|
                 Struct::Action.new _raw_
               end
             when :album
@@ -45,17 +45,17 @@ module FbGraph2
             when :group
               Group.new raw[:id], raw
             when :image_sources
-              Collection.new(raw).collect do |_raw_|
+              Collection.new(raw).collect! do |_raw_|
                 Struct::ImageSource.new _raw_
               end
             when :messages
-              Collection.new(raw).collect do |_raw_|
+              Collection.new(raw).collect! do |_raw_|
                 Message.new _raw_[:id], _raw_
               end
             when :page
               Page.new raw[:id], raw
             when :pages
-              Collection.new(raw).collect do |_raw_|
+              Collection.new(raw).collect! do |_raw_|
                 Page.new _raw_[:id], _raw_
               end
             when :photo
@@ -65,13 +65,13 @@ module FbGraph2
             when :profile
               as_profile raw
             when :profiles
-              Collection.new(raw).collect do |_raw_|
+              Collection.new(raw).collect! do |_raw_|
                 as_profile _raw_
               end
             when :user
               User.new raw[:id], raw
             when :users
-              Collection.new(raw).collect do |_raw_|
+              Collection.new(raw).collect! do |_raw_|
                 User.new _raw_[:id], _raw_
               end
             else

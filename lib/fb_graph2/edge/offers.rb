@@ -3,7 +3,7 @@ module FbGraph2
     module Offers
       def offers(params = {})
         offers = self.edge :offers, params
-        offers.collect do |offer|
+        offers.collect! do |offer|
           Offer.new(offer[:id], offer).authenticate self.access_token
         end
       end

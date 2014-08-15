@@ -3,7 +3,7 @@ module FbGraph2
     module Outbox
       def outbox(params = {})
         threads = self.edge :outbox, params
-        threads.collect do |thread|
+        threads.collect! do |thread|
           Thread.new(thread[:id], thread).authenticate self.access_token
         end
       end

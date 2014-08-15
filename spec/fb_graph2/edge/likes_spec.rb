@@ -9,6 +9,7 @@ describe FbGraph2::Edge::Likes do
         likes = mock_graph :get, 'me/likes', 'user/likes', access_token: 'token' do
           me.likes
         end
+        likes.should be_instance_of FbGraph2::Edge
         likes.should_not be_blank
         likes.each do |like|
           like.should be_instance_of FbGraph2::Page
@@ -68,6 +69,7 @@ describe FbGraph2::Edge::Likes do
           likes = mock_graph :get, 'post_id/likes', 'post/likes', access_token: 'token' do
             post.likes
           end
+          likes.should be_instance_of FbGraph2::Edge
           likes.should_not be_blank
           likes.each do |like|
             like.should be_instance_of FbGraph2::User

@@ -4,7 +4,7 @@ module FbGraph2
       def videos(*args)
         params = args.extract_options!
         videos = self.edge :videos, params, edge_scope: args.first
-        videos.collect do |video|
+        videos.collect! do |video|
           Video.new(video[:id], video).authenticate self.access_token
         end
       end

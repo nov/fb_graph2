@@ -8,6 +8,7 @@ describe FbGraph2::Edge::SharedPosts do
         posts = mock_graph :get, 'post_id/sharedposts', 'post/shared_posts', access_token: 'token' do
           post.shared_posts
         end
+        posts.should be_instance_of FbGraph2::Edge
         posts.should_not be_blank
         posts.each do |post|
           post.should be_instance_of FbGraph2::Post

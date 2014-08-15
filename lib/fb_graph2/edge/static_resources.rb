@@ -3,7 +3,7 @@ module FbGraph2
     module StaticResources
       def static_resources(params = {})
         resources = self.edge :staticresources, params
-        resources.collect do |resource|
+        resources.collect! do |resource|
           Struct::StaticResource.new resource
         end
       end
