@@ -41,6 +41,16 @@ describe FbGraph2::Edge::Comments do
           end
         end
       end
+
+      context 'when summary requested' do
+        it 'should be summarized' do
+          comments = mock_graph :get, 'post_id/comments', 'post/comments_with_summary', access_token: 'token' do
+            post.comments
+          end
+          comments.order.should == 'chronological'
+          comments.total_count.should == 4
+        end
+      end
     end
 
     describe '#comment!' do
