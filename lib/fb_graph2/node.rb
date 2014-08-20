@@ -41,7 +41,7 @@ module FbGraph2
     def edges
       @edges ||= self.class.included_modules.select do |_module_|
         _module_.name =~ /FbGraph2::Edge/
-      end.collect(&:instance_methods).sort
+      end.collect(&:instance_methods).flatten.sort
     end
 
     def update(params = {}, options = {})

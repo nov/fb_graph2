@@ -44,8 +44,10 @@ describe FbGraph2::Edge::Comments do
 
       context 'when summary requested' do
         it 'should be summarized' do
-          comments = mock_graph :get, 'post_id/comments', 'post/comments_with_summary', access_token: 'token' do
-            post.comments
+          comments = mock_graph :get, 'post_id/comments', 'post/comments_with_summary', access_token: 'token', params: {
+            summary: true
+          } do
+            post.comments(summary: true)
           end
           comments.order.should == 'chronological'
           comments.total_count.should == 4

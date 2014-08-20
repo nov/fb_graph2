@@ -86,11 +86,63 @@ describe FbGraph2::Node do
       its(:access_token) { should == 'access_token' }
     end
 
+    describe '#edges' do
+      it do
+        instance.edges.should be_blank
+      end
+
+      context 'for FbGraph2::User' do
+        it do
+          FbGraph2::User.me('token').edges.should include :accounts, :feed, :feed!
+        end
+      end
+    end
+
+    describe '#update' do
+      it 'should call API with POST method' do
+        expect do
+          instance.update
+        end.to request_to 'identifier', :post
+      end
+    end
+
     describe '#destroy' do
       it 'should call API with DELETE method' do
         expect do
           instance.destroy
         end.to request_to 'identifier', :delete
+      end
+    end
+
+    describe '#build_params' do
+      context 'when an array of strings given' do
+        it 'should join fields option' do
+          mock_graph :get, 'identifier', 'user/me', params: {
+            fields: 'f1,f2,f3'
+          } do
+            instance.fetch(fields: ['f1', 'f2', 'f3'])
+          end
+        end
+      end
+
+      context 'when an array of symbols given' do
+        it 'should join fields option' do
+          mock_graph :get, 'identifier', 'user/me', params: {
+            fields: 'f1,f2,f3'
+          } do
+            instance.fetch(fields: [:f1, :f2, :f3])
+          end
+        end
+      end
+
+      context 'when a string given' do
+        it 'should join fields option' do
+          mock_graph :get, 'identifier', 'user/me', params: {
+            fields: 'f1,f2,f3'
+          } do
+            instance.fetch(fields: 'f1,f2,f3')
+          end
+        end
       end
     end
 
