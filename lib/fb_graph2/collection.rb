@@ -34,8 +34,6 @@ module FbGraph2
     end
 
     def summarize(summary)
-      # NOTE: notifications edge returns "summary" as a blank Array.
-      summary = Hash(summary)
       self.order       = summary.try(:[], :order)
       self.total_count = summary.try(:[], :total_count)
     end
