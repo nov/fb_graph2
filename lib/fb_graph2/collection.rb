@@ -1,6 +1,6 @@
 module FbGraph2
   class Collection < Array
-    attr_accessor :before, :after, :next, :previous, :order, :total_count
+    attr_accessor :before, :after, :next, :previous, :order, :total_count, :summary
 
     def initialize(collection = [])
       collection = normalize collection
@@ -34,6 +34,7 @@ module FbGraph2
     end
 
     def summarize(summary)
+      self.summary     = summary
       self.order       = summary.try(:[], :order)
       self.total_count = summary.try(:[], :total_count)
     end
