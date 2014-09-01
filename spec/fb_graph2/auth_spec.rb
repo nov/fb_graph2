@@ -21,5 +21,18 @@ describe FbGraph2::Auth do
         access_token.should be_instance_of Rack::OAuth2::AccessToken::Legacy
       end
     end
+
+    context 'when error occured' do
+      it do
+        expect do
+          mock_graph :post, 'oauth/access_token', 'error/400/191', status: [400, 'Bad Request'], disable_api_versioning: true do
+            instance.authorization_code = 'auth_code'
+            instance.access_token!
+          end
+        end.to raise_error(FbGraph2::Exception) do |e|
+          e.message.should == 'Missing redirect_uri parameter.'
+        end
+      end
+    end
   end
 end

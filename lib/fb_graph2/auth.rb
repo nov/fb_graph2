@@ -27,7 +27,7 @@ module FbGraph2
         client_auth_method: :body
       )
     rescue Rack::OAuth2::Client::Error => e
-      raise Exception.detect_from_status(e.status).new(e.message)
+      raise Exception.detect(e.status, e.response)
     end
   end
 end
