@@ -1,0 +1,17 @@
+{
+  "data": [{
+    "name": "Akira  Otaishi",
+    "rsvp_status": "attending",
+    "id": "553375548107883"
+  }, {
+    "name": "Shin-ichiro Kagaya",
+    "rsvp_status": "attending",
+    "id": "241546062702044"
+  }],
+  "paging": {
+    "cursors": {
+      "after": "TVRBd01EQXdNRFl6TWpjME1qSTBPakUwTVRBMU1UQTJNREE2TVRZMU1EZzBPRGsyT0RRNE5UZ3g=",
+      "before": "TVRBd01EQXpNRFl6TWpjM01qTXhPakUwTVRBMU1UQTJNREE2TVRjMk9UQTRNVE0xTmpnM09UWXg="
+    }
+  }
+}
