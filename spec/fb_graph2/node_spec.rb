@@ -22,7 +22,7 @@ describe FbGraph2::Node do
         it 'should use api_version globally' do
           expect do
             instance.fetch
-          end.to request_to 'v2.x/identifier', :get, api_version_in_path: true
+          end.to request_to 'v2.x/identifier', :get, disable_api_versioning: true
         end
       end
 
@@ -30,7 +30,7 @@ describe FbGraph2::Node do
         it 'should use api_version globally' do
           expect do
             instance.edge :foo
-          end.to request_to 'v2.x/identifier/foo', :get, api_version_in_path: true
+          end.to request_to 'v2.x/identifier/foo', :get, disable_api_versioning: true
         end
       end
     end
@@ -40,7 +40,7 @@ describe FbGraph2::Node do
         it 'should use api_version locally' do
           expect do
             instance.fetch nil, api_version: 'v2.y'
-          end.to request_to 'v2.y/identifier', :get, api_version_in_path: true
+          end.to request_to 'v2.y/identifier', :get, disable_api_versioning: true
           FbGraph2.api_version.should == @original
         end
       end
@@ -49,7 +49,7 @@ describe FbGraph2::Node do
         it 'should use api_version locally' do
           expect do
             instance.edge :foo, {}, api_version: 'v2.y'
-          end.to request_to 'v2.y/identifier/foo', :get, api_version_in_path: true
+          end.to request_to 'v2.y/identifier/foo', :get, disable_api_versioning: true
           FbGraph2.api_version.should == @original
         end
       end

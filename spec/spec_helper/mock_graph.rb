@@ -14,7 +14,7 @@ module MockGraph
       response = yield
       a_request(
         method,
-        endpoint_for(path)
+        endpoint_for(path, options)
       ).with(
         request_for(method, options)
       ).should have_been_made.once
@@ -40,7 +40,7 @@ module MockGraph
   private
 
   def endpoint_for(path, options = {})
-    api_version = unless options[:api_version_in_path]
+    api_version = unless options[:disable_api_versioning]
       options[:api_version] || FbGraph2.api_version
     end
     File.join FbGraph2.root_url, api_version.to_s, path
