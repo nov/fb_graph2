@@ -24,37 +24,37 @@ describe FbGraph2::Page do
     describe '#parking' do
       subject { page.parking }
       [:street, :lot, :valet].each do |key|
-        its(key) { should == false }
+        its(key) { should be false }
       end
     end
 
     describe '#restaurant_services' do
       subject { page.restaurant_services }
       [:kids, :delivery, :catering, :waiter, :outdoor, :takeout].each do |key|
-        its(key) { should == false }
+        its(key) { should be false }
       end
       [:groups, :reserve, :walkins].each do |key|
-        its(key) { should == true }
+        its(key) { should be true }
       end
     end
 
     describe '#restaurant_specialties' do
       subject { page.restaurant_specialties }
       [:coffee, :drinks, :breakfast, :lunch].each do |key|
-        its(key) { should == false }
+        its(key) { should be false }
       end
       [:dinner].each do |key|
-        its(key) { should == true }
+        its(key) { should be true }
       end
     end
 
     describe '#payment_options' do
       subject { page.payment_options }
       [:cash_only, :discover].each do |key|
-        its(key) { should == false }
+        its(key) { should be false }
       end
       [:amex, :mastercard, :visa].each do |key|
-        its(key) { should == true }
+        its(key) { should be true }
       end
     end
   end

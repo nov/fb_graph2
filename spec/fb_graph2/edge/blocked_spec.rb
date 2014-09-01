@@ -4,7 +4,7 @@ describe FbGraph2::Edge::Blocked do
   context 'included in Page' do
     let(:page)    { FbGraph2::Page.new('page_id').authenticate('page_token') }
     let(:user_id) { 'user_id' }
-    let(:user)    { FbGraph2::Page.new(user_id) }
+    let(:user)    { FbGraph2::User.new(user_id) }
 
     describe '#blocked' do
       it 'should return an Array of FbGraph2::User' do

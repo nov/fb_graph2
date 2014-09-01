@@ -1,0 +1,10 @@
+{
+  "data": [{
+    "app_id": "210798282372757",
+    "user": "579612276",
+    "role": "administrators"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.1/210798282372757/roles?limit=5000&offset=5000&__after_id=enc_AezKeljwOb-ajJmD2AAQnxKG4ppLUt__oG9ScW9Um9PcjIxWf1zs1-LbrM8skz4rDAVCAQxs3SO_-GeS6OnwPJNA"
+  }
+}
