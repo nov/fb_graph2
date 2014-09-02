@@ -1,7 +1,7 @@
 module FbGraph2
   class Edge < Collection
     attr_accessor :owner, :edge, :params, :options, :collection
-    delegate :order, :total_count, to: :collection
+    delegate :summary, :total_count, to: :collection
 
     def initialize(owner, edge, params = {}, options = {})
       self.owner = owner

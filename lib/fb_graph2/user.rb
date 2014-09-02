@@ -47,6 +47,8 @@ module FbGraph2
         :relationship,
         # NOTE: in page admin context
         :perms, :role,
+        # NOTE: in group context
+        :administrator,
         # NOTE: in photo tags context
         :x, :y
       ],

@@ -1,6 +1,6 @@
 module FbGraph2
   class Collection < Array
-    attr_accessor :before, :after, :next, :previous, :order, :total_count, :summary
+    attr_accessor :before, :after, :next, :previous, :total_count, :summary
 
     def initialize(collection = [])
       collection = normalize collection
@@ -35,8 +35,10 @@ module FbGraph2
 
     def summarize(summary)
       self.summary     = summary
-      self.order       = summary.try(:[], :order)
       self.total_count = summary.try(:[], :total_count)
+      if summary.try(:[], :updated_time)
+        self.summary[:updated_time] = Time.parse summary[:updated_time]
+      end
     end
 
     def params_in(url)

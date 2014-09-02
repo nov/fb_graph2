@@ -49,7 +49,7 @@ describe FbGraph2::Edge::Comments do
           } do
             post.comments(summary: true)
           end
-          comments.order.should == 'chronological'
+          comments.summary.should include order: 'chronological', total_count: 4
           comments.total_count.should == 4
         end
       end

@@ -39,7 +39,7 @@
     "unread": 1
   }],
   "paging": {
-    "previous": "https://graph.facebook.com/v2.1/579612276/notifications?limit=5000&since=1409272999&__paging_token=enc_Aewp7NBZ5fIN12MTyeJziuFNDceCydTGsvVqg-hwrjPZBCnWi-W_fjsS1bNaXkZ9K-tS8wFhFQw4pOajivn20h3c",
-    "next": "https://graph.facebook.com/v2.1/579612276/notifications?limit=5000&until=1408919679&__paging_token=enc_Aey6fAeKsVGCSCKsplC0g1FGjchGgmGajndTVwb-tzE0q7A8nT6C_1iVdwBRzXWdt3zKHh3yOjq6caxNtsTrD58s"
+    "previous": "https://graph.facebook.com/v2.1/579612276/notifications?limit=5000&since=1409272999&__paging_token=***",
+    "next": "https://graph.facebook.com/v2.1/579612276/notifications?limit=5000&until=1408919679&__paging_token=***"
   }
 }

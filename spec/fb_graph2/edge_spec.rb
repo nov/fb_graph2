@@ -16,7 +16,7 @@ describe FbGraph2::Edge do
 
   describe 'summary' do
     subject { comments }
-    its(:order) { should == 'chronological' }
+    its(:summary) { should include order: 'chronological', total_count: 4 }
     its(:total_count) { should == 4 }
   end
 
