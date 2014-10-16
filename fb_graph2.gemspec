@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|gem|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_runtime_dependency 'httpclient', '>= 2.3'
+  gem.add_runtime_dependency 'httpclient', '>= 2.4'
   gem.add_runtime_dependency 'rack-oauth2', '>= 1.0'
   gem.add_runtime_dependency 'multi_json'
   gem.add_runtime_dependency 'activesupport', '>= 3.2'
