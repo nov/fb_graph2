@@ -8,6 +8,18 @@ module FbGraph2
             Struct::Role.new role
           end
         end
+
+        def role!(user, params = {})
+          self.post params.merge(
+            user: Util.as_identifier(user)
+          ), edge: :roles
+        end
+
+        def unrole!(user, params = {})
+          self.post params.merge(
+            user: Util.as_identifier(user)
+          ), edge: :roles
+        end
       end
 
       module PageContext
