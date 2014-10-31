@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.email         = ['nov@matake.jp']
   gem.summary       = %q{Facebook Graph API v2.0 Wrapper in Ruby}
   gem.description   = %q{Facebook Graph API v2.0 Wrapper in Ruby}
-  gem.homepage      = 'https://github.com/fb_graph2'
+  gem.homepage      = 'https://github.com/nov/fb_graph2'
   gem.license       = 'MIT'
 
   gem.files         = `git ls-files -z`.split("\x0")
