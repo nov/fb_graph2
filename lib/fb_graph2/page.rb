@@ -21,9 +21,10 @@ module FbGraph2
     register_attributes(
       raw: [
         :about, :attire, :band_members, :booking_agent, :can_post, :category, :checkins, :company_overview,
-        :current_location, :description, :directed_by, :founded, :general_info, :general_manager, :hometown, :hours,
-        :is_permanently_closed, :is_published, :is_unclaimed, :likes, :link, :mission, :name, :phone, :press_contact,
-        :price_range, :products, :talking_about_count, :username, :website, :were_here_count,
+        :current_location, :description, :directed_by, :founded, :general_info, :general_manager, :global_brand_page_name,
+        :hometown, :hours, :impressum, :is_permanently_closed, :is_published, :is_unclaimed, :likes, :link, :mission, :name,
+        :name_with_location_descriptor, :phone, :press_contact, :price_range, :products, :talking_about_count, :username,
+        :website, :were_here_count,
         # NOTE: only within /:user_id/accounts context
         :perms
       ],
@@ -33,7 +34,7 @@ module FbGraph2
         :start_date, :end_date
       ],
       date: [:birthday],
-      page: [:best_page],
+      page: [:best_page, :global_brand_parent_page],
       photo: [:cover],
       users: [
         # NOTE: only as Struct::Education#classes and Struct::Work#projects
