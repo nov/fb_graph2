@@ -42,7 +42,7 @@ module FbGraph2
       raw: [
         :about, :bio, :email, :first_name, :gender, :installed, :is_verified, :last_name, :link, :locale,
         :middle_name, :name, :name_format, :political, :quotes, :relationship_status, :religion,
-        :timezone, :third_party_id, :verified, :website,
+        :timezone, :third_party_id, :token_for_business, :verified, :website,
         # NOTE: in family edge context
         :relationship,
         # NOTE: in page admin context
