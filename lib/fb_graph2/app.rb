@@ -7,7 +7,7 @@ module FbGraph2
     include Edge::Groups
     include Edge::Permissions
     include Edge::Picture
-    include Edge::Roles
+    include Edge::Roles::AppContext
     include Edge::Scores
     include Edge::StaticResources
     include Edge::Subscriptions
