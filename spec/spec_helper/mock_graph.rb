@@ -54,13 +54,12 @@ module MockGraph
         authorization: "Bearer #{options[:access_token]}"
       }
     end
-    if options[:params]
-      case method
-      when :post, :put, :delete
-        request[:body] = options[:params]
-      else
-        request[:query] = options[:params]
-      end
+    params = options.try(:[], :params) || {}
+    case method
+    when :post, :put, :delete
+      request[:body] = params
+    else
+      request[:query] = params
     end
     request
   end
