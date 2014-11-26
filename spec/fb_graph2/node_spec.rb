@@ -61,14 +61,6 @@ describe FbGraph2::Node do
     it { should_not respond_to :register_attributes }
     it { should_not respond_to :registered_attributes }
     it { should_not respond_to :registered_attributes= }
-
-    describe '.fetch' do
-      it 'should call API' do
-        expect do
-          klass.fetch 'foo'
-        end.to request_to 'foo'
-      end
-    end
   end
 
   context 'instance' do

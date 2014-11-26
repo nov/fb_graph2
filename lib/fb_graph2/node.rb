@@ -23,10 +23,6 @@ module FbGraph2
       self.class.new(attributes[:id], attributes).authenticate access_token
     end
 
-    def self.fetch(identifier, params = {}, options = {})
-      new(identifier).fetch params, options
-    end
-
     def edge(edge, params = {}, options = {})
       Edge.new(
         self,

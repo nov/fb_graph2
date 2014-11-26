@@ -29,5 +29,13 @@ module FbGraph2
     rescue Rack::OAuth2::Client::Error => e
       raise Exception.detect(e.status, e.response)
     end
+
+    def debug_token!(input_token)
+      debug_token = DebugToken.new
+      debug_token.authenticate access_token!
+      debug_token.fetch(
+        input_token: input_token.to_s
+      )
+    end
   end
 end
