@@ -22,6 +22,58 @@ describe FbGraph2::Auth do
       end
     end
 
+    describe '#debug_token!' do
+      before do
+        mock_graph :post, 'oauth/access_token', 'token_response', params: {
+          grant_type: 'client_credentials',
+          client_id: 'client_id',
+          client_secret: 'client_secret'
+        }, disable_api_versioning: true
+      end
+
+      context 'when user_token given' do
+        subject do
+          mock_graph :get, 'debug_token', 'token_metadata/user_token', params: {
+            input_token: 'user_token'
+          } do
+            instance.debug_token! 'user_token'
+          end
+        end
+        it { should be_instance_of FbGraph2::TokenMetadata }
+        its(:app) { should be_instance_of FbGraph2::App }
+        its(:user) { should be_instance_of FbGraph2::User }
+        its(:page) { should be_nil }
+      end
+
+      context 'when app_token given' do
+        subject do
+          mock_graph :get, 'debug_token', 'token_metadata/app_token', params: {
+            input_token: 'app_token'
+          } do
+            instance.debug_token! 'app_token'
+          end
+        end
+        it { should be_instance_of FbGraph2::TokenMetadata }
+        its(:app) { should be_instance_of FbGraph2::App }
+        its(:user) { should be_nil }
+        its(:page) { should be_nil }
+      end
+
+      context 'when page_token given' do
+        subject do
+          mock_graph :get, 'debug_token', 'token_metadata/page_token', params: {
+            input_token: 'page_token'
+          } do
+            instance.debug_token! 'page_token'
+          end
+        end
+        it { should be_instance_of FbGraph2::TokenMetadata }
+        its(:app) { should be_instance_of FbGraph2::App }
+        its(:user) { should be_instance_of FbGraph2::User }
+        its(:page) { should be_instance_of FbGraph2::Page }
+      end
+    end
+
     context 'when error occured' do
       it do
         expect do

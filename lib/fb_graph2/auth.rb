@@ -31,9 +31,9 @@ module FbGraph2
     end
 
     def debug_token!(input_token)
-      debug_token = DebugToken.new
-      debug_token.authenticate access_token!
-      debug_token.fetch(
+      token_metadata = TokenMetadata.new
+      token_metadata.authenticate access_token!
+      token_metadata.fetch(
         input_token: input_token.to_s
       )
     end
