@@ -21,6 +21,11 @@ module FbGraph2
       end
     end
 
+    def fetch(params = {}, options = {})
+      attributes = get params, options
+      self.class.new(attributes[:data]).authenticate access_token
+    end
+
     def valid?
       !!is_valid
     end
@@ -35,11 +40,6 @@ module FbGraph2
 
     def page_token?
       app.present? && user.present? && page.present?
-    end
-
-    def fetch(params = {}, options = {})
-      attributes = get params, options
-      self.class.new(attributes[:data]).authenticate access_token
     end
   end
 end

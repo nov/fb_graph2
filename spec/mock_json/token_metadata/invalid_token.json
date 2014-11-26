@@ -1,0 +1,15 @@
+{
+  "data": {
+    "error": {
+      "message": "Error validating access token: This may be because the user logged out or may be due to a system error.",
+      "code": 190,
+      "subcode": 467
+    },
+    "app_id": "210798282372757",
+    "is_valid": false,
+    "application": "gem sample",
+    "user_id": "579612276",
+    "expires_at": 1409655600,
+    "scopes": ["public_profile", "basic_info", "read_stream", "read_mailbox", "read_page_mailboxes", "rsvp_event", "email", "ads_management", "ads_read", "read_insights", "manage_notifications", "read_friendlists", "manage_pages", "publish_actions", "user_birthday", "user_religion_politics", "user_relationships", "user_relationship_details", "user_hometown", "user_location", "user_likes", "user_activities", "user_interests", "user_education_history", "user_work_history", "user_website", "user_groups", "user_events", "user_photos", "user_videos", "user_friends", "user_about_me", "user_status", "user_games_activity", "user_tagged_places", "user_actions.books", "user_actions.music", "user_actions.video", "user_actions.news"]
+  }
+}
