@@ -11,13 +11,13 @@ module FbGraph2
     def initialize(attributes = {})
       super :debug_token, attributes
       if app_id
-        @app = App.new app_id
+        self.app = App.new app_id
       end
       if user_id
-        @user = User.new user_id
+        self.user = User.new user_id
       end
       if profile_id
-        @page = Page.new profile_id
+        self.page = Page.new profile_id
       end
     end
 

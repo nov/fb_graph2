@@ -6,6 +6,7 @@ module FbGraph2
     include Edge::Events
     include Edge::Feed
     include Edge::GlobalBrandChildren
+    include Edge::Insights
     include Edge::Links
     include Edge::Locations
     include Edge::Milestones

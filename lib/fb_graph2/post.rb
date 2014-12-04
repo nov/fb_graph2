@@ -1,6 +1,7 @@
 module FbGraph2
   class Post < Node
     include Edge::Comments
+    include Edge::Insights
     include Edge::Likes::LikeeContext
     include Edge::SharedPosts
 
