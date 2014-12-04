@@ -70,7 +70,7 @@ describe FbGraph2::Node do
     describe '#initialize' do
       its(:id) { should == 'identifier' }
       its(:access_token) { should be_nil }
-      its(:raw_attributes) { should be_nil }
+      its(:raw_attributes) { should == {} }
     end
 
     describe '#authenticate' do
