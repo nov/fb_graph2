@@ -1,4 +1,5 @@
-require 'active_support/all'
+require 'active_support'
+require 'active_support/core_ext'
 require 'rack/oauth2'
 
 module FbGraph2
