@@ -3,7 +3,7 @@ module FbGraph2
     class Education < Struct
       register_attributes(
         raw: [:type],
-        page: [:school, :year],
+        page: [:school, :year, :degree],
         pages: [:classes, :concentration]
       )
     end
