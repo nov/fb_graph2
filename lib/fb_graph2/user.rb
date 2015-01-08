@@ -37,6 +37,7 @@ module FbGraph2
     include Edge::TaggedPlaces
     include Edge::Television
     include Edge::Videos
+    extend Searchable
 
     register_attributes(
       raw: [

@@ -20,6 +20,7 @@ module FbGraph2
     include Edge::Statuses
     include Edge::Tagged
     include Edge::Videos
+    extend Searchable
 
     register_attributes(
       raw: [

@@ -9,6 +9,7 @@ module FbGraph2
     include Edge::Picture
     include Edge::Photos
     include Edge::Videos
+    extend Searchable
 
     register_attributes(
       raw: [:description, :is_date_only, :location, :name, :privacy, :ticket_uri, :timezone],

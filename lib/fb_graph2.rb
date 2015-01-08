@@ -43,6 +43,7 @@ end
 require 'fb_graph2/attribute_assigner'
 require 'fb_graph2/node'
 require 'fb_graph2/collection'
+require 'fb_graph2/searchable'
 require 'fb_graph2/edge'
 [
   '.',

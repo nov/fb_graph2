@@ -5,6 +5,7 @@ module FbGraph2
     include Edge::Feed
     include Edge::Files
     include Edge::Members
+    extend Searchable
 
     register_attributes(
       raw: [
