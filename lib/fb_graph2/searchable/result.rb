@@ -1,10 +1,11 @@
 module FbGraph2
   module Searchable
     class Result < Collection
-      attr_accessor :query, :klass, :collection, :options
+      attr_accessor :query, :access_token, :klass, :collection, :options
 
-      def initialize(query, klass, options = {})
+      def initialize(query, access_token, klass, options = {})
         @klass = klass
+        @access_token = access_token
         @query = query
         @options = options
         @collection = options.delete(:collection) || Collection.new
@@ -12,18 +13,18 @@ module FbGraph2
       end
 
       def next(_options_ = {})
-        if self.collection.next.present?
-          self.klass.search(self.query, self.options.merge(_options_).merge(self.collection.next))
+        if collection.next.present?
+          klass.search query, access_token, options.merge(_options_).merge(collection.next)
         else
-          self.class.new(self.query, self.klass)
+          self.class.new query, access_token, klass
         end
       end
 
       def previous(_options_ = {})
-        if self.collection.previous.present?
-          self.klass.search(self.query, self.options.merge(_options_).merge(self.collection.previous))
+        if collection.previous.present?
+          klass.search query, access_token, options.merge(_options_).merge(collection.previous)
         else
-          self.class.new(self.query, self.klass)
+          self.class.new query, access_token, klass
         end
       end
     end
