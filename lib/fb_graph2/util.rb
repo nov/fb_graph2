@@ -3,7 +3,7 @@ module FbGraph2
     module_function
 
     def as_identifier(object)
-      if object.respond_to? :id
+      if object.respond_to?(:id) && !object.nil?
         object.id
       else
         object
