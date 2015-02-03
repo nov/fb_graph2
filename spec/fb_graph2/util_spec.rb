@@ -15,5 +15,11 @@ describe FbGraph2::Util do
         FbGraph2::Util.as_identifier('object_id').should == 'object_id'
       end
     end
+
+    context 'when nil given' do
+      it do
+        FbGraph2::Util.as_identifier(nil).should == nil
+      end
+    end
   end
 end
