@@ -16,7 +16,7 @@ module FbGraph2
 
     register_attributes(
       raw: [
-        :id, :android_key_hash, :app_domains, :auth_dialog_data_help_url, :auth_dialog_headline,
+        :android_key_hash, :app_domains, :auth_dialog_data_help_url, :auth_dialog_headline,
         :auth_dialog_perms_explanation, :auth_referral_enabled, :auth_referral_extended_perms,
         :auth_referral_friend_perms, :auth_referral_user_perms, :canvas_fluid_height, :canvas_fluid_width,
         :canvas_url, :category, :company, :contact_email, :creator_uid, :daily_active_users, :daily_active_users_rank,

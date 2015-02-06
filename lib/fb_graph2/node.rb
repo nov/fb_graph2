@@ -1,6 +1,7 @@
 module FbGraph2
   class Node
     attr_accessor :id, :access_token, :raw_attributes
+    alias_method :identifier, :id
 
     def self.inherited(klass)
       klass.send :include, AttributeAssigner

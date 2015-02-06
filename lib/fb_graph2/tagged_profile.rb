@@ -1,7 +1,7 @@
 module FbGraph2
   class TaggedProfile < Node
     register_attributes(
-      raw: [:id, :name, :type, :offset, :length],
+      raw: [:name, :type, :offset, :length],
       custom: [:object]
     )
 
