@@ -3,6 +3,8 @@ module FbGraph2
     attr_accessor :id, :access_token, :raw_attributes
     alias_method :identifier, :id
 
+    alias_method :identifier, :id
+    
     def self.inherited(klass)
       klass.send :include, AttributeAssigner
       FbGraph2.object_classes << klass
