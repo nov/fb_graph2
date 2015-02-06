@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'httpclient', '>= 2.4'
   gem.add_runtime_dependency 'rack-oauth2', '>= 1.0'
+  gem.add_runtime_dependency 'url_safe_base64'
   gem.add_runtime_dependency 'multi_json'
   gem.add_runtime_dependency 'activesupport', '>= 3.2'
   gem.add_development_dependency 'rake'

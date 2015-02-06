@@ -37,5 +37,23 @@ module FbGraph2
         input_token: input_token.to_s
       )
     end
+
+    def from_cookie(cookie)
+      token = case cookie
+      when String
+        cookie
+      else
+        cookie["fbsr_#{identifier}"]
+      end
+      from_signed_request token
+    end
+
+    def from_signed_request(token)
+      SignedRequest.new(token).verify! self
+    end
   end
+end
+
+Dir[File.join(__dir__, 'auth/*.rb')].each do |file|
+  require file
 end
