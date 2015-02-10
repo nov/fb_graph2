@@ -3,6 +3,7 @@ module FbGraph2
     include Edge::Admins
     include Edge::Albums
     include Edge::Blocked
+    include Edge::Conversations
     include Edge::Events
     include Edge::Feed
     include Edge::GlobalBrandChildren
