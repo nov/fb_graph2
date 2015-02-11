@@ -1,0 +1,16 @@
+{
+  "data": [{
+    "name": "gem sample",
+    "namespace": "gem-sample",
+    "id": "210798282372757"
+  }, {
+    "name": "Localhost",
+    "id": "158245434257042"
+  }, {
+    "name": "OAuth.jp",
+    "id": "126213067419995"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.1/579612276/applications?type=developer&limit=25&offset=25&__after_id=***"
+  }
+}

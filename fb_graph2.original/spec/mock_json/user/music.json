@@ -1,0 +1,45 @@
+{
+  "data": [{
+    "category": "Music",
+    "name": "斉藤和義",
+    "created_time": "2011-07-31T05:30:44+0000",
+    "id": "108827045813193"
+  }, {
+    "category": "Musician/band",
+    "name": "L'arc~en~Ciel",
+    "created_time": "2011-07-31T05:28:30+0000",
+    "id": "12039028077"
+  }, {
+    "category": "Musician/band",
+    "name": "Utada Hikaru",
+    "created_time": "2010-05-10T06:57:25+0000",
+    "id": "105806242793688"
+  }, {
+    "category": "Musician/band",
+    "category_list": [{
+      "id": "180164648685982",
+      "name": "Bands & Musicians"
+    }],
+    "name": "Avril Lavigne",
+    "created_time": "2009-01-22T18:03:07+0000",
+    "id": "5413509299"
+  }, {
+    "category": "Musician/band",
+    "name": "Bank Band",
+    "created_time": "2009-01-22T17:47:26+0000",
+    "id": "28534671472"
+  }, {
+    "category": "Musician/band",
+    "name": "The Yellow Monkey",
+    "created_time": "2009-01-22T17:36:46+0000",
+    "id": "32548904409"
+  }, {
+    "category": "Musician/band",
+    "name": "Mr. Children",
+    "created_time": "2009-01-22T17:36:26+0000",
+    "id": "27868140174"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.0/579612276/music?limit=25&offset=25&__after_id=enc_AeyVKBfCEuM8ZXcswQ4tW_IGxEZSp9qkwAdtOM37T5EWpk1I8POJ2Kn5tSqM2lWyx0Q"
+  }
+}

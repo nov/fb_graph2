@@ -1,0 +1,23 @@
+{
+  "data": [{
+    "id": "532912916729105",
+    "from": {
+      "category": "Software",
+      "name": "FbGraph",
+      "id": "117513961602338"
+    },
+    "name": "Timeline Photos",
+    "link": "https://www.facebook.com/album.php?fbid=532912916729105&id=117513961602338&aid=116544",
+    "privacy": "everyone",
+    "type": "wall",
+    "created_time": "2013-02-16T13:23:10+0000",
+    "updated_time": "2013-02-16T13:23:10+0000",
+    "can_upload": false
+  }],
+  "paging": {
+    "cursors": {
+      "after": "MjEwNDcxNDkyMzA2NTg0",
+      "before": "NTMyOTEyOTE2NzI5MTA1"
+    }
+  }
+}

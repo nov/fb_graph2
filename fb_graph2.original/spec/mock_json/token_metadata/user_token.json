@@ -1,0 +1,10 @@
+{
+  "data": {
+    "app_id": "210798282372757",
+    "is_valid": true,
+    "application": "gem sample",
+    "user_id": "579612276",
+    "expires_at": 1416992400,
+    "scopes": ["public_profile", "basic_info", "read_stream"]
+  }
+}

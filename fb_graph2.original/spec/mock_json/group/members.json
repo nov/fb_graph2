@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "name": "Hayashi Tatsuya",
+      "administrator": false,
+      "id": "10152167763779825"
+    },
+    {
+      "name": "Ryo Ito",
+      "administrator": false,
+      "id": "10203204372262716"
+    },
+    {
+      "name": "Nov Matake",
+      "administrator": true,
+      "id": "579612276"
+    }
+  ],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.1/343659285716553/members?limit=5000&offset=5000&__after_id=***"
+  }
+}

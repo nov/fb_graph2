@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "name": "Test Event",
+      "start_time": "2014-06-13T19:00:00+0900",
+      "timezone": "Asia/Tokyo",
+      "location": "六本木",
+      "rsvp_status": "attending",
+      "id": "246996708819160"
+    }
+  ],
+  "paging": {
+    "previous": "https://graph.facebook.com/v2.0/579612276/events?limit=25&since=1402653600&__paging_token=***",
+    "next": "https://graph.facebook.com/v2.0/579612276/events?limit=25&until=1402653600&__paging_token=***"
+  }
+}

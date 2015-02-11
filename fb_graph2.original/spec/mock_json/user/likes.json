@@ -1,0 +1,33 @@
+{
+  "data": [{
+    "category": "Business/economy website",
+    "name": "デザイナーズSOHOオフィスなら【SOHO東京】",
+    "created_time": "2014-04-27T07:42:29+0000",
+    "id": "140108926038346"
+  }, {
+    "category": "Real estate",
+    "category_list": [{
+      "id": "198327773511962",
+      "name": "Real Estate"
+    }],
+    "name": "ジョイライフスタイル",
+    "created_time": "2014-04-05T15:26:28+0000",
+    "id": "117500321741291"
+  }, {
+    "category": "Internet/software",
+    "category_list": [{
+      "id": "2256",
+      "name": "Internet/Software"
+    }],
+    "name": "Engineerrise",
+    "created_time": "2014-03-28T14:32:31+0000",
+    "id": "565244630160593"
+  }],
+  "paging": {
+    "cursors": {
+      "after": "MzY3OTg5NTQzMjU5NzU3",
+      "before": "MTQwMTA4OTI2MDM4MzQ2"
+    },
+    "next": "https://graph.facebook.com/v2.0/579612276/likes?limit=25&after=MzY3OTg5NTQzMjU5NzU3"
+  }
+}

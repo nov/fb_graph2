@@ -1,0 +1,45 @@
+{
+  "data": [{
+    "id": "10152480998332277",
+    "from": {
+      "id": "579612276",
+      "name": "Nov Matake"
+    },
+    "picture": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCtEdPdezKIoUxo&w=154&h=154&url=http%3A%2F%2Fi.yimg.jp%2Fi%2Fdocs%2Frelease%2Ffbicon.jpg",
+    "privacy": {
+      "description": "Your friends",
+      "value": "ALL_FRIENDS",
+      "allow": "",
+      "deny": "",
+      "networks": "",
+      "friends": ""
+    },
+    "link": "http://docs.yahoo.co.jp/docs/info/terms/chapter1.html#cf2nd",
+    "name": "ヤフー株式会社 - サービス利用規約 第1編 基本ガイドライン",
+    "description": "Yahoo! JAPANのサービス利用規約、第1編 基本ガイドラインは当社のサービスをご利用になるすべての方に共通して適用されます。",
+    "icon": "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif",
+    "created_time": "2014-06-02T09:34:13+0000",
+    "likes": {
+      "data": [{
+        "id": "689134294485152",
+        "name": "Shunya Iriki"
+      }, {
+        "id": "1246364330",
+        "name": "Kaoru Maeda"
+      }],
+      "paging": {
+        "cursors": {
+          "after": "MTI0NjM2NDMzMA==",
+          "before": "Njg5MTM0Mjk0NDg1MTUy"
+        }
+      }
+    }
+  }],
+  "paging": {
+    "cursors": {
+      "after": "MTAxNTI0NDIwNzU4MzIyNzc=",
+      "before": "MTAxNTI0ODA5OTgzMzIyNzc="
+    },
+    "next": "https://graph.facebook.com/v2.0/579612276/links?limit=25&after=MTAxNTI0NDIwNzU4MzIyNzc="
+  }
+}

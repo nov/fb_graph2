@@ -1,0 +1,12 @@
+{
+  "data": [{
+    "id": "100003934202581",
+    "name": "Open Graph Test User"
+  }],
+  "paging": {
+    "cursors": {
+      "before": "MTAwMDAzOTM0MjAyNTgx",
+      "after": "MTAwMDAzOTM0MjAyNTgx"
+    }
+  }
+}

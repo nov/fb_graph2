@@ -1,0 +1,18 @@
+{
+  "data": [{
+    "name": "Nat Sakimura",
+    "id": "1048138174"
+  }, {
+    "name": "Yusuke Kondo",
+    "id": "1229826130"
+  }, {
+    "name": "Yuya Ito",
+    "id": "1326792131"
+  }, {
+    "name": "Tatsuya Katsuhara",
+    "id": "1784765822"
+  }],
+  "paging": {
+    "next": "https://graph.facebook.com/v2.0/579612276/friends?limit=5000&offset=5000&__after_id=enc_AexFQ6mn3PA35psWD5WjFNzW7ovDp35_gkApd8tXqRmc5ygEBBAEs56d3YIetOc9NNk"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "data": [{
+    "id": "100003934202581",
+    "login_url": "https://developers.facebook.com/checkpoint/test-user-login/100003934202581/",
+    "access_token": "test_user_token"
+  }, {
+    "id": "100003888272508",
+    "login_url": "https://developers.facebook.com/checkpoint/test-user-login/100003888272508/",
+    "access_token": "test_user_token"
+  }],
+  "paging": {
+    "cursors": {
+      "before": "MTAwMDAzOTM0MjAyNTgx",
+      "after": "MTAwMDAzODg4MjcyNTA4"
+    }
+  }
+}

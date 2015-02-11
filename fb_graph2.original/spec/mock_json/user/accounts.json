@@ -1,0 +1,24 @@
+{
+  "data": [{
+    "category": "Community",
+    "name": "Identity Conference #idcon",
+    "access_token": "page_token",
+    "perms": ["ADMINISTER", "EDIT_PROFILE", "CREATE_CONTENT", "MODERATE_CONTENT", "CREATE_ADS", "BASIC_ADMIN"],
+    "id": "367989543259757"
+  }, {
+    "category": "Community organization",
+    "name": "OAuth.jp",
+    "access_token": "page_token",
+    "perms": ["ADMINISTER", "EDIT_PROFILE", "CREATE_CONTENT", "MODERATE_CONTENT", "CREATE_ADS", "BASIC_ADMIN"],
+    "id": "140478125968442"
+  }, {
+    "category": "Non-profit organization",
+    "name": "OpenID Foundation Japan",
+    "access_token": "page_token",
+    "perms": ["ADMINISTER", "EDIT_PROFILE", "CREATE_CONTENT", "MODERATE_CONTENT", "CREATE_ADS", "BASIC_ADMIN"],
+    "id": "157574337644417"
+  }],
+  "paging": {
+    "next": "https:\/\/graph.facebook.com\/v2.0\/579612276\/accounts?limit=5000&offset=5000&__after_id=enc_AeyErLVKPOCVAXiRThtd3kSkz__A4QR6eZWAQTTTWw-QCDtft_TmuaKhPOxK_I993BKoO1VIgoyXIAd72ZZNYvrw"
+  }
+}

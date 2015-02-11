@@ -1,0 +1,65 @@
+{
+  "age_range": {
+    "min": 21
+  },
+  "context": {
+    "mutual_friends": {
+      "data": [],
+      "summary": {
+        "total_count": 245
+      }
+    },
+    "mutual_likes": {
+      "data": [{
+        "category": "Product/service",
+        "name": "GSMA Mobile World Congress",
+        "id": "177607143648"
+      }, {
+        "category": "Business/economy website",
+        "name": "デザイナーズSOHOオフィスなら【SOHO東京】",
+        "id": "140108926038346"
+      }, {
+        "category": "Real estate",
+        "category_list": [{
+          "id": "198327773511962",
+          "name": "Real Estate"
+        }],
+        "name": "ジョイライフスタイル",
+        "id": "117500321741291"
+      }, {
+        "category": "Internet/software",
+        "category_list": [{
+          "id": "10101472279007861",
+          "name": "Internet/Software"
+        }],
+        "name": "Engineerrise",
+        "id": "565244630160593"
+      }, {
+        "category": "Electronics",
+        "name": "Rapiro",
+        "id": "124199987785627"
+      }],
+      "paging": {
+        "next": "https://graph.facebook.com/v2.0/579612276?pretty=1&fields=context.fields(mutual_likes.limit(5).after(MTI0MTk5OTg3Nzg1NjI3))",
+        "cursors": {
+          "before": "MTc3NjA3MTQzNjQ4",
+          "after": "MTI0MTk5OTg3Nzg1NjI3"
+        }
+      },
+      "summary": {
+        "total_count": 89
+      }
+    }
+  },
+  "currency": {
+    "currency_offset": 1,
+    "usd_exchange": 0.0097614,
+    "usd_exchange_inverse": 102.4443215113,
+    "user_currency": "JPY"
+  },
+  "devices": [{
+    "hardware": "iPhone",
+    "os": "iOS"
+  }],
+  "id": "579612276"
+}

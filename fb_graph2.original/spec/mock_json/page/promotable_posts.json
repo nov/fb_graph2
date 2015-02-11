@@ -1,0 +1,67 @@
+{
+  "data": [{
+    "id": "140478125968442_881790788503835",
+    "from": {
+      "category": "Community organization",
+      "name": "OAuth.jp",
+      "id": "140478125968442"
+    },
+    "story": "OAuth.jp shared a link.",
+    "story_tags": {
+      "0": [{
+        "id": "140478125968442",
+        "name": "OAuth.jp",
+        "offset": 0,
+        "length": 8,
+        "type": "page"
+      }]
+    },
+    "link": "http://oauth.jp/blog/2014/05/09/what-happens-when-oauth2-code-leaked/",
+    "name": "OAuth 2.0 の code は漏れても大丈夫ってホント!? - OAuth.jp",
+    "caption": "oauth.jp",
+    "description": "昨日のCovert Redirect で Query 漏れるケースもある!?やOAuth 2.0 の脆弱性 (!?) “Covert Redirect” とはにあるように、OAuth 2.0 の code が漏れちゃうことも、ありえます。 漏れないためにやるべきことは、 …",
+    "icon": "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif",
+    "actions": [{
+      "name": "Comment",
+      "link": "https://www.facebook.com/140478125968442/posts/881790788503835"
+    }, {
+      "name": "Like",
+      "link": "https://www.facebook.com/140478125968442/posts/881790788503835"
+    }],
+    "privacy": {
+      "description": "Public",
+      "value": "EVERYONE",
+      "friends": "",
+      "networks": "",
+      "allow": "",
+      "deny": ""
+    },
+    "type": "link",
+    "status_type": "shared_story",
+    "created_time": "2014-05-09T02:18:54+0000",
+    "updated_time": "2014-05-09T02:18:54+0000",
+    "is_published": true,
+    "likes": {
+      "data": [{
+        "id": "799980330042786",
+        "name": "Nobuyuki Tetsuka"
+      }, {
+        "id": "671955032839764",
+        "name": "Naohiro Fujie"
+      }, {
+        "id": "514441882016076",
+        "name": "Shouji  Ohara"
+      }],
+      "paging": {
+        "cursors": {
+          "after": "NTE0NDQxODgyMDE2MDc2",
+          "before": "Nzk5OTgwMzMwMDQyNzg2"
+        }
+      }
+    }
+  }],
+  "paging": {
+    "previous": "https://graph.facebook.com/v2.0/140478125968442/promotable_posts?limit=25&since=1399601934",
+    "next": "https://graph.facebook.com/v2.0/140478125968442/promotable_posts?limit=25&until=1340970652"
+  }
+}

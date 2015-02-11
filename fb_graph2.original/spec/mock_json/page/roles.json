@@ -1,0 +1,19 @@
+{
+  "data": [{
+    "id": "10101078259835569",
+    "name": "Micah Wedemeyer",
+    "role": "Admin",
+    "perms": ["ADMINISTER", "EDIT_PROFILE", "CREATE_CONTENT", "MODERATE_CONTENT", "CREATE_ADS", "BASIC_ADMIN"]
+  }, {
+    "id": "579612276",
+    "name": "Nov Matake",
+    "role": "Admin",
+    "perms": ["ADMINISTER", "EDIT_PROFILE", "CREATE_CONTENT", "MODERATE_CONTENT", "CREATE_ADS", "BASIC_ADMIN"]
+  }],
+  "paging": {
+    "cursors": {
+      "before": "MTAxMDEwNzgyNTk4MzU1Njk=",
+      "after": "NTc5NjEyMjc2"
+    }
+  }
+}

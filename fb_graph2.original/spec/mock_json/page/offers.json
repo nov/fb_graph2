@@ -1,0 +1,19 @@
+{
+  "data": [{
+    "id": "797106500309744",
+    "from": {
+      "category": "Software",
+      "name": "FbGraph",
+      "id": "117513961602338"
+    },
+    "title": "Foobar",
+    "created_time": "2014-09-02T09:56:14+0000",
+    "expiration_time": "2014-09-12T14:59:59+0000",
+    "image_url": "https:\/\/fbcdn-profile-a.akamaihd.net\/hprofile-ak-xap1\/v\/t1.0-1\/p200x200\/12758_485082394845491_483124061_n.png?oh=ffdf2fc204852be4167eebaeb7f1b2ec&oe=54733980&__gda__=1415926027_bbf6edaad90b94e23268131e6d8f258b",
+    "claim_limit": 1000000000,
+    "coupon_type": "in_store_only"
+  }],
+  "paging": {
+    "next": "https:\/\/graph.facebook.com\/v2.0\/117513961602338\/offers?limit=50&offset=50&__after_id=enc_Aey48t-R5OQbq6nWOeyBEJKEHiddR7mdWX_5Pg0nBoVbmDoe_Lr4d_5XIg4vhahIQ7oFJzHsY8P91oMo_GD_ZrNy"
+  }
+}
