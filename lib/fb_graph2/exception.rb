@@ -1,6 +1,7 @@
 module FbGraph2
   class Exception < StandardError
     attr_accessor :status, :type, :code
+    alias_attribute :code, :error_code
 
     class << self
       def detect(status, body = {}, headers = {})
@@ -43,6 +44,7 @@ module FbGraph2
       self.status = status
       self.type = error[:type]
       self.code = error[:code]
+      self.error_subcode = error[:error_subcode]
     end
 
     class BadRequest < Exception
