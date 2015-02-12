@@ -1,7 +1,7 @@
 module FbGraph2
   class Exception < StandardError
-    attr_accessor :status, :type, :code
-    alias_attribute :code, :error_code
+    attr_accessor :status, :type, :code, :error_subcode
+    alias_method :error_code, :code
 
     class << self
       def detect(status, body = {}, headers = {})
