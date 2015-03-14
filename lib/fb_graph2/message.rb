@@ -1,9 +1,11 @@
 module FbGraph2
   class Message < Node
     register_attributes(
-      raw: [:message],
+      raw: [:message, :subject],
       time: [:created_time],
-      profile: [:from]
+      profile: [:from],
+      profiles: [:to],
+      tags: [:tags]
     )
   end
 end

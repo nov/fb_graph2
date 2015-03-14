@@ -73,6 +73,10 @@ module FbGraph2
               Collection.new(raw).collect! do |_raw_|
                 User.new _raw_[:id], _raw_
               end
+            when :tags
+              Collection.new(raw).collect! do |_raw_|
+                Struct::Tag.new _raw_
+              end
             else
               # NOTE: handle these attributes in each class
               next
