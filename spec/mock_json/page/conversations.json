@@ -1,0 +1,195 @@
+{
+  "data": [
+    {
+      "id": "t_mid.1423584806504:8058c97775af418600",
+      "snippet": "Here is a private message",
+      "updated_time": "2015-02-10T17:18:42+0000",
+      "message_count": 4,
+      "unread_count": 2,
+      "tags": {
+        "data": [
+          {
+            "name": "inbox"
+          },
+          {
+            "name": "seen"
+          },
+          {
+            "name": "sent"
+          },
+          {
+            "name": "source:web"
+          }
+        ]
+      },
+      "participants": {
+        "data": [
+          {
+            "name": "Bryan Brunetti",
+            "email": "noemail@facebook.com",
+            "id": "643757367"
+          },
+          {
+            "name": "Strong Robot",
+            "email": "noemail@facebook.com",
+            "id": "760739430676869"
+          }
+        ]
+      },
+      "senders": {
+        "data": [
+          {
+            "name": "Bryan Brunetti",
+            "email": "noemail@facebook.com",
+            "id": "643757367"
+          },
+          {
+            "name": "Strong Robot",
+            "email": "760739430676869@facebook.com",
+            "id": "760739430676869"
+          }
+        ]
+      },
+      "can_reply": true,
+      "is_subscribed": true,
+      "link": "/Strong-Robot-760739430676869/manager/messages/?mercurythreadid=user%3A100009053773840&threadid=mid.1423584806504%3A8058c97775af418600&folder=inbox",
+      "messages": {
+        "data": [
+          {
+            "id": "m_mid.1423588722783:846d4f349148767020",
+            "created_time": "2015-02-10T17:18:42+0000",
+            "tags": {
+              "data": [
+                {
+                  "name": "inbox"
+                },
+                {
+                  "name": "source:web"
+                }
+              ]
+            },
+            "from": {
+              "name": "Bryan Brunetti",
+              "email": "noemail@facebook.com",
+              "id": "643757367"
+            },
+            "to": {
+              "data": [
+                {
+                  "name": "Strong Robot",
+                  "email": "760739430676869@facebook.com",
+                  "id": "760739430676869"
+                }
+              ]
+            },
+            "message": "Here is a private message?"
+          },
+          {
+            "id": "m_mid.1423588347361:274a1a7d1bf5d74e16",
+            "created_time": "2015-02-10T17:12:27+0000",
+            "tags": {
+              "data": [
+                {
+                  "name": "inbox"
+                },
+                {
+                  "name": "source:web"
+                }
+              ]
+            },
+            "from": {
+              "name": "Bryan Brunetti",
+              "email": "noemail@facebook.com",
+              "id": "643757367"
+            },
+            "to": {
+              "data": [
+                {
+                  "name": "Strong Robot",
+                  "email": "760739430676869@facebook.com",
+                  "id": "760739430676869"
+                }
+              ]
+            },
+            "message": "Hi StrongRobot, this should end up in your Page's inbox"
+          },
+          {
+            "id": "m_mid.1423587945778:f95fbf02d292743725",
+            "created_time": "2015-02-10T17:05:46+0000",
+            "tags": {
+              "data": [
+                {
+                  "name": "inbox"
+                },
+                {
+                  "name": "read"
+                },
+                {
+                  "name": "sent"
+                },
+                {
+                  "name": "source:web"
+                }
+              ]
+            },
+            "from": {
+              "name": "Strong Robot",
+              "email": "760739430676869@facebook.com",
+              "id": "760739430676869"
+            },
+            "to": {
+              "data": [
+                {
+                  "name": "Bryan Brunetti",
+                  "email": "noemail@facebook.com",
+                  "id": "643757367"
+                }
+              ]
+            },
+            "message": "I can reply here"
+          },
+          {
+            "id": "m_mid.1423584806504:8058c97775af418600",
+            "created_time": "2015-02-10T16:13:26+0000",
+            "tags": {
+              "data": [
+                {
+                  "name": "inbox"
+                },
+                {
+                  "name": "read"
+                },
+                {
+                  "name": "source:web"
+                }
+              ]
+            },
+            "from": {
+              "name": "Bryan Brunetti",
+              "email": "noemail@facebook.com",
+              "id": "643757367"
+            },
+            "to": {
+              "data": [
+                {
+                  "name": "Strong Robot",
+                  "email": "760739430676869@facebook.com",
+                  "id": "760739430676869"
+                }
+              ]
+            },
+            "message": "This is a private message, let's see what happens"
+          }
+        ],
+        "paging": {
+          "previous": "https://graph.facebook.com/v2.2/t_mid.1423584806504:8058c97775af418600/messages?limit=25&since=1423588722&__paging_token=enc_AezzpD7Lhmy5QT34la8NBAmnnRd5F1KwTMPWNy4Qj2vWD-mVGcHMXuLL80Owz0oisDKB124UDNT0ekXvPi19zvVg5ecQ55NI8vimtiSd278yUw",
+          "next": "https://graph.facebook.com/v2.2/t_mid.1423584806504:8058c97775af418600/messages?limit=25&until=1423584806&__paging_token=enc_AewRPLYk1qA57YLlrIFDmxYZjyx78TJtpkerH-X6NdNdm4KIQ_0CSO_cdEh7vrFCmJKAQ0j-F2PEklHI292sQBe3Ca0TmUuVJMTYafmnvnwtuQ"
+        }
+      }
+    }
+  ],
+  "paging": {
+    "previous": "https://graph.facebook.com/v2.2/760739430676869/conversations?limit=25&since=1423588722&__paging_token=enc_Aey_YEbEtK-VcEzb82fHVbOXdwsTv3JOF_tm1ZdA-MUCFViIHP3MY1oY7k1_hG0wSCqr8sDJOxGWnzx6-ySVaOmKHZYtOh6Z-YeFW7-P08MCng",
+    "next": "https://graph.facebook.com/v2.2/760739430676869/conversations?limit=25&until=1423588722&__paging_token=enc_AexoBe3yyqizVI-V9Xo3rX8kMiQaB0p-FAftGpgc5cp_wI51ZYZ17hp_23TzR3x5L_HQ8vpEx1CSFRGdAAgxxv4nkODbh-JDKsH3wl2Fsozh3Q"
+  }
+}
