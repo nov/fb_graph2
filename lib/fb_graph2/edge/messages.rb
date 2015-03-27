@@ -4,7 +4,7 @@ module FbGraph2
       def messages(params = {})
         messages = self.edge :messages, params
         messages.collect! do |message|
-          Message.new(message[:id], message).authenticate message[:access_token]
+          Message.new(message[:id], message).authenticate self.access_token
         end
       end
     end
