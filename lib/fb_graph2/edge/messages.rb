@@ -10,10 +10,10 @@ module FbGraph2
 
       def messages(params = {})
         messages = if @_cached_messages.present? && params.blank?
-                     @_cached_messages
-                   else
-                     self.edge :messages, params
-                   end
+          @_cached_messages
+        else
+          self.edge :messages, params
+        end
         messages.collect! do |message|
           Message.new(message[:id], message).authenticate self.access_token
         end
