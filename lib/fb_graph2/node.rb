@@ -94,6 +94,7 @@ module FbGraph2
     end
 
     def build_params(params = {})
+      params = Hash(params).merge(debug: :all) if FbGraph2.debugging?
       if params.present?
         if params.include? :fields
           params[:fields] = Array(params[:fields]).join(',')
