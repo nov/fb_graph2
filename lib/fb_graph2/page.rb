@@ -16,6 +16,7 @@ module FbGraph2
     include Edge::Photos
     include Edge::Posts
     include Edge::PromotablePosts
+    include Edge::Ratings
     include Edge::Roles::PageContext
     include Edge::Settings
     include Edge::Statuses
