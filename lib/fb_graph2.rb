@@ -7,7 +7,7 @@ module FbGraph2
 
   self.root_url = 'https://graph.facebook.com'
   self.api_version = 'v2.0'
-  self.gem_version = File.read(File.join(__dir__, '../VERSION')).delete("\n\r")
+  self.gem_version = File.read(File.join(__dir__, '../VERSION')).strip
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
   self.object_classes = Array.new
