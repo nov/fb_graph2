@@ -51,6 +51,8 @@ module FbGraph2
               Collection.new(raw).collect! do |_raw_|
                 Message.new _raw_[:id], _raw_
               end
+            when :location
+              Struct::Location.new raw
             when :page
               Page.new raw[:id], raw
             when :pages

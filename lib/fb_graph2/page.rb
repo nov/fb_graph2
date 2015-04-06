@@ -46,6 +46,7 @@ module FbGraph2
         # NOTE: only as Struct::Education#classes and Struct::Work#projects
         :with
       ],
+      location: [:location],
       custom: [
         :category_list, :context, :location, :parking, :restaurant_services, :restaurant_specialties,
         # NOTE: undocumented
@@ -62,9 +63,6 @@ module FbGraph2
       end
       if attributes.include? :context
         self.context = Struct::Context::PageContext.new attributes[:context]
-      end
-      if attributes.include? :location
-        self.location = Struct::Location.new attributes[:location]
       end
       if attributes.include? :parking
         self.parking = Struct::Parking.new attributes[:parking]

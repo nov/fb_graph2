@@ -2,7 +2,7 @@ module FbGraph2
   class Struct
     class Location < Struct
       register_attributes(
-        raw: [:country, :city, :longitude, :zip, :state, :street, :located_in, :latitude]
+        raw: [:city, :country, :latitude, :located_in, :longitude, :name, :region, :state, :street, :zip]
       )
     end
   end
