@@ -7,6 +7,7 @@ module FbGraph2
     include Edge::Applications
     include Edge::AppRequests
     include Edge::Books
+    include Edge::Domains
     include Edge::Events
     include Edge::Family
     include Edge::Feed
