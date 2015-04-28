@@ -53,7 +53,9 @@ module FbGraph2
         # NOTE: in group context
         :administrator,
         # NOTE: in photo tags context
-        :x, :y
+        :x, :y,
+        # NOTE: in event-related context
+        :rsvp_status
       ],
       time: [
         :updated_time,
