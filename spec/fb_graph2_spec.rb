@@ -6,7 +6,7 @@ describe FbGraph2 do
 
   context 'as default' do
     its(:logger) { should be_a Logger }
-    its(:api_version) { should == 'v2.0' }
+    its(:api_version) { should == 'v2.3' }
     its(:root_url) { should == 'https://graph.facebook.com' }
     its(:object_classes) { should contain_exactly *FbGraph2::Node.subclasses + [FbGraph2::Place] }
     it { should_not be_debugging }
