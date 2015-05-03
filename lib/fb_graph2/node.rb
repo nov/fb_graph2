@@ -111,7 +111,7 @@ module FbGraph2
       _response_ = _response_.with_indifferent_access if _response_.respond_to? :with_indifferent_access
       case response.status
       when 200...300
-        if _response_.respond_to?(:include?) && _response_.include?(:success)
+        if _response_.respond_to?(:has_key?) && _response_.has_key?(:success)
           _response_[:success]
         else
           _response_
