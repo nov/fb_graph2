@@ -3,8 +3,8 @@ Gem::Specification.new do |gem|
   gem.version       = File.read('VERSION').delete("\n\r")
   gem.authors       = ['nov matake']
   gem.email         = ['nov@matake.jp']
-  gem.summary       = %q{Facebook Graph API v2.0 Wrapper in Ruby}
-  gem.description   = %q{Facebook Graph API v2.0 Wrapper in Ruby}
+  gem.summary       = %q{Facebook Graph API v2.x Wrapper in Ruby}
+  gem.description   = %q{Facebook Graph API v2.x Wrapper in Ruby}
   gem.homepage      = 'https://github.com/nov/fb_graph2'
   gem.license       = 'MIT'
 

@@ -1,7 +1,9 @@
-FbGraph2 [![Version](https://img.shields.io/gem/v/fb_graph2.svg)](https://rubygems.org/gems/fb_graph2) [![Dependencies](https://img.shields.io/gemnasium/nov/fb_graph2.svg)](https://gemnasium.com/nov/fb_graph2) [![Build Status](https://img.shields.io/travis/nov/fb_graph2/master.svg)](http://travis-ci.org/nov/fb_graph2) [![Code Climate](https://img.shields.io/codeclimate/github/nov/fb_graph2.svg)](https://codeclimate.com/github/nov/fb_graph2)
+FbGraph2
 ====
 
-Similar to [fb_graph gem](https://github.com/nov/fb_graph), but supports Graph API v2.0+.
+Facebook Graph API v2.x Wrapper in Ruby
+
+[![Build Status](https://img.shields.io/travis/nov/fb_graph2/master.svg)](http://travis-ci.org/nov/fb_graph2)
 
 ## Installation
 
