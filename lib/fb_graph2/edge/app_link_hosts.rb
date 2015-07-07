@@ -4,7 +4,7 @@ module FbGraph2
       def app_link_hosts(params = {})
         hosts = self.edge :app_link_hosts, params
         hosts.collect! do |host|
-          AppLinkHost.new(hosts[:id], hosts).authenticate self.access_token
+          AppLinkHost.new(host[:id], host).authenticate self.access_token
         end
       end
     end
