@@ -13,7 +13,7 @@ describe FbGraph2::Struct::AppLink do
   end
 
   describe FbGraph2::Struct::AppLink::Native::Android do
-    its(:registered_attributes) { should == {raw: [:url, :app_name, :class, :package]} }
+    its(:registered_attributes) { should == {raw: [:url, :app_name, :package], custom: [:klass]} }
   end
 
   describe FbGraph2::Struct::AppLink::Native::WindowsPhone do
