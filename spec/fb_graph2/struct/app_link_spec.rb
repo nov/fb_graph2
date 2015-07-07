@@ -10,10 +10,6 @@ describe FbGraph2::Struct::AppLink do
 
   describe FbGraph2::Struct::AppLink::Native::IOS do
     its(:registered_attributes) { should == {raw: [:url, :app_name, :app_store_id]} }
-
-    describe FbGraph2::Struct::AppLink::Native::IOS::IPhone do
-      its(:registered_attributes) { should == {raw: [:url, :app_name, :app_store_id]} }
-    end
   end
 
   describe FbGraph2::Struct::AppLink::Native::Android do

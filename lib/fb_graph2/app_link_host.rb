@@ -12,6 +12,9 @@ module FbGraph2
           self.send :"#{link_attr}=", collect_links(attributes, link_attr)
         end
       end
+      if attributes.include? :web
+        self.web = Struct::AppLink::Web.new attributes[:web]
+      end
     end
 
     private
