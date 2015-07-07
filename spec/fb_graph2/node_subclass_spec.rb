@@ -13,7 +13,6 @@ describe FbGraph2::NodeSubClass do
     subject { klass }
     it { should respond_to :register_attributes }
     it { should respond_to :registered_attributes }
-    it { should respond_to :registered_attributes= }
   end
 
   context 'instance' do

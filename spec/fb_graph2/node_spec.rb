@@ -60,7 +60,6 @@ describe FbGraph2::Node do
     subject { klass }
     it { should_not respond_to :register_attributes }
     it { should_not respond_to :registered_attributes }
-    it { should_not respond_to :registered_attributes= }
   end
 
   context 'instance' do

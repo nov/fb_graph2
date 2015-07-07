@@ -5,13 +5,25 @@ module FbGraph2
     included do
       extend ClassMethods
       attr_accessor :raw_attributes
-      cattr_accessor :registered_attributes
     end
 
     module ClassMethods
       def register_attributes(attributes)
-        self.registered_attributes = attributes
+        @registered_attributes ||= {}
+        attributes.each do |type, keys|
+          @registered_attributes[type] ||= []
+          @registered_attributes[type] += keys
+        end
         send :attr_accessor, *attributes.values.flatten
+      end
+
+      def registered_attributes
+        @registered_attributes
+      end
+
+      def inherited(child)
+        super
+        child.register_attributes registered_attributes
       end
     end
 

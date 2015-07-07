@@ -14,6 +14,8 @@ module FbGraph2
           register_attributes(
             raw: [:app_store_id]
           )
+          class IPhone < IOS; end
+          class IPad < IOS; end
         end
 
         class Android < Native
@@ -24,7 +26,7 @@ module FbGraph2
 
         class WindowsPhone < Native
           register_attributes(
-            raw: [:app_name]
+            raw: [:app_id]
           )
         end
       end
