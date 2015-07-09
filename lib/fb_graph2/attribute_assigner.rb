@@ -8,26 +8,28 @@ module FbGraph2
     end
 
     module ClassMethods
-      def register_attributes(attributes)
-        @registered_attributes ||= {}
-        attributes.each do |type, keys|
-          @registered_attributes[type] ||= []
-          @registered_attributes[type] += keys
-        end
-        send :attr_accessor, *attributes.values.flatten
-      end
-
-      def registered_attributes
-        @registered_attributes
-      end
+      attr_reader :registered_attributes
 
       def inherited(child)
         super
         child.register_attributes registered_attributes
       end
+
+      def registered_attributes
+        @registered_attributes ||= {}
+      end
+
+      def register_attributes(attributes)
+        attributes.each do |type, keys|
+          registered_attributes[type] ||= []
+          registered_attributes[type] += keys
+        end
+        send :attr_accessor, *attributes.values.flatten
+      end
     end
 
     def assign(attributes)
+      self.raw_attributes = attributes
       Array(self.class.registered_attributes).each do |type, keys|
         keys.each do |key|
           if attributes.include? key
@@ -91,9 +93,11 @@ module FbGraph2
               Collection.new(raw).collect! do |_raw_|
                 Struct::Tag.new _raw_
               end
-            else
+            when :custom
               # NOTE: handle these attributes in each class
               next
+            else
+              raise "unknown attribute type #{type}"
             end
             self.send :"#{key}=", value
           end

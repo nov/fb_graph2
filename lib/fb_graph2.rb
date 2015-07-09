@@ -1,5 +1,6 @@
 require 'active_support'
 require 'active_support/core_ext'
+require 'active_support/concern'
 require 'rack/oauth2'
 
 module FbGraph2
@@ -10,9 +11,12 @@ module FbGraph2
   self.gem_version = File.read(File.join(__dir__, '../VERSION')).strip
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
-  self.object_classes = Array.new
 
   class << self
+    def object_classes
+      FbGraph2::Node.descendants
+    end
+
     def debugging?
       !!self.debugging
     end

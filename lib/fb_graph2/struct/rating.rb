@@ -3,7 +3,7 @@ module FbGraph2
     class Rating < Struct
       register_attributes(
         raw: [:has_rating, :has_review, :rating, :review_text],
-        datetime: [:created_time],
+        time: [:created_time],
         user: [:reviewer],
         custom: [:open_graph_story]
       )

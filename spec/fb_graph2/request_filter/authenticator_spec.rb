@@ -1,11 +1,9 @@
 require 'spec_helper'
 
 describe FbGraph2::RequestFilter::Authenticator do
-  let(:klass)    { FbGraph2::RequestFilter::Authenticator }
-
   let(:endpoint) { 'https://graph.facebook.com/matake' }
   let(:request)  { HTTP::Message.new_request(:get, URI.parse(endpoint)) }
-  let(:request_filter) { klass.new token }
+  let(:request_filter) { described_class.new token }
 
   context 'when String given' do
     let(:token) { 'token' }

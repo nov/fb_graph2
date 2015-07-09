@@ -1,17 +1,12 @@
 module FbGraph2
   class Node
-    attr_accessor :id, :access_token, :raw_attributes
+    include AttributeAssigner
+    attr_accessor :id, :access_token
     alias_method :identifier, :id
-
-    def self.inherited(klass)
-      klass.send :include, AttributeAssigner
-      FbGraph2.object_classes << klass
-    end
 
     def initialize(id, attributes = {})
       self.id = id
-      self.raw_attributes = attributes
-      assign attributes if respond_to? :assign
+      assign attributes
       authenticate attributes[:access_token] if attributes.include? :access_token
     end
 
