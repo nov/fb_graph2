@@ -31,7 +31,6 @@ module FbGraph2
     include Edge::Pokes
     include Edge::Posts
     include Edge::Scores
-    include Edge::Statuses
     include Edge::TaggableFriends
     include Edge::Tagged
     include Edge::TaggedPlaces
