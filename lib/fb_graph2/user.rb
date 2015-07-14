@@ -2,7 +2,6 @@ module FbGraph2
   class User < Node
     include Edge::Accounts
     include Edge::Achievements
-    include Edge::Actions
     include Edge::Activities
     include Edge::Albums
     include Edge::Applications
@@ -25,6 +24,7 @@ module FbGraph2
     include Edge::Movies
     include Edge::Music
     include Edge::Notifications
+    include Edge::OpenGraph::Actions
     include Edge::Outbox
     include Edge::PaymentTransactions
     include Edge::Permissions
