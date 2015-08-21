@@ -12,7 +12,7 @@ describe FbGraph2::Auth do
         grant_type: 'client_credentials',
         client_id: 'client_id',
         client_secret: 'client_secret'
-      }, disable_api_versioning: true
+      }
     end
 
     context 'when user_token given' do
@@ -62,7 +62,7 @@ describe FbGraph2::Auth do
     context 'when error occured' do
       it do
         expect do
-          mock_graph :post, 'oauth/access_token', 'error/400/191', status: [400, 'Bad Request'], disable_api_versioning: true do
+          mock_graph :post, 'oauth/access_token', 'error/400/191', status: [400, 'Bad Request'] do
             instance.authorization_code = 'auth_code'
             instance.access_token!
           end
@@ -80,7 +80,7 @@ describe FbGraph2::Auth do
           fb_exchange_token: 'short_lived_access_token',
           client_id: 'client_id',
           client_secret: 'client_secret'
-        }, disable_api_versioning: true do
+        } do
           instance.access_token!
         end
         access_token.should be_instance_of Rack::OAuth2::AccessToken::Legacy
@@ -99,7 +99,7 @@ describe FbGraph2::Auth do
         code: '8d60d684082d56732671e170.1-579612276|7jdVZz2SK5F6oH-CmEAkYeZnV10',
         client_id: 'client_id',
         client_secret: 'client_secret'
-      }, disable_api_versioning: true do
+      } do
         instance.from_cookie token
       end
       signed_request.should be_instance_of FbGraph2::Auth::SignedRequest
@@ -119,7 +119,7 @@ describe FbGraph2::Auth do
           code: '8d60d684082d56732671e170.1-579612276|7jdVZz2SK5F6oH-CmEAkYeZnV10',
           client_id: 'client_id',
           client_secret: 'client_secret'
-        }, disable_api_versioning: true do
+        } do
           instance.from_cookie cookie
         end
         signed_request.should be_instance_of FbGraph2::Auth::SignedRequest
