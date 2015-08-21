@@ -11,8 +11,8 @@ module FbGraph2
         identifier: client_id,
         secret: client_secret,
         host: URI.parse(FbGraph2.root_url).host,
-        authorization_endpoint: '/oauth/authorize',
-        token_endpoint: '/oauth/access_token'
+        authorization_endpoint: File.join('/', FbGraph2.api_version, '/oauth/authorize'),
+        token_endpoint: File.join('/', FbGraph2.api_version, '/oauth/access_token')
       )
     end
 
