@@ -67,6 +67,8 @@ module FbGraph2
               end
             when :location
               Struct::Location.new raw
+            when :start_info
+              Struct::StartInfo.new raw
             when :page
               Page.new raw[:id], raw
             when :pages
