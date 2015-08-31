@@ -8,7 +8,6 @@ module FbGraph2
     include Edge::Feed
     include Edge::GlobalBrandChildren
     include Edge::Insights
-    include Edge::Links
     include Edge::Locations
     include Edge::Milestones
     include Edge::Offers
@@ -19,7 +18,6 @@ module FbGraph2
     include Edge::Ratings
     include Edge::Roles::PageContext
     include Edge::Settings
-    include Edge::Statuses
     include Edge::Tagged
     include Edge::Videos
     extend Searchable

@@ -15,12 +15,9 @@ module FbGraph2
     include Edge::Friends
     include Edge::Games
     include Edge::Groups
-    include Edge::Home
-    include Edge::Inbox
     include Edge::Interests
     include Edge::InvitableFriends
     include Edge::Likes::LikerContext
-    include Edge::Links
     include Edge::Movies
     include Edge::Music
     include Edge::Notifications
@@ -33,7 +30,6 @@ module FbGraph2
     include Edge::Pokes
     include Edge::Posts
     include Edge::Scores
-    include Edge::Statuses
     include Edge::TaggableFriends
     include Edge::Tagged
     include Edge::TaggedPlaces
