@@ -20,6 +20,9 @@ module FbGraph2
     include Edge::Likes::LikerContext
     include Edge::Movies
     include Edge::Music
+    include Edge::Notifications
+    include Edge::OpenGraph::Actions
+    include Edge::Outbox
     include Edge::PaymentTransactions
     include Edge::Permissions
     include Edge::Picture

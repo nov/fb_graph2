@@ -11,8 +11,8 @@ module FbGraph2
         identifier: client_id,
         secret: client_secret,
         host: URI.parse(FbGraph2.root_url).host,
-        authorization_endpoint: '/oauth/authorize',
-        token_endpoint: '/oauth/access_token'
+        authorization_endpoint: File.join('/', FbGraph2.api_version, '/oauth/authorize'),
+        token_endpoint: File.join('/', FbGraph2.api_version, '/oauth/access_token')
       )
     end
 
@@ -54,6 +54,6 @@ module FbGraph2
   end
 end
 
-Dir[File.join(__dir__, 'auth/*.rb')].each do |file|
+Dir[File.join(File.dirname(__FILE__), 'auth/*.rb')].each do |file|
   require file
 end

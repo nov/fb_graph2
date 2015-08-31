@@ -14,6 +14,6 @@ RSpec.configure do |config|
   end
 end
 
-Dir[File.join(__dir__, 'spec_helper/*.rb')].each do |file|
+Dir[File.join(File.dirname(__FILE__), 'spec_helper/*.rb')].each do |file|
   require file
 end

@@ -34,6 +34,7 @@ module FbGraph2
   end
 end
 
-Dir[File.join(__dir__, 'edge/*.rb')].each do |file|
+
+Dir[File.join(File.dirname(__FILE__), 'edge/*.rb')].each do |file|
   require file
 end

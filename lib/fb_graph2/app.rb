@@ -5,6 +5,7 @@ module FbGraph2
     include Edge::AppEventTypes
     include Edge::Banned
     include Edge::Groups
+    include Edge::OpenGraph::Objects
     include Edge::Permissions
     include Edge::Picture
     include Edge::Roles::AppContext
