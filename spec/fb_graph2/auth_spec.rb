@@ -98,7 +98,8 @@ describe FbGraph2::Auth do
         grant_type: 'authorization_code',
         code: '8d60d684082d56732671e170.1-579612276|7jdVZz2SK5F6oH-CmEAkYeZnV10',
         client_id: 'client_id',
-        client_secret: 'client_secret'
+        client_secret: 'client_secret',
+        redirect_uri: ''
       } do
         instance.from_cookie token
       end
@@ -118,7 +119,8 @@ describe FbGraph2::Auth do
           grant_type: 'authorization_code',
           code: '8d60d684082d56732671e170.1-579612276|7jdVZz2SK5F6oH-CmEAkYeZnV10',
           client_id: 'client_id',
-          client_secret: 'client_secret'
+          client_secret: 'client_secret',
+          redirect_uri: ''
         } do
           instance.from_cookie cookie
         end
