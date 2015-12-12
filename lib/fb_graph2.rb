@@ -2,6 +2,7 @@ require 'active_support'
 require 'active_support/core_ext'
 require 'active_support/concern'
 require 'rack/oauth2'
+require 'patch/rack/oauth2/util'
 
 module FbGraph2
   mattr_accessor :root_url, :api_version, :gem_version, :logger, :debugging, :_http_config_, :object_classes

@@ -27,6 +27,7 @@ module FbGraph2
 
       def instantiate(client)
         if payload[:code].present?
+          client.redirect_uri ||= ''
           client.authorization_code = payload[:code]
           self.access_token = client.access_token!
         else
