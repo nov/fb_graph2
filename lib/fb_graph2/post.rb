@@ -17,7 +17,7 @@ module FbGraph2
       profiles: [:to, :with_tags],
       actions: [:actions],
       custom: [
-        :message_tags, :privacy, :properties
+        :message_tags, :privacy, :properties, :shares
       ]
     )
 
@@ -38,6 +38,9 @@ module FbGraph2
         self.properties = attributes[:properties].collect do |property|
           Struct::Property.new property
         end
+      end
+      if attributes.include? :shares
+        self.shares = Struct::Share.new attributes[:shares]
       end
     end
   end

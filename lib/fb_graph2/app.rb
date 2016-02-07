@@ -1,6 +1,7 @@
 module FbGraph2
   class App < Node
     include Edge::Achievements
+    include Edge::AppInsights
     include Edge::AppLinkHosts
     include Edge::AppEventTypes
     include Edge::Banned
