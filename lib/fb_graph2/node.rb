@@ -72,8 +72,13 @@ module FbGraph2
     private
 
     def edge_for(edge, params = {}, options = {})
-      collection = get params, options.merge(edge: edge)
-      Collection.new collection
+      if params[:installed] == true
+        collection = post params, options.merge(edge: edge)      
+        Array.new << collection
+      else
+        collection = get params, options.merge(edge: edge)
+        Collection.new collection
+      end
     end
 
     def build_endpoint(options = {})
