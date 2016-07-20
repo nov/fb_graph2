@@ -7,6 +7,12 @@ module FbGraph2
           User.new(user[:id], user)
         end
       end
+
+      def test_users!(params = {})
+        user = self.post params, edge: :accounts, edge_scope: :'test-users'
+        params.delete(:access_token)
+        User.new(user[:id], params.merge(user))
+      end
     end
   end
 end
