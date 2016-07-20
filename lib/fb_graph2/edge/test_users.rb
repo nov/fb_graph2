@@ -10,8 +10,8 @@ module FbGraph2
 
       def test_users!(params = {})
         user = self.post params, edge: :accounts, edge_scope: :'test-users'
-        params.delete(:access_token)
-        User.new(user[:id], params.merge(user))
+        params.delete(:access_token) # so as not to keep app token
+        User.new(user[:id], user.merge(params))
       end
     end
   end
