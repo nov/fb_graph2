@@ -18,11 +18,11 @@ describe FbGraph2::Edge::TestUsers do
       end
     end
 
-    describe '#test_users!' do
+    describe '#test_user!' do
       it 'should create an Object of FbGraph2::User with test_user token' do
         permissions = %w[public_profile,email,user_friends].join(',')
         user = mock_graph :post, 'app/accounts/test-users', 'post/test_users', access_token: 'app_token', permissions: permissions do
-          app.test_users!
+          app.test_user!
         end
         user.should be_instance_of FbGraph2::User
         user.access_token.should == 'test_user_token'
