@@ -26,6 +26,16 @@ describe FbGraph2::Edge::Feed do
         post.id.should == 'created_object_id'
         post.message.should == 'hello'
       end
+
+      context 'with location' do
+        it 'should convert place_id to Place object' do
+          post = mock_graph :post, 'me/feed', 'success_with_id', access_token: 'token' do
+            me.feed! place: 'place_id'
+          end
+          post.place.should be_instance_of FbGraph2::Place
+          post.place.id.should == 'place_id'
+        end
+      end
     end
   end
 end

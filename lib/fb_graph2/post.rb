@@ -12,7 +12,7 @@ module FbGraph2
       ],
       time: [:created_time, :updated_time],
       app: [:application],
-      page: [:place],
+      place: [:place],
       profile: [:from],
       profiles: [:to, :with_tags],
       actions: [:actions],

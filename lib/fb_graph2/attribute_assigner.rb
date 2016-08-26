@@ -73,6 +73,12 @@ module FbGraph2
               Collection.new(raw).collect! do |_raw_|
                 Page.new _raw_[:id], _raw_
               end
+            when :place
+              if raw.is_a? Hash
+                Place.new raw[:id], raw
+              else
+                Place.new raw
+              end
             when :photo
               Photo.new raw[:id], raw
             when :picture
