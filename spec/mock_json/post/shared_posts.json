@@ -6,15 +6,13 @@
       "name": "Shunya Iriki"
     },
     "story": "Shunya Iriki shared a link.",
-    "story_tags": {
-      "0": [{
+    "story_tags": [{
         "id": "689134294485152",
         "name": "Shunya Iriki",
         "offset": 0,
         "length": 12,
         "type": "user"
-      }]
-    },
+      }],
     "picture": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCtEdPdezKIoUxo&w=154&h=154&url=http%3A%2F%2Fi.yimg.jp%2Fi%2Fdocs%2Frelease%2Ffbicon.jpg",
     "link": "http://docs.yahoo.co.jp/docs/info/terms/chapter1.html#cf2nd",
     "name": "ヤフー株式会社 - サービス利用規約 第1編 基本ガイドライン",
