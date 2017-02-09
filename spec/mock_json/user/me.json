@@ -1,6 +1,6 @@
 {
   "id": "10152411392127277",
-  "bio": "Ruby/Rails developer, developing several gems like fb_graph, rack-oauth2, paypal-express, openid_connect, activitystreams etc.",
+  "about": "Ruby/Rails developer, developing several gems like fb_graph, rack-oauth2, paypal-express, openid_connect, activitystreams etc.",
   "birthday": "12/13/1981",
   "education": [{
     "classes": [{

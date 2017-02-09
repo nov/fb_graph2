@@ -6,15 +6,13 @@
       "name": "Nov Matake"
     },
     "story": "Nov Matake likes a photo.",
-    "story_tags": {
-      "0": [{
+    "story_tags": [{
         "id": "579612276",
         "name": "Nov Matake",
         "offset": 0,
         "length": 10,
         "type": "user"
-      }]
-    },
+      }],
     "privacy": {
       "value": ""
     },
@@ -29,22 +27,20 @@
     },
     "message": "ビッグデータとひわいっち",
     "story": "Nov Matake shared Keisuke Hiwatashi's photo.",
-    "story_tags": {
-      "0": [{
+    "story_tags": [{
         "id": "579612276",
         "name": "Nov Matake",
         "offset": 0,
         "length": 10,
         "type": "user"
-      }],
-      "18": [{
+      },
+      {
         "id": "674146975973023",
         "name": "Keisuke Hiwatashi",
         "offset": 18,
         "length": 17,
         "type": "user"
-      }]
-    },
+      }],
     "picture": "https://fbcdn-photos-h-a.akamaihd.net/hphotos-ak-xfp1/t1.0-0/10325169_677983408922713_1895639973177548237_s.jpg",
     "link": "https://www.facebook.com/photo.php?fbid=677983408922713&set=a.150687431652316.43478.100001331809083&type=1",
     "name": "Mobile Uploads",
@@ -87,15 +83,13 @@
       "name": "Nov Matake"
     },
     "story": "Nov Matake shared a link.",
-    "story_tags": {
-      "0": [{
+    "story_tags": [{
         "id": "579612276",
         "name": "Nov Matake",
         "offset": 0,
         "length": 10,
         "type": "user"
-      }]
-    },
+      }],
     "picture": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAcHDji1ec2KqYZ&w=154&h=154&url=http%3A%2F%2Fua.nakanohito.jp%2Fua%2F%3Ffrom%3Duamb%26id%3D7932754%26mode%3Ddefault%26h%3D55529355%26rand%3Dnoscript%26guid%3DON%26url%3Dhttp%3A%2F%2Fkirik.tea-nifty.com%2Fdiary%2F2014%2F05%2Fivs-ed80.html%26eflg%3D1",
     "link": "http://ow.ly/xoEJp",
     "name": "IVS札幌でセクハラ・レイプ未遂騒ぎが勃発＆インサイダー情報が乱舞: やまもといちろうBLOG（ブログ）",
@@ -152,22 +146,20 @@
     },
     "message": "じわじわくる",
     "story": "Nov Matake shared Yoichi Hagiwara's photo.",
-    "story_tags": {
-      "0": [{
+    "story_tags": [{
         "id": "579612276",
         "name": "Nov Matake",
         "offset": 0,
         "length": 10,
         "type": "user"
-      }],
-      "18": [{
+      },
+      {
         "id": "636860593058872",
         "name": "Yoichi Hagiwara",
         "offset": 18,
         "length": 15,
         "type": "user"
-      }]
-    },
+      }],
     "picture": "https://fbcdn-photos-b-a.akamaihd.net/hphotos-ak-xfp1/t1.0-0/10410479_636298869781711_8967036710690476822_s.jpg",
     "link": "https://www.facebook.com/photo.php?fbid=636298869781711&set=a.168178316593771.41312.100002048127511&type=1",
     "name": "Timeline Photos",
@@ -209,15 +201,13 @@
       "name": "Nov Matake"
     },
     "story": "Nov Matake shared a link.",
-    "story_tags": {
-      "0": [{
+    "story_tags": [{
         "id": "579612276",
         "name": "Nov Matake",
         "offset": 0,
         "length": 10,
         "type": "user"
-      }]
-    },
+      }],
     "picture": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQDQyx3PnnIPoGqZ&w=154&h=154&url=http%3A%2F%2Fc002.ocn.ne.jp%2Fimg%2Flogo_nttcommunications_001.gif",
     "link": "http://mypage.ocn.ne.jp/sorry/index.html",
     "name": "お詫び | マイページ",

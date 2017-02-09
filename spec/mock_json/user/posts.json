@@ -12,15 +12,13 @@
       }]
     },
     "message": "Nov Matake test",
-    "message_tags": {
-      "0": [{
+    "message_tags": [{
         "id": "579612276",
         "name": "Nov Matake",
         "type": "user",
         "offset": 0,
         "length": 10
-      }]
-    },
+      }],
     "actions": [{
       "name": "Comment",
       "link": "https://www.facebook.com/579612276/posts/10152483324277277"

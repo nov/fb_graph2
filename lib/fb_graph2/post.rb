@@ -24,11 +24,8 @@ module FbGraph2
     def initialize(id, attributes = {})
       super
       if attributes.include? :message_tags
-        self.message_tags = attributes[:message_tags].inject({}) do |message_tags, (key, values)|
-          _message_tags_ = values.collect do |value|
-            TaggedProfile.new value[:id], value
-          end
-          message_tags.merge! key => _message_tags_
+        self.message_tags = attributes[:message_tags].collect do |message_tag|
+          TaggedProfile.new message_tag[:id], message_tag
         end
       end
       if attributes.include? :privacy
