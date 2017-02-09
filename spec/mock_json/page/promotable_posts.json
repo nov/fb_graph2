@@ -7,15 +7,13 @@
       "id": "140478125968442"
     },
     "story": "OAuth.jp shared a link.",
-    "story_tags": {
-      "0": [{
+    "story_tags": [{
         "id": "140478125968442",
         "name": "OAuth.jp",
         "offset": 0,
         "length": 8,
         "type": "page"
-      }]
-    },
+      }],
     "link": "http://oauth.jp/blog/2014/05/09/what-happens-when-oauth2-code-leaked/",
     "name": "OAuth 2.0 の code は漏れても大丈夫ってホント!? - OAuth.jp",
     "caption": "oauth.jp",
