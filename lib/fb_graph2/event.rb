@@ -3,7 +3,6 @@ module FbGraph2
     include Edge::Attending
     include Edge::Declined
     include Edge::Feed
-    include Edge::Invited
     include Edge::Maybe
     include Edge::Noreply
     include Edge::Picture
