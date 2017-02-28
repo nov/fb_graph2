@@ -26,9 +26,9 @@ module FbGraph2
       raw: [
         :about, :attire, :band_members, :booking_agent, :can_post, :category, :checkins, :company_overview,
         :current_location, :description, :directed_by, :emails, :founded, :general_info, :general_manager, :global_brand_page_name,
-        :hometown, :hours, :impressum, :is_permanently_closed, :is_published, :is_unclaimed, :likes, :link, :mission, :name,
+        :hometown, :hours, :impressum, :is_permanently_closed, :is_published, :is_unclaimed, :fan_count, :link, :mission, :name,
         :name_with_location_descriptor, :phone, :press_contact, :price_range, :products, :talking_about_count, :username,
-        :website, :were_here_count,
+        :website, :were_here_count, :is_webhooks_subscribed,
         # NOTE: only within /:user_id/accounts context
         :perms
       ],

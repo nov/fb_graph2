@@ -11,7 +11,7 @@ module FbGraph2
     extend Searchable
 
     register_attributes(
-      raw: [:description, :is_date_only, :location, :name, :privacy, :ticket_uri, :timezone],
+      raw: [:description, :location, :name, :ticket_uri, :timezone],
       time: [:end_time, :start_time, :updated_time],
       page: [:venue],
       profile: [:owner],

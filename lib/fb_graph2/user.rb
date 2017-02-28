@@ -4,7 +4,6 @@ module FbGraph2
     include Edge::Achievements
     include Edge::Activities
     include Edge::Albums
-    include Edge::Applications
     include Edge::AppRequests
     include Edge::Books
     include Edge::Domains
@@ -36,7 +35,7 @@ module FbGraph2
 
     register_attributes(
       raw: [
-        :about, :bio, :email, :first_name, :gender, :install_type, :installed, :interested_in, :is_eligible_promo,
+        :about, :email, :first_name, :gender, :install_type, :installed, :interested_in, :is_eligible_promo,
         :is_shared_login, :is_verified, :last_name, :link, :locale, :meeting_for, :middle_name, :name, :name_format,
         :political, :quotes, :relationship_status, :religion, :test_group, :third_party_id, :timezone, :token_for_business,
         :verified, :viewer_can_send_gift, :website,
@@ -66,7 +65,6 @@ module FbGraph2
         :tagging_user
       ],
       photo: [:cover],
-      location: [:address],
       custom: [
         :age_range, :context, :currency, :devices, :education, :payment_mobile_pricepoints, :payment_pricepoints,
         :security_settings, :suggested_groups, :video_upload_limits, :work
