@@ -27,4 +27,14 @@ describe FbGraph2::TestUser do
       test_user.login_url.should == 'https://developers.facebook.com/checkpoint/test-user-login/106444709796298/'
     end
   end
+
+  describe '#friend!' do
+    let(:test_friend) { FbGraph2::TestUser.new('123456789') }
+
+    it 'should request and confirm the friendship for the given test user' do
+      mock_graph :post, "#{test_user.id}/friends/#{test_friend.id}", 'success_true', access_token: test_user.access_token
+      mock_graph :post, "#{test_friend.id}/friends/#{test_user.id}", 'success_true', access_token: test_friend.access_token
+      test_user.friend!(test_friend)
+    end
+  end
 end
