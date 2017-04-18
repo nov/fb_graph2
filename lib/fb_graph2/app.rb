@@ -13,6 +13,7 @@ module FbGraph2
     include Edge::StaticResources
     include Edge::Subscriptions
     include Edge::TestUsers # called "accounts" edge on Graph API Doc.
+    include Edge::TestUser
     include Edge::Translations
 
     register_attributes(
