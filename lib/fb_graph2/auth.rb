@@ -1,5 +1,7 @@
 module FbGraph2
   class Auth < Rack::OAuth2::Client
+    attr_required :client_code_endpoint
+
     class Grant
       class FbExchangeToken < Rack::OAuth2::Client::Grant
         attr_required :fb_exchange_token
@@ -12,7 +14,8 @@ module FbGraph2
         secret: client_secret,
         host: URI.parse(FbGraph2.root_url).host,
         authorization_endpoint: File.join('/', FbGraph2.api_version, '/oauth/authorize'),
-        token_endpoint: File.join('/', FbGraph2.api_version, '/oauth/access_token')
+        token_endpoint: File.join('/', FbGraph2.api_version, '/oauth/access_token'),
+        client_code_endpoint: File.join('/', FbGraph2.api_version, '/oauth/client_code')
       )
     end
 
@@ -28,6 +31,26 @@ module FbGraph2
       )
     rescue Rack::OAuth2::Client::Error => e
       raise Exception.detect(e.status, e.response)
+    end
+
+    def client_code!(access_token, options = {})
+      params = {
+        access_token: access_token,
+        client_id: identifier,
+        client_secret: secret,
+        redirect_uri: redirect_uri
+      }.merge(options)
+      response = Rack::OAuth2.http_client.post(
+        absolute_uri_for(client_code_endpoint),
+        params
+      )
+      response_json = JSON.parse(response.body).with_indifferent_access
+      case response.status
+      when 200..201
+        response_json
+      else
+        raise Exception.detect(response.status, response_json)
+      end
     end
 
     def debug_token!(input_token)
