@@ -10,7 +10,7 @@ module FbGraph2
       raw: [:can_upload, :count, :cover_photo, :description, :link, :location, :name, :privacy, :type],
       time: [:created_time, :updated_time],
       user: [:from],
-      page: [:place]
+      place: [:place]
     )
   end
 end

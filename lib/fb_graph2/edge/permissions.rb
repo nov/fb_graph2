@@ -7,6 +7,10 @@ module FbGraph2
           Struct::Permission.new permission
         end
       end
+
+      def revoke!(permission = nil, params = {})
+        destroy params, edge: :permissions, edge_scope: permission
+      end
     end
   end
 end

@@ -11,7 +11,7 @@ module FbGraph2
         :offset_y, :offset_x
       ],
       time: [:backdated_time, :created_time, :updated_time],
-      page: [:place],
+      place: [:place],
       profile: [:from],
       album: [:album],
       image_sources: [:images],

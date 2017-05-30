@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "created_time": "2014-10-13T02:04:49+0000",
+      "reviewer": {
+        "id": "10206374744997522",
+        "name": "Shigeru Takagaki"
+      },
+      "rating": 5
+    },
+    {
+      "created_time": "2014-07-09T13:39:31+0000",
+      "reviewer": {
+        "id": "585838138182211",
+        "name": "Teruko Kaneshiro"
+      },
+      "rating": 5
+    },
+    {
+      "created_time": "2013-11-10T08:21:29+0000",
+      "reviewer": {
+        "id": "10152917500568292",
+        "name": "Lyn Yeoh"
+      },
+      "rating": 5
+    },
+    {
+      "created_time": "2013-07-08T11:28:20+0000",
+      "reviewer": {
+        "id": "10152167763779825",
+        "name": "Hayashi Tatsuya"
+      },
+      "rating": 5
+    }
+  ],
+  "paging": {
+    "cursors": {
+      "before": "MTUzNDY1MDA1NzoxMzkyOTYxMDYwOTU4Mjk=",
+      "after": "NzcyNjg5ODI0OjEzOTI5NjEwNjA5NTgyOQ=="
+    }
+  }
+}

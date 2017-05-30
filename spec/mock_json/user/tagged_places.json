@@ -1,0 +1,375 @@
+{
+  "data": [{
+    "id": "10154435331737277",
+    "created_time": "2016-08-16T08:24:53+0000",
+    "place": {
+      "id": "131821956863606",
+      "location": {
+        "city": "Chiyoda-ku",
+        "country": "Japan",
+        "latitude": 35.681075526371,
+        "longitude": 139.76741588095,
+        "state": "Tokyo",
+        "zip": "100-0005"
+      },
+      "name": "東京駅 (Tokyo Station)"
+    }
+  }, {
+    "id": "10154426636262277",
+    "created_time": "2016-08-13T09:39:01+0000",
+    "place": {
+      "id": "451101184918695",
+      "location": {
+        "latitude": 34.855232444856,
+        "longitude": 135.84911517625
+      },
+      "name": "宇治田原"
+    }
+  }, {
+    "id": "10154426337972277",
+    "created_time": "2016-08-13T06:40:02+0000",
+    "place": {
+      "id": "137680342928499",
+      "location": {
+        "city": "Inabe-shi",
+        "country": "Japan",
+        "latitude": 34.98555556,
+        "longitude": 135.75777778,
+        "state": "Mie",
+        "zip": "600-8216"
+      },
+      "name": "Kyōto Station"
+    }
+  }, {
+    "id": "10154160152517277",
+    "created_time": "2016-05-05T02:53:14+0000",
+    "place": {
+      "id": "117951684932168",
+      "location": {
+        "city": "Minato-ku",
+        "country": "Japan",
+        "latitude": 35.627544444444,
+        "longitude": 139.74165194444,
+        "state": "Tokyo"
+      },
+      "name": "ガスト 品川インターシティ店"
+    }
+  }, {
+    "id": "10154126987817277",
+    "created_time": "2016-04-20T11:33:02+0000",
+    "place": {
+      "id": "131821956863606",
+      "location": {
+        "city": "Chiyoda-ku",
+        "country": "Japan",
+        "latitude": 35.681075526371,
+        "longitude": 139.76741588095,
+        "state": "Tokyo",
+        "zip": "100-0005"
+      },
+      "name": "東京駅 (Tokyo Station)"
+    }
+  }, {
+    "id": "10154126631512277",
+    "created_time": "2016-04-20T07:20:46+0000",
+    "place": {
+      "id": "133752529998670",
+      "location": {
+        "city": "Atsugi-shi",
+        "country": "Japan",
+        "latitude": 35.452777777778,
+        "longitude": 139.39083333333,
+        "state": "Kanagawa",
+        "street": "上郷570",
+        "zip": "243-0434"
+      },
+      "name": "Ebina Station"
+    }
+  }, {
+    "id": "10154020232737277",
+    "created_time": "2016-03-18T11:27:49+0000",
+    "place": {
+      "id": "214085901982335",
+      "location": {
+        "street": "港南 2-16-3 品川グランドセントラルタワー",
+        "zip": "108-0075"
+      },
+      "name": "Microsoft"
+    }
+  }, {
+    "id": "10153874992907277",
+    "created_time": "2016-01-19T12:56:15+0000",
+    "place": {
+      "id": "172216339510916",
+      "location": {
+        "city": "Chiyoda-ku",
+        "country": "Japan",
+        "latitude": 35.687241109167,
+        "longitude": 139.76537605222,
+        "state": "Tokyo"
+      },
+      "name": "ての字 大手町店"
+    }
+  }, {
+    "id": "10153858538627277",
+    "created_time": "2016-01-12T10:22:29+0000",
+    "place": {
+      "id": "456786567830420",
+      "location": {
+        "city": "Shibuya-ku",
+        "country": "Japan",
+        "latitude": 35.65795387,
+        "longitude": 139.69928259333,
+        "state": "Tokyo",
+        "street": "道玄坂1-5-5 藤木ビル3F",
+        "zip": "150-0043"
+      },
+      "name": "旬魚と個室 和食りん 渋谷店"
+    }
+  }, {
+    "id": "10153721558647277",
+    "created_time": "2015-11-06T14:08:12+0000",
+    "place": {
+      "id": "226876317426732",
+      "location": {
+        "city": "Yokohama",
+        "country": "Japan",
+        "latitude": 35.462620092738,
+        "longitude": 139.62273062169,
+        "state": "Kanagawa",
+        "street": "横浜市西区高島2-7-1　ファーストプレイス横浜2F",
+        "zip": "220-0011"
+      },
+      "name": "コトブキヤ酒店 厨 -Kuriya-"
+    }
+  }, {
+    "id": "10153715405947277",
+    "created_time": "2015-11-03T05:08:18+0000",
+    "place": {
+      "id": "132469806788540",
+      "location": {
+        "city": "Kawasaki-shi",
+        "country": "Japan",
+        "latitude": 35.45833333,
+        "longitude": 139.63638889,
+        "state": "Kanagawa",
+        "street": "西区みなとみらい1-1-1",
+        "zip": "220-0012"
+      },
+      "name": "Pacifico Yokohama"
+    }
+  }, {
+    "id": "10153702352642277",
+    "created_time": "2015-10-27T15:30:22+0000",
+    "place": {
+      "id": "132738745815",
+      "location": {
+        "city": "Mountain View",
+        "country": "United States",
+        "latitude": 37.41443,
+        "longitude": -122.07698,
+        "state": "CA",
+        "street": "1401 N Shoreline Blvd",
+        "zip": "94043"
+      },
+      "name": "Computer History Museum"
+    }
+  }, {
+    "id": "10153698349707277",
+    "created_time": "2015-10-25T13:25:29+0000",
+    "place": {
+      "id": "416746601679596",
+      "location": {
+        "city": "Ota-ku",
+        "country": "Japan",
+        "latitude": 35.545251831522,
+        "longitude": 139.76890325546,
+        "state": "Tokyo",
+        "street": "羽田空港2-6-5",
+        "zip": "144-0041"
+      },
+      "name": "羽田空港国際線旅客ターミナル／Haneda Airport International Terminal"
+    }
+  }, {
+    "id": "10153674122512277",
+    "created_time": "2015-10-12T04:04:54+0000",
+    "place": {
+      "id": "222682241075946",
+      "location": {
+        "city": "Osaka",
+        "country": "Japan",
+        "latitude": 34.703301720498,
+        "located_in": "170585066333688",
+        "longitude": 135.49474634082,
+        "state": "Osaka",
+        "zip": "530-0001"
+      },
+      "name": "ノースゲートビルディング"
+    }
+  }, {
+    "id": "10153670747232277",
+    "created_time": "2015-10-10T07:12:07+0000",
+    "place": {
+      "id": "343597862365508",
+      "location": {
+        "city": "Ota-ku",
+        "country": "Japan",
+        "latitude": 35.549476646857,
+        "longitude": 139.78258462691,
+        "state": "Tokyo"
+      },
+      "name": "羽田空港 JAL機内"
+    }
+  }, {
+    "id": "10153668818022277",
+    "created_time": "2015-10-09T10:09:21+0000",
+    "place": {
+      "id": "162385363835177",
+      "location": {
+        "latitude": 34.6973395,
+        "longitude": 135.49717196667
+      },
+      "name": "北新地本通"
+    }
+  }, {
+    "id": "10153668472702277",
+    "created_time": "2015-10-09T04:33:50+0000",
+    "place": {
+      "id": "210150309036138",
+      "location": {
+        "city": "Osaka",
+        "country": "Japan",
+        "latitude": 34.70345435,
+        "longitude": 135.49566151667,
+        "state": "Osaka"
+      },
+      "name": "大阪ステーション ノースゲートビル"
+    }
+  }, {
+    "id": "10153668454662277",
+    "created_time": "2015-10-09T04:10:40+0000",
+    "place": {
+      "id": "125028760881939",
+      "location": {
+        "city": "Osaka",
+        "country": "Japan",
+        "latitude": 34.7050581,
+        "longitude": 135.4975292,
+        "state": "Osaka",
+        "street": "北区芝田1-1-35",
+        "zip": "530-8310"
+      },
+      "name": "大阪新阪急ホテル"
+    }
+  }, {
+    "id": "10153668416907277",
+    "created_time": "2015-10-09T03:36:47+0000",
+    "place": {
+      "id": "152613091493393",
+      "location": {
+        "city": "Toyonaka-shi",
+        "country": "Japan",
+        "latitude": 34.790694423106,
+        "longitude": 135.44123660175,
+        "state": "Osaka",
+        "zip": "560-0036"
+      },
+      "name": "大阪国際空港（伊丹） / Osaka International Airport (ITM)"
+    }
+  }, {
+    "id": "10153668284402277",
+    "created_time": "2015-10-09T01:28:44+0000",
+    "place": {
+      "id": "378804022256093",
+      "location": {
+        "city": "Ota-ku",
+        "country": "Japan",
+        "latitude": 35.5489776,
+        "longitude": 139.7844181,
+        "state": "Tokyo"
+      },
+      "name": "東京羽田空港第一ターミナル"
+    }
+  }, {
+    "id": "10153555064607277",
+    "created_time": "2015-08-20T04:51:28+0000",
+    "place": {
+      "id": "418930924819831",
+      "location": {
+        "city": "Minato-ku",
+        "country": "Japan",
+        "latitude": 35.660949194309,
+        "longitude": 139.72455134918,
+        "state": "Tokyo",
+        "street": "西麻布1-10-6 NISHIAZABU1106ビル１F",
+        "zip": "106-0031"
+      },
+      "name": "京都　瓢喜　西麻布店 (ひょうき）"
+    }
+  }, {
+    "id": "10153528448307277",
+    "created_time": "2015-08-10T13:21:24+0000",
+    "place": {
+      "id": "567625066686031",
+      "location": {
+        "city": "Minato-ku",
+        "country": "Japan",
+        "latitude": 35.66445084003,
+        "longitude": 139.73060878186,
+        "state": "Tokyo"
+      },
+      "name": "Hackers Bar Tokyo"
+    }
+  }, {
+    "id": "10153525555637277",
+    "created_time": "2015-08-09T07:14:09+0000",
+    "place": {
+      "id": "366288036835289",
+      "location": {
+        "city": "Kyoto-shi",
+        "country": "Japan",
+        "latitude": 34.985555555556,
+        "located_in": "206861819341319",
+        "longitude": 135.75888888889,
+        "state": "Kyoto"
+      },
+      "name": "Shinkansen Kyoto Station"
+    }
+  }, {
+    "id": "10153525515587277",
+    "created_time": "2015-08-09T06:22:27+0000",
+    "place": {
+      "id": "137064116331977",
+      "location": {
+        "city": "京都府京都市",
+        "latitude": 35.010294,
+        "longitude": 135.768281,
+        "zip": "604-8091"
+      },
+      "name": "Honnō-ji"
+    }
+  }, {
+    "id": "10153525323407277",
+    "created_time": "2015-08-09T04:23:26+0000",
+    "place": {
+      "id": "128150170728666",
+      "location": {
+        "city": "Kyoto-shi",
+        "country": "Japan",
+        "latitude": 35.033686400818,
+        "longitude": 135.76625289757,
+        "state": "Kyoto",
+        "street": "京都市上京区鶴山町14",
+        "zip": "602-0802"
+      },
+      "name": "阿弥陀寺"
+    }
+  }],
+  "paging": {
+    "cursors": {
+      "before": "MTAxNTQ0MzUzMzE3MzcyNzcZD",
+      "after": "MTAxNTM1MjUzMjM0MDcyNzcZD"
+    },
+    "next": "https://graph.facebook.com/v2.7/579612276/tagged_places?access_token=EAACZCuEy9dpUBAGiXCl27Vlx5cbAbddArhm6CVYpULc7VYoxwIikeZCqOfZAnxZCnu3AmJ7hHQ5IW400gs8xjja42OA6BIc61p8AaE35ZBJct26Q9BxZBLMZBSS2OzZAyYrfz1NPL5nWIeNrAVzbnNjbjjmQEunReZATIdr5kZB5vXTgZDZD&pretty=0&limit=25&after=MTAxNTM1MjUzMjM0MDcyNzcZD"
+  }
+}

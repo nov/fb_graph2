@@ -5,17 +5,31 @@ module FbGraph2
     included do
       extend ClassMethods
       attr_accessor :raw_attributes
-      cattr_accessor :registered_attributes
     end
 
     module ClassMethods
+      attr_reader :registered_attributes
+
+      def inherited(child)
+        super
+        child.register_attributes registered_attributes
+      end
+
+      def registered_attributes
+        @registered_attributes ||= {}
+      end
+
       def register_attributes(attributes)
-        self.registered_attributes = attributes
+        attributes.each do |type, keys|
+          registered_attributes[type] ||= []
+          registered_attributes[type] += keys
+        end
         send :attr_accessor, *attributes.values.flatten
       end
     end
 
     def assign(attributes)
+      self.raw_attributes = attributes
       Array(self.class.registered_attributes).each do |type, keys|
         keys.each do |key|
           if attributes.include? key
@@ -51,11 +65,19 @@ module FbGraph2
               Collection.new(raw).collect! do |_raw_|
                 Message.new _raw_[:id], _raw_
               end
+            when :location
+              Struct::Location.new raw
             when :page
               Page.new raw[:id], raw
             when :pages
               Collection.new(raw).collect! do |_raw_|
                 Page.new _raw_[:id], _raw_
+              end
+            when :place
+              if raw.is_a? Hash
+                Place.new raw[:id], raw
+              else
+                Place.new raw
               end
             when :photo
               Photo.new raw[:id], raw
@@ -73,9 +95,15 @@ module FbGraph2
               Collection.new(raw).collect! do |_raw_|
                 User.new _raw_[:id], _raw_
               end
-            else
+            when :tags
+              Collection.new(raw).collect! do |_raw_|
+                Struct::Tag.new _raw_
+              end
+            when :custom
               # NOTE: handle these attributes in each class
               next
+            else
+              raise "unknown attribute type #{type}"
             end
             self.send :"#{key}=", value
           end

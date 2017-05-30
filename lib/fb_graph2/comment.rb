@@ -6,8 +6,8 @@ module FbGraph2
     register_attributes(
       raw: [:can_comment, :can_remove, :comment_count, :like_count, :message, :user_likes, :is_hidden, :can_hide],
       time: [:created_time],
-      user: [:from],
       comment: [:parent],
+      profile: [:from],
       profiles: [:message_tags],
       custom: [:attachment]
     )

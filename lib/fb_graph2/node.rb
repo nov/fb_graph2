@@ -1,16 +1,12 @@
 module FbGraph2
   class Node
-    attr_accessor :id, :access_token, :raw_attributes
-
-    def self.inherited(klass)
-      klass.send :include, AttributeAssigner
-      FbGraph2.object_classes << klass
-    end
+    include AttributeAssigner
+    attr_accessor :id, :access_token
+    alias_method :identifier, :id
 
     def initialize(id, attributes = {})
       self.id = id
-      self.raw_attributes = attributes
-      assign attributes if respond_to? :assign
+      assign attributes
       authenticate attributes[:access_token] if attributes.include? :access_token
     end
 
@@ -93,6 +89,7 @@ module FbGraph2
     end
 
     def build_params(params = {})
+      params = Hash(params).merge(debug: :all) if FbGraph2.debugging?
       if params.present?
         if params.include? :fields
           params[:fields] = Array(params[:fields]).join(',')
@@ -109,7 +106,7 @@ module FbGraph2
       _response_ = _response_.with_indifferent_access if _response_.respond_to? :with_indifferent_access
       case response.status
       when 200...300
-        if _response_.respond_to?(:include?) && _response_.include?(:success)
+        if _response_.respond_to?(:has_key?) && _response_.has_key?(:success)
           _response_[:success]
         else
           _response_

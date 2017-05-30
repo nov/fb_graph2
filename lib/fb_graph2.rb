@@ -1,18 +1,23 @@
 require 'active_support'
 require 'active_support/core_ext'
+require 'active_support/concern'
 require 'rack/oauth2'
+require 'patch/rack/oauth2/util'
 
 module FbGraph2
   mattr_accessor :root_url, :api_version, :gem_version, :logger, :debugging, :_http_config_, :object_classes
 
   self.root_url = 'https://graph.facebook.com'
-  self.api_version = 'v2.0'
-  self.gem_version = File.read(File.join(__dir__, '../VERSION')).delete("\n\r")
+  self.api_version = 'v2.8'
+  self.gem_version = File.read(File.join(__dir__, '../VERSION')).strip
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
-  self.object_classes = Array.new
 
   class << self
+    def object_classes
+      FbGraph2::Node.descendants
+    end
+
     def debugging?
       !!self.debugging
     end
@@ -40,13 +45,14 @@ module FbGraph2
   end
 end
 
-require 'fb_graph2/attribute_assigner'
-require 'fb_graph2/node'
-require 'fb_graph2/collection'
-require 'fb_graph2/searchable'
-require 'fb_graph2/edge'
+require_relative 'fb_graph2/exception'
+require_relative 'fb_graph2/attribute_assigner'
+require_relative 'fb_graph2/node'
+require_relative 'fb_graph2/collection'
+require_relative 'fb_graph2/searchable'
+require_relative 'fb_graph2/edge'
 [
-  '.',
+  '',
   'request_filter'
 ].each do |dir|
   Dir[File.join(__dir__, 'fb_graph2', dir, '*.rb')].each do |file|

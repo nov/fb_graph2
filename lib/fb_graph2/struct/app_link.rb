@@ -18,13 +18,21 @@ module FbGraph2
 
         class Android < Native
           register_attributes(
-            raw: [:class, :package]
+            raw: [:package],
+            custom: [:klass]
           )
+
+          def initialize(attributes = {})
+            super
+            if attributes.include? :class
+              self.klass = attributes[:class]
+            end
+          end
         end
 
         class WindowsPhone < Native
           register_attributes(
-            raw: [:app_name]
+            raw: [:app_id]
           )
         end
       end

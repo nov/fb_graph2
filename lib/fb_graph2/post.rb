@@ -12,23 +12,20 @@ module FbGraph2
       ],
       time: [:created_time, :updated_time],
       app: [:application],
-      page: [:place],
+      place: [:place],
       profile: [:from],
       profiles: [:to, :with_tags],
       actions: [:actions],
       custom: [
-        :message_tags, :privacy, :properties
+        :message_tags, :privacy, :properties, :shares
       ]
     )
 
     def initialize(id, attributes = {})
       super
       if attributes.include? :message_tags
-        self.message_tags = attributes[:message_tags].inject({}) do |message_tags, (key, values)|
-          _message_tags_ = values.collect do |value|
-            TaggedProfile.new value[:id], value
-          end
-          message_tags.merge! key => _message_tags_
+        self.message_tags = attributes[:message_tags].collect do |message_tag|
+          TaggedProfile.new message_tag[:id], message_tag
         end
       end
       if attributes.include? :privacy
@@ -38,6 +35,9 @@ module FbGraph2
         self.properties = attributes[:properties].collect do |property|
           Struct::Property.new property
         end
+      end
+      if attributes.include? :shares
+        self.shares = Struct::Share.new attributes[:shares]
       end
     end
   end

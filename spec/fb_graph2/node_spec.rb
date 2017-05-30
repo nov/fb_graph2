@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe FbGraph2::Node do
-  let(:klass) { FbGraph2::Node }
-  let(:instance) { klass.new 'identifier' }
+  let(:instance) { described_class.new 'identifier' }
 
   describe 'API Versioning' do
     before do
@@ -56,16 +55,8 @@ describe FbGraph2::Node do
     end
   end
 
-  context 'class' do
-    subject { klass }
-    it { should_not respond_to :register_attributes }
-    it { should_not respond_to :registered_attributes }
-    it { should_not respond_to :registered_attributes= }
-  end
-
   context 'instance' do
     subject { instance }
-    it { should_not respond_to :assign }
 
     describe '#initialize' do
       its(:id) { should == 'identifier' }

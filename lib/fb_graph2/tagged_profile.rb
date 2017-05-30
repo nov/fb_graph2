@@ -20,6 +20,10 @@ module FbGraph2
         Group
       when 'event'
         Event
+      when 'application'
+        App
+      else
+        Node
       end
     end
   end

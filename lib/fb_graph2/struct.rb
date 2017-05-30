@@ -1,11 +1,9 @@
 module FbGraph2
   class Struct
-    def self.inherited(klass)
-      klass.send :include, AttributeAssigner
-    end
+    include AttributeAssigner
 
     def initialize(attributes = {})
-      assign attributes if respond_to? :assign
+      assign attributes
     end
   end
 end

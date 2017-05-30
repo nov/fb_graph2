@@ -4,7 +4,7 @@ describe FbGraph2::Edge::Members do
   context 'included in Group' do
     let(:group) { FbGraph2::Group.new('group_id').authenticate('token') }
 
-    describe '#invited' do
+    describe '#members' do
       it 'should return an Array of FbGraph2::User' do
         users = mock_graph :get, 'group_id/members', 'group/members', access_token: 'token' do
           group.members
