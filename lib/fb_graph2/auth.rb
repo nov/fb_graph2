@@ -66,7 +66,7 @@ module FbGraph2
       when String
         cookie
       else
-        cookie["fbsr_#{identifier}"]
+        cookie.delete "fbsr_#{identifier}"
       end
       from_signed_request token
     end
