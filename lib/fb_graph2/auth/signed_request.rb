@@ -17,7 +17,6 @@ module FbGraph2
       end
 
       def verify!(client)
-        digest = OpenSSL::Digest::SHA256.new
         signature = OpenSSL::HMAC.digest OpenSSL::Digest::SHA256.new, client.secret, @payload_str
         raise VerificationFailed.new('Verification failed') unless @signature == signature
         instantiate client
