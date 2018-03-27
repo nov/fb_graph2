@@ -1,6 +1,7 @@
 require 'active_support'
 require 'active_support/core_ext'
 require 'active_support/concern'
+require 'multi_json'
 require 'rack/oauth2'
 require 'patch/rack/oauth2/util'
 
