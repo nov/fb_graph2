@@ -16,19 +16,19 @@ module FbGraph2
 
   class << self
     def root_url
-      Thread.current['fb_graph2_root_url'] || DEFAULT_ROOT_URL
+      ::Thread.current['fb_graph2_root_url'] || DEFAULT_ROOT_URL
     end
 
     def root_url=(value)
-      Thread.current['fb_graph2_root_url'] = value
+      ::Thread.current['fb_graph2_root_url'] = value
     end
 
     def api_version
-      Thread.current['fb_graph2_api_version'] || DEFAULT_API_VERSION
+      ::Thread.current['fb_graph2_api_version'] || DEFAULT_API_VERSION
     end
 
     def api_version=(value)
-      Thread.current['fb_graph2_api_version'] = value
+      ::Thread.current['fb_graph2_api_version'] = value
     end
 
     def object_classes
