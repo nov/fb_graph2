@@ -10,8 +10,6 @@ module FbGraph2
 
   DEFAULT_ROOT_URL = 'https://graph.facebook.com'
   DEFAULT_API_VERSION = 'v2.11'
-  self.root_url = 'https://graph.facebook.com'
-  self.api_version = 'v2.11'
   self.gem_version = File.read(File.join(__dir__, '../VERSION')).strip
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
