@@ -18,11 +18,6 @@ module FbGraph2
           Message.new(message[:id], message).authenticate self.access_token
         end
       end
-
-      def message!(params = {})
-        message = self.post params, edge: :messages
-        Message.new(message[:id], params.merge(message)).authenticate self.access_token
-      end
     end
   end
 end
