@@ -24,9 +24,11 @@ module FbGraph2
     def initialize(id, attributes = {})
       super
       if attributes.include? :message_tags
-        self.message_tags = attributes[:message_tags].collect do |message_tag|
-          TaggedProfile.new message_tag[:id], message_tag
-        end
+        self.message_tags = attributes[:message_tags].values.collect do |message_tags|
+          message_tags.collect do |tag|
+            TaggedProfile.new tag[:id], tag
+          end
+        end.flatten
       end
       if attributes.include? :privacy
         self.privacy = Struct::Privacy.new attributes[:privacy]
