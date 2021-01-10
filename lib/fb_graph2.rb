@@ -6,17 +6,17 @@ require 'rack/oauth2'
 require 'patch/rack/oauth2/util'
 
 module FbGraph2
-  mattr_accessor :gem_version, :logger, :debugging, :_http_config_, :object_classes
+  mattr_accessor :default_root_url, :default_api_version, :gem_version, :logger, :debugging, :_http_config_, :object_classes
 
-  DEFAULT_ROOT_URL = 'https://graph.facebook.com'
-  DEFAULT_API_VERSION = 'v7.0'
+  self.default_root_url = 'https://graph.facebook.com'
+  self.default_api_version = 'v7.0'
   self.gem_version = File.read(File.join(__dir__, '../VERSION')).strip
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
 
   class << self
     def root_url
-      ::Thread.current['fb_graph2_root_url'] || DEFAULT_ROOT_URL
+      ::Thread.current['fb_graph2_root_url'] || default_root_url
     end
 
     def root_url=(value)
@@ -24,7 +24,7 @@ module FbGraph2
     end
 
     def api_version
-      ::Thread.current['fb_graph2_api_version'] || DEFAULT_API_VERSION
+      ::Thread.current['fb_graph2_api_version'] || default_api_version
     end
 
     def api_version=(value)
