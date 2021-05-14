@@ -5,6 +5,7 @@ module FbGraph2
     include Edge::Blocked
     include Edge::Conversations
     include Edge::SendApi
+    include Edge::ScheduledPosts
     include Edge::Events
     include Edge::Feed
     include Edge::GlobalBrandChildren
