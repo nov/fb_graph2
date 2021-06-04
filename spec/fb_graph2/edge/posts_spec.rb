@@ -12,6 +12,7 @@ describe FbGraph2::Edge::Posts do
         posts.should_not be_blank
         posts.each do |post|
           post.should be_instance_of FbGraph2::Post
+          post.message_tags.count.should == 2
         end
       end
     end

@@ -9,7 +9,7 @@ module FbGraph2
   mattr_accessor :gem_version, :logger, :debugging, :_http_config_, :object_classes
 
   DEFAULT_ROOT_URL = 'https://graph.facebook.com'
-  DEFAULT_API_VERSION = 'v2.11'
+  DEFAULT_API_VERSION = 'v7.0'
   self.gem_version = File.read(File.join(__dir__, '../VERSION')).strip
   self.logger = Logger.new(STDOUT)
   self.logger.progname = 'FbGraph2'
