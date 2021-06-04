@@ -6,7 +6,7 @@ describe FbGraph2 do
 
   context 'as default' do
     its(:logger) { should be_a Logger }
-    its(:api_version) { should == 'v2.11' }
+    its(:api_version) { should == 'v7.0' }
     its(:root_url) { should == 'https://graph.facebook.com' }
     it { should_not be_debugging }
   end

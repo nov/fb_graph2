@@ -12,13 +12,26 @@
       }]
     },
     "message": "Nov Matake test",
-    "message_tags": [{
-        "id": "579612276",
-        "name": "Nov Matake",
-        "type": "user",
-        "offset": 0,
-        "length": 10
-      }],
+    "message_tags": {
+      "0": [
+        {
+          "id": "579612276",
+          "name": "Nov Matake",
+          "type": "user",
+          "offset": 0,
+          "length": 10
+        }
+      ],
+      "11": [
+        {
+          "id": "10153177366617368",
+          "name": "Bryan Brunetti",
+          "type": "user",
+          "offset": 11,
+          "length": 14
+        }
+      ]
+    },
     "actions": [{
       "name": "Comment",
       "link": "https://www.facebook.com/579612276/posts/10152483324277277"
