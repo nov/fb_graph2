@@ -47,6 +47,11 @@ module FbGraph2
       _http_client_ = HTTPClient.new(
         agent_name: "FbGraph2 (#{gem_version})"
       )
+
+      # NOTE: httpclient gem seems stopped maintaining root certtificate set, use OS default.
+     _http_client_.ssl_config.clear_cert_store
+     _http_client_.ssl_config.cert_store.set_default_paths
+
       _http_client_.request_filter.delete_if do |filter|
         filter.is_a? HTTPClient::WWWAuth
       end
